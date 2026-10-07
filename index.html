@@ -245,10 +245,10 @@ const buscador = document.getElementById("buscador");
 let regionActual = "Todos";
 
 function normalizarTexto(texto) {
-    return texto
-        .toLowerCase()
+    return String(texto || "")
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
         .trim();
 }
 
@@ -258,10 +258,16 @@ function mostrarDepartamentos() {
 
     document.querySelectorAll("#departamentos .card").forEach(card => {
         const nombre = normalizarTexto(card.dataset.nombre);
+        const nombreVisible = normalizarTexto(card.querySelector("h3")?.textContent);
         const regionCard = normalizarTexto(card.dataset.region);
 
-        const coincideNombre = nombre.includes(texto);
-        const coincideRegion = regionActual === "Todos" || regionCard === region;
+        const coincideNombre =
+            !texto ||
+            nombre.includes(texto) ||
+            nombreVisible.includes(texto);
+
+        const coincideRegion =
+            regionActual === "Todos" || regionCard === region;
 
         card.hidden = !(coincideNombre && coincideRegion);
     });

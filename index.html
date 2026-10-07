@@ -70,8 +70,13 @@
             <p class="subtitulo-cordoba">Accede directamente al servicio que buscas.</p>
             <div class="cordoba-servicios" id="fichaServicios"></div>
             <div class="otros-accesos-cordoba">
-                <strong>🔗 Accesos nacionales</strong>
-                <span>RUNT · SIMIT</span>
+                <strong>🔗 Otros accesos oficiales</strong>
+                <span>Gobernación de Córdoba · RUNT · SIMIT</span>
+            </div>
+            <div class="contacto-cordoba" id="fichaContacto">
+                <strong>Gobernación de Córdoba · Secretaría de Hacienda</strong>
+                <span>Centro Comercial Places Mall, 2.º piso · Cra. 6 # 65-24 · Montería</span>
+                <span>Atención: lunes a viernes, 8:00 a. m. – 5:00 p. m.</span>
             </div>
         </div>
     </div></main>
@@ -238,6 +243,12 @@ function abrirFicha(nombre) {
             : ''}`;
 
     servicios.innerHTML = tarjetas;
+
+    const contacto = document.getElementById("fichaContacto");
+    if (contacto) {
+        contacto.style.display = d.nombre === "Córdoba" ? "flex" : "none";
+    }
+
     modal.classList.add("mostrar");
     modal.setAttribute("aria-hidden","false");
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portal informativo para consultar los sitios oficiales de impuesto vehicular de Colombia.">
     <title>Impuestos Vehiculares de Colombia</title>
-    <link rel="stylesheet" href="css/estilos.css?v=20261007">
+    <link rel="stylesheet" href="css/estilos.css?v=20261007b">
 </head>
 <body>
 
@@ -57,36 +57,24 @@
 
     <section id="departamentos" class="grid"></section>
 
-    <div id="modalCordoba" class="modal" aria-hidden="true">
+    <div id="modalFicha" class="modal" aria-hidden="true">
         <div class="modal-contenido">
             <button class="cerrar-modal" id="cerrarModal" aria-label="Cerrar">×</button>
             <span class="mini-badge">🇨🇴 FICHA DEPARTAMENTAL</span>
             <div class="modal-titulo">
-                <div class="escudo modal-escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20oficial%20de%20C%C3%B3rdoba%20(Colombia).svg" alt="Escudo de Córdoba">
-                <div><h2>Córdoba</h2><p>Servicios oficiales para propietarios de vehículos</p></div>
+                <div class="escudo modal-escudo"><img id="fichaEscudo" src="" alt=""></div>
+                <div><h2 id="fichaTitulo">Departamento</h2><p id="fichaSubtitulo">Servicios oficiales para propietarios de vehículos</p></div>
             </div>
-            <div class="cordoba-alerta">🛡️ Para pagos y consultas tributarias, utiliza únicamente los portales oficiales de la Gobernación de Córdoba.</div>
+            <div class="cordoba-alerta">🛡️ Utiliza únicamente los enlaces oficiales o plataformas autorizadas. Este portal no recibe pagos ni solicita datos bancarios.</div>
             <h3 class="pregunta-cordoba">🚗 ¿Qué necesitas hacer?</h3>
-            <p class="subtitulo-cordoba">Elige directamente el trámite que buscas.</p>
-            <div class="cordoba-servicios">
-                <a href="https://impuestos.cordoba.gov.co/VehiculosCor/IUVA_001.jsp?opcionSeleccionada=2" target="_blank" rel="noopener noreferrer">🔎 <strong>Consultar vehículo</strong><small>Consulta por placa</small></a>
-                <a href="https://impuestos.cordoba.gov.co/VehiculosCor/DecVeh.jsp" target="_blank" rel="noopener noreferrer">💰 <strong>Liquidar impuesto</strong><small>Declaración y pago</small></a>
-                <a href="https://impuestos.cordoba.gov.co/VehiculosCor/Solicitud_PazySalvo.jsp" target="_blank" rel="noopener noreferrer">📄 <strong>Paz y salvo</strong><small>Solicitud en línea</small></a>
-                <a href="https://impuestos.cordoba.gov.co/VehiculosCor/calendario.jsp" target="_blank" rel="noopener noreferrer">📅 <strong>Calendario</strong><small>Fechas y beneficios</small></a>
-                <a href="https://www.runt.gov.co/consultaCiudadana/#/consultaVehiculo" target="_blank" rel="noopener noreferrer">🛡️ <strong>Revisar SOAT</strong><small>Consulta nacional RUNT</small></a>
-                <a href="https://www.simit.org.co/" target="_blank" rel="noopener noreferrer">⚠️ <strong>Consultar multas</strong><small>Consulta nacional SIMIT</small></a>
-                <a href="https://www.runt.gov.co/" target="_blank" rel="noopener noreferrer">🚗 <strong>Hacer un trámite</strong><small>Portal nacional RUNT</small></a>
-                <a href="https://www.cordoba.gov.co/" target="_blank" rel="noopener noreferrer">🏛️ <strong>Gobernación</strong><small>Portal oficial</small></a>
-            </div>
-            <div class="otros-accesos-cordoba"><strong>🔗 Otros accesos oficiales</strong><span>Gobernación de Córdoba · RUNT · SIMIT</span></div>
-            <div class="contacto-cordoba">
-                <strong>Gobernación de Córdoba · Secretaría de Hacienda</strong>
-                <span>Centro Comercial Places Mall, 2.º piso · Cra. 6 # 65-24 · Montería</span>
-                <span>Atención: lunes a viernes, 8:00 a. m. – 5:00 p. m.</span>
+            <p class="subtitulo-cordoba">Accede directamente al servicio que buscas.</p>
+            <div class="cordoba-servicios" id="fichaServicios"></div>
+            <div class="otros-accesos-cordoba">
+                <strong>🔗 Accesos nacionales</strong>
+                <span>RUNT · SIMIT</span>
             </div>
         </div>
-    </div>
-</main>
+    </div></main>
 
 <footer>
     <p>Portal informativo independiente • Los enlaces llevan a sitios oficiales o plataformas autorizadas por cada entidad.</p>
@@ -103,16 +91,16 @@ const serviciosNacionales = {
 
 const departamentos = [
     { nombre:"Amazonas", region:"Amazonía", logo:escudo("Escudo de Amazonas (Colombia).svg") },
-    { nombre:"Antioquia", region:"Andina", logo:escudo("Escudo de Antioquia.svg"), url:"https://www.vehiculosantioquia.com.co/impuestosWeb/index.jsp" },
-    { nombre:"Arauca", region:"Orinoquía", logo:escudo("Escudo de Arauca.svg"), url:"https://arauca.gov.co/impuesto-de-vehiculo" },
-    { nombre:"Atlántico", region:"Caribe", logo:escudo("Escudo del Atlántico.svg"), url:"https://portalimpuestos.atlantico.gov.co/Portal-ATLRentas/vehiculos_declaracion.jsp" },
-    { nombre:"Bolívar", region:"Caribe", logo:escudo("Escudo de Bolívar (Colombia).svg"), url:"https://impuestos.bolivar.gov.co/gobol_web/liquidaciones" },
-    { nombre:"Boyacá", region:"Andina", logo:escudo("Escudo de Boyacá.svg"), url:"https://www.boyaca.gov.co/" },
-    { nombre:"Caldas", region:"Andina", logo:escudo("Coat of Arms of the Department of Caldas.svg"), url:"https://vehiculos.caldas.gov.co/web/#/" },
+    { nombre:"Antioquia", region:"Andina", logo:escudo("Escudo de Antioquia.svg"), url:"https://www.vehiculosantioquia.com.co/impuestosWeb/index.jsp", ficha:true },
+    { nombre:"Arauca", region:"Orinoquía", logo:escudo("Escudo de Arauca.svg"), url:"https://arauca.gov.co/impuesto-de-vehiculo", ficha:true },
+    { nombre:"Atlántico", region:"Caribe", logo:escudo("Escudo del Atlántico.svg"), url:"https://portalimpuestos.atlantico.gov.co/Portal-ATLRentas/vehiculos_declaracion.jsp", ficha:true },
+    { nombre:"Bolívar", region:"Caribe", logo:escudo("Escudo de Bolívar (Colombia).svg"), url:"https://impuestos.bolivar.gov.co/gobol_web/liquidaciones", ficha:true },
+    { nombre:"Boyacá", region:"Andina", logo:escudo("Escudo de Boyacá.svg"), url:"https://www.boyaca.gov.co/", ficha:true },
+    { nombre:"Caldas", region:"Andina", logo:escudo("Coat of Arms of the Department of Caldas.svg"), url:"https://vehiculos.caldas.gov.co/web/#/", ficha:true },
     { nombre:"Caquetá", region:"Amazonía", logo:escudo("Escudo del Caquetá.svg") },
-    { nombre:"Casanare", region:"Orinoquía", logo:escudo("Escudo oficial de Casanare.svg"), url:"https://impuestos.casanare.gov.co/impuesto-vehiculos" },
-    { nombre:"Cauca", region:"Pacífica", logo:escudo("Escudo del Cauca.svg"), url:"https://www.cauca.gov.co/" },
-    { nombre:"Cesar", region:"Caribe", logo:escudo("Coat of arms of Cesar (Colombia).svg"), url:"https://www.cesar.gov.co/d/es/atencion-ciudadano/tramites-servicios/46-tramites" },
+    { nombre:"Casanare", region:"Orinoquía", logo:escudo("Escudo oficial de Casanare.svg"), url:"https://impuestos.casanare.gov.co/impuesto-vehiculos", ficha:true },
+    { nombre:"Cauca", region:"Pacífica", logo:escudo("Escudo del Cauca.svg"), url:"https://www.cauca.gov.co/", ficha:true },
+    { nombre:"Cesar", region:"Caribe", logo:escudo("Coat of arms of Cesar (Colombia).svg"), url:"https://www.cesar.gov.co/d/es/atencion-ciudadano/tramites-servicios/46-tramites", ficha:true },
     { nombre:"Chocó", region:"Pacífica", logo:escudo("Escudo del Chocó.svg") },
     { nombre:"Córdoba", region:"Caribe", logo:escudo("Escudo oficial de Córdoba (Colombia).svg"), url:"https://impuestos.cordoba.gov.co/RentasCord/vehiculos_declaracion.jsp",
       ficha:true,
@@ -124,23 +112,23 @@ const departamentos = [
           gobernacion:"https://www.cordoba.gov.co/"
       }
     },
-    { nombre:"Cundinamarca", region:"Andina", logo:escudo("Escudo de Cundinamarca.svg"), url:"https://estampillas.cundinamarca.gov.co/preguntas-frecuentes/4/impuesto-sobre-vehiculos/" },
+    { nombre:"Cundinamarca", region:"Andina", logo:escudo("Escudo de Cundinamarca.svg"), url:"https://estampillas.cundinamarca.gov.co/preguntas-frecuentes/4/impuesto-sobre-vehiculos/", ficha:true },
     { nombre:"Guainía", region:"Amazonía", logo:escudo("Escudo del Guainía.svg") },
     { nombre:"Guaviare", region:"Amazonía", logo:escudo("Escudo del Guaviare.svg") },
-    { nombre:"Huila", region:"Andina", logo:escudo("Escudo del Huila.svg"), url:"https://vehiculos.huila.gobiernoit.com/HUIVehiculos/index.jsp" },
-    { nombre:"La Guajira", region:"Caribe", logo:escudo("Escudo de La Guajira.svg"), url:"https://edeskprisma.syc.com.co/guajira" },
-    { nombre:"Magdalena", region:"Caribe", logo:escudo("Escudo del Magdalena.svg"), url:"https://impuestos.gobernaciondelmagdalena.gov.co/" },
-    { nombre:"Meta", region:"Orinoquía", logo:escudo("Escudo del Meta.svg"), url:"https://meta.gov.co/" },
-    { nombre:"Nariño", region:"Pacífica", logo:escudo("Escudo de Nariño.svg"), url:"https://impuestovehicular.narino.gov.co/portal-narino/#/" },
-    { nombre:"Norte de Santander", region:"Andina", logo:escudo("Escudo de Norte de Santander.svg"), url:"https://vehiculos.nortedesantander.gov.co/" },
-    { nombre:"Putumayo", region:"Amazonía", logo:escudo("Escudo del Putumayo.svg"), url:"https://appsold.putumayo.gov.co/aplicaciones/tramites_gober/" },
-    { nombre:"Quindío", region:"Andina", logo:escudo("Escudo del Quindío.svg"), url:"https://isva.quindio.gov.co/portal-quindio/" },
-    { nombre:"Risaralda", region:"Andina", logo:escudo("Escudo de Risaralda.svg"), url:"https://tributario.risaralda.siifweb.com/" },
-    { nombre:"San Andrés y Providencia", region:"Caribe", logo:escudo("Escudo de San Andrés y Providencia.svg"), url:"https://ventanilla.sanandres.gov.co/tramites/154/impuesto-sobre-vehiculo-automotor/" },
-    { nombre:"Santander", region:"Andina", logo:escudo("Escudo de Santander 2004 (Colombia).svg"), url:"https://edeskprisma.syc.com.co/SANTANDER" },
-    { nombre:"Sucre", region:"Caribe", logo:escudo("Escudo de Sucre.svg"), url:"https://impuestos.sucre.gobiernoit.com/Portal-VehiculoSucre/" },
-    { nombre:"Tolima", region:"Andina", logo:escudo("Escudo del Tolima.svg"), url:"https://aplicativosenlinea.net/sivervtolima/redirect/" },
-    { nombre:"Valle del Cauca", region:"Pacífica", logo:escudo("Escudo del Valle del Cauca.svg"), url:"https://www.vehiculosvalle.com.co/impuestosweb/#/public" },
+    { nombre:"Huila", region:"Andina", logo:escudo("Escudo del Huila.svg"), url:"https://vehiculos.huila.gobiernoit.com/HUIVehiculos/index.jsp", ficha:true },
+    { nombre:"La Guajira", region:"Caribe", logo:escudo("Escudo de La Guajira.svg"), url:"https://edeskprisma.syc.com.co/guajira", ficha:true },
+    { nombre:"Magdalena", region:"Caribe", logo:escudo("Escudo del Magdalena.svg"), url:"https://impuestos.gobernaciondelmagdalena.gov.co/", ficha:true },
+    { nombre:"Meta", region:"Orinoquía", logo:escudo("Escudo del Meta.svg"), url:"https://meta.gov.co/", ficha:true },
+    { nombre:"Nariño", region:"Pacífica", logo:escudo("Escudo de Nariño.svg"), url:"https://impuestovehicular.narino.gov.co/portal-narino/#/", ficha:true },
+    { nombre:"Norte de Santander", region:"Andina", logo:escudo("Escudo de Norte de Santander.svg"), url:"https://vehiculos.nortedesantander.gov.co/", ficha:true },
+    { nombre:"Putumayo", region:"Amazonía", logo:escudo("Escudo del Putumayo.svg"), url:"https://appsold.putumayo.gov.co/aplicaciones/tramites_gober/", ficha:true },
+    { nombre:"Quindío", region:"Andina", logo:escudo("Escudo del Quindío.svg"), url:"https://isva.quindio.gov.co/portal-quindio/", ficha:true },
+    { nombre:"Risaralda", region:"Andina", logo:escudo("Escudo de Risaralda.svg"), url:"https://tributario.risaralda.siifweb.com/", ficha:true },
+    { nombre:"San Andrés y Providencia", region:"Caribe", logo:escudo("Escudo de San Andrés y Providencia.svg"), url:"https://ventanilla.sanandres.gov.co/tramites/154/impuesto-sobre-vehiculo-automotor/", ficha:true },
+    { nombre:"Santander", region:"Andina", logo:escudo("Escudo de Santander 2004 (Colombia).svg"), url:"https://edeskprisma.syc.com.co/SANTANDER", ficha:true },
+    { nombre:"Sucre", region:"Caribe", logo:escudo("Escudo de Sucre.svg"), url:"https://impuestos.sucre.gobiernoit.com/Portal-VehiculoSucre/", ficha:true },
+    { nombre:"Tolima", region:"Andina", logo:escudo("Escudo del Tolima.svg"), url:"https://aplicativosenlinea.net/sivervtolima/redirect/", ficha:true },
+    { nombre:"Valle del Cauca", region:"Pacífica", logo:escudo("Escudo del Valle del Cauca.svg"), url:"https://www.vehiculosvalle.com.co/impuestosweb/#/public", ficha:true },
     { nombre:"Vaupés", region:"Amazonía", logo:escudo("Escudo del Vaupés.svg") },
     { nombre:"Vichada", region:"Orinoquía", logo:escudo("Escudo del Vichada.svg") },
     { nombre:"Bogotá D.C.", region:"Andina", logo:escudo("Escudo de Bogotá.svg"), url:"https://www.haciendabogota.gov.co/es/impuestos/impuesto-sobre-vehiculos-automotores" }
@@ -179,7 +167,7 @@ function mostrarDepartamentos() {
                 ${activo}
                     ? `<div class="acciones">
                          <a class="boton" href="${d.url}" target="_blank" rel="noopener noreferrer">💰 Impuesto ↗</a>
-                         ${d.ficha ? '<button class="boton ficha" type="button" onclick="abrirCordoba()">🇨🇴 Ver ficha</button>' : ''}
+                         <button class="boton ficha" type="button" onclick="abrirFicha('${d.nombre}')">🇨🇴 Ver ficha</button>
                          <a class="boton secundario" href="https://www.runt.gov.co/consultaCiudadana/#/consultaVehiculo" target="_blank" rel="noopener noreferrer">🛡️ SOAT ↗</a>
                          <a class="boton secundario" href="https://www.simit.org.co/" target="_blank" rel="noopener noreferrer">⚠️ Multas ↗</a>
                          <a class="boton secundario" href="https://www.runt.gov.co/" target="_blank" rel="noopener noreferrer">📄 Trámites ↗</a>
@@ -209,22 +197,63 @@ document.querySelectorAll(".filtro").forEach(boton => {
     });
 });
 
-function abrirCordoba() {
-    const modal = document.getElementById("modalCordoba");
+function abrirFicha(nombre) {
+    const d = departamentos.find(item => item.nombre === nombre);
+    if (!d) return;
+
+    const modal = document.getElementById("modalFicha");
+    const escudoImg = document.getElementById("fichaEscudo");
+    const titulo = document.getElementById("fichaTitulo");
+    const subtitulo = document.getElementById("fichaSubtitulo");
+    const servicios = document.getElementById("fichaServicios");
+
+    titulo.textContent = d.nombre;
+    subtitulo.textContent = d.nombre === "Córdoba"
+        ? "Servicios oficiales para propietarios de vehículos"
+        : "Portal oficial de impuesto vehicular y consultas nacionales";
+
+    escudoImg.src = d.logo;
+    escudoImg.alt = "Escudo de " + d.nombre;
+
+    let tarjetas = "";
+
+    if (d.servicios && d.servicios.consulta) {
+        tarjetas += `
+            <a href="${d.servicios.consulta}" target="_blank" rel="noopener noreferrer">🔎 <strong>Consultar vehículo</strong><small>Consulta por placa</small></a>
+            <a href="${d.servicios.liquidacion}" target="_blank" rel="noopener noreferrer">💰 <strong>Liquidar impuesto</strong><small>Declaración y pago</small></a>
+            <a href="${d.servicios.pazsalvo}" target="_blank" rel="noopener noreferrer">📄 <strong>Paz y salvo</strong><small>Solicitud en línea</small></a>
+            <a href="${d.servicios.calendario}" target="_blank" rel="noopener noreferrer">📅 <strong>Calendario</strong><small>Fechas y beneficios</small></a>`;
+    } else {
+        tarjetas += `
+            <a href="${d.url}" target="_blank" rel="noopener noreferrer">💰 <strong>Impuesto vehicular</strong><small>Portal oficial del departamento</small></a>
+            <a href="${d.url}" target="_blank" rel="noopener noreferrer">🔎 <strong>Consultar / liquidar</strong><small>Ingresar al portal tributario</small></a>`;
+    }
+
+    tarjetas += `
+        <a href="${serviciosNacionales.soat}" target="_blank" rel="noopener noreferrer">🛡️ <strong>Revisar SOAT</strong><small>Consulta nacional RUNT</small></a>
+        <a href="${serviciosNacionales.multas}" target="_blank" rel="noopener noreferrer">⚠️ <strong>Consultar multas</strong><small>Consulta nacional SIMIT</small></a>
+        <a href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer">🚗 <strong>Trámites de tránsito</strong><small>Portal nacional RUNT</small></a>
+        ${d.servicios && d.servicios.gobernacion
+            ? '<a href="' + d.servicios.gobernacion + '" target="_blank" rel="noopener noreferrer">🏛️ <strong>Gobernación</strong><small>Portal oficial</small></a>'
+            : ''}`;
+
+    servicios.innerHTML = tarjetas;
     modal.classList.add("mostrar");
     modal.setAttribute("aria-hidden","false");
 }
-function cerrarCordoba() {
-    const modal = document.getElementById("modalCordoba");
+
+function cerrarFicha() {
+    const modal = document.getElementById("modalFicha");
     modal.classList.remove("mostrar");
     modal.setAttribute("aria-hidden","true");
 }
-document.getElementById("cerrarModal").addEventListener("click", cerrarCordoba);
-document.getElementById("modalCordoba").addEventListener("click", e => {
-    if (e.target.id === "modalCordoba") cerrarCordoba();
+
+document.getElementById("cerrarModal").addEventListener("click", cerrarFicha);
+document.getElementById("modalFicha").addEventListener("click", e => {
+    if (e.target.id === "modalFicha") cerrarFicha();
 });
 document.addEventListener("keydown", e => {
-    if (e.key === "Escape") cerrarCordoba();
+    if (e.key === "Escape") cerrarFicha();
 });
 
 buscador.addEventListener("input", mostrarDepartamentos);

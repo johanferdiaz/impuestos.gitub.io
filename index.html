@@ -49,9 +49,9 @@
             <p>Accesos oficiales para consultar información que aplica a todo el país.</p>
         </div>
         <div class="servicios-grid">
-            <a href="https://www.runt.gov.co/consultaCiudadana/#/consultaVehiculo" target="_blank" rel="noopener noreferrer" class="servicio"><span>🛡️</span><strong>Consultar SOAT</strong><small>RUNT</small></a>
-            <a href="https://www.simit.org.co/" target="_blank" rel="noopener noreferrer" class="servicio"><span>⚠️</span><strong>Consultar multas</strong><small>SIMIT</small></a>
-            <a href="https://www.runt.gov.co/" target="_blank" rel="noopener noreferrer" class="servicio"><span>📄</span><strong>Trámites de tránsito</strong><small>RUNT</small></a>
+            <a href="${serviciosNacionales.soat}" target="_blank" rel="noopener noreferrer" class="servicio"><span>🛡️</span><strong>Consultar SOAT</strong><small>RUNT</small></a>
+            <a href="${serviciosNacionales.multas}" target="_blank" rel="noopener noreferrer" class="servicio"><span>⚠️</span><strong>Consultar multas</strong><small>SIMIT</small></a>
+            <a href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer" class="servicio"><span>📄</span><strong>Trámites de tránsito</strong><small>RUNT</small></a>
         </div>
     </section>
 
@@ -62,23 +62,20 @@
             <button class="cerrar-modal" id="cerrarModal" aria-label="Cerrar">×</button>
             <span class="mini-badge">🇨🇴 FICHA DEPARTAMENTAL</span>
             <div class="modal-titulo">
-                <div class="escudo modal-escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20oficial%20de%20C%C3%B3rdoba%20(Colombia).svg" alt="Escudo de Córdoba">
+                <div class="escudo modal-escudo"><img src="${escudo("Escudo oficial de Córdoba (Colombia).svg")}" alt="Escudo de Córdoba"></div>
                 <div><h2>Córdoba</h2><p>Servicios oficiales para propietarios de vehículos</p></div>
             </div>
             <div class="cordoba-alerta">🛡️ Para pagos y consultas tributarias, utiliza únicamente los portales oficiales de la Gobernación de Córdoba.</div>
-            <h3 class="pregunta-cordoba">🚗 ¿Qué necesitas hacer?</h3>
-            <p class="subtitulo-cordoba">Elige directamente el trámite que buscas.</p>
             <div class="cordoba-servicios">
                 <a href="https://impuestos.cordoba.gov.co/VehiculosCor/IUVA_001.jsp?opcionSeleccionada=2" target="_blank" rel="noopener noreferrer">🔎 <strong>Consultar vehículo</strong><small>Consulta por placa</small></a>
                 <a href="https://impuestos.cordoba.gov.co/VehiculosCor/DecVeh.jsp" target="_blank" rel="noopener noreferrer">💰 <strong>Liquidar impuesto</strong><small>Declaración y pago</small></a>
                 <a href="https://impuestos.cordoba.gov.co/VehiculosCor/Solicitud_PazySalvo.jsp" target="_blank" rel="noopener noreferrer">📄 <strong>Paz y salvo</strong><small>Solicitud en línea</small></a>
                 <a href="https://impuestos.cordoba.gov.co/VehiculosCor/calendario.jsp" target="_blank" rel="noopener noreferrer">📅 <strong>Calendario</strong><small>Fechas y beneficios</small></a>
-                <a href="https://www.runt.gov.co/consultaCiudadana/#/consultaVehiculo" target="_blank" rel="noopener noreferrer">🛡️ <strong>Revisar SOAT</strong><small>Consulta nacional RUNT</small></a>
-                <a href="https://www.simit.org.co/" target="_blank" rel="noopener noreferrer">⚠️ <strong>Consultar multas</strong><small>Consulta nacional SIMIT</small></a>
-                <a href="https://www.runt.gov.co/" target="_blank" rel="noopener noreferrer">🚗 <strong>Hacer un trámite</strong><small>Portal nacional RUNT</small></a>
+                <a href="${serviciosNacionales.soat}" target="_blank" rel="noopener noreferrer">🛡️ <strong>SOAT</strong><small>Consulta nacional RUNT</small></a>
+                <a href="${serviciosNacionales.multas}" target="_blank" rel="noopener noreferrer">⚠️ <strong>Multas</strong><small>Consulta nacional SIMIT</small></a>
+                <a href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer">🚗 <strong>Trámites</strong><small>RUNT</small></a>
                 <a href="https://www.cordoba.gov.co/" target="_blank" rel="noopener noreferrer">🏛️ <strong>Gobernación</strong><small>Portal oficial</small></a>
             </div>
-            <div class="otros-accesos-cordoba"><strong>🔗 Otros accesos oficiales</strong><span>Gobernación de Córdoba · RUNT · SIMIT</span></div>
             <div class="contacto-cordoba">
                 <strong>Gobernación de Córdoba · Secretaría de Hacienda</strong>
                 <span>Centro Comercial Places Mall, 2.º piso · Cra. 6 # 65-24 · Montería</span>
@@ -114,7 +111,16 @@ const departamentos = [
     { nombre:"Cauca", region:"Pacífica", logo:escudo("Escudo del Cauca.svg"), url:"https://www.cauca.gov.co/" },
     { nombre:"Cesar", region:"Caribe", logo:escudo("Coat of arms of Cesar (Colombia).svg"), url:"https://www.cesar.gov.co/d/es/atencion-ciudadano/tramites-servicios/46-tramites" },
     { nombre:"Chocó", region:"Pacífica", logo:escudo("Escudo del Chocó.svg") },
-    { nombre:"Córdoba", region:"Caribe", logo:escudo("Escudo oficial de Córdoba (Colombia).svg"), url:"https://impuestos.cordoba.gov.co/RentasCord/vehiculos_declaracion.jsp", ficha:true },
+    { nombre:"Córdoba", region:"Caribe", logo:escudo("Escudo oficial de Córdoba (Colombia).svg"), url:"https://impuestos.cordoba.gov.co/RentasCord/vehiculos_declaracion.jsp",
+      ficha:true,
+      servicios:{
+          consulta:"https://impuestos.cordoba.gov.co/VehiculosCor/IUVA_001.jsp?opcionSeleccionada=2",
+          liquidacion:"https://impuestos.cordoba.gov.co/VehiculosCor/DecVeh.jsp",
+          pazsalvo:"https://impuestos.cordoba.gov.co/VehiculosCor/Solicitud_PazySalvo.jsp",
+          calendario:"https://impuestos.cordoba.gov.co/VehiculosCor/calendario.jsp",
+          gobernacion:"https://www.cordoba.gov.co/"
+      }
+    },
     { nombre:"Cundinamarca", region:"Andina", logo:escudo("Escudo de Cundinamarca.svg"), url:"https://estampillas.cundinamarca.gov.co/preguntas-frecuentes/4/impuesto-sobre-vehiculos/" },
     { nombre:"Guainía", region:"Amazonía", logo:escudo("Escudo del Guainía.svg") },
     { nombre:"Guaviare", region:"Amazonía", logo:escudo("Escudo del Guaviare.svg") },
@@ -143,6 +149,7 @@ let regionActual = "Todos";
 
 function mostrarDepartamentos() {
     const texto = buscador.value.toLowerCase().trim();
+
     const resultados = departamentos.filter(d =>
         d.nombre.toLowerCase().includes(texto) &&
         (regionActual === "Todos" || d.region === regionActual)
@@ -150,38 +157,44 @@ function mostrarDepartamentos() {
 
     contenedor.innerHTML = resultados.map(d => {
         const activo = Boolean(d.url);
-        const iniciales = d.nombre.replace(" y Providencia","").replace(" D.C.","")
-            .split(" ").filter(Boolean).slice(0,2).map(p => p[0]).join("");
+        const iniciales = d.nombre
+            .replace(" y Providencia","")
+            .replace(" D.C.","")
+            .split(" ").filter(Boolean).slice(0,2)
+            .map(p => p[0]).join("");
 
-        const acciones = activo
-            ? `<div class="acciones">
-                <a class="boton" href="${d.url}" target="_blank" rel="noopener noreferrer">💰 Impuesto ↗</a>
-                ${d.ficha ? '<button class="boton ficha" type="button" onclick="abrirCordoba()">🇨🇴 Ver ficha</button>' : ''}
-                <a class="boton secundario" href="${serviciosNacionales.soat}" target="_blank" rel="noopener noreferrer">🛡️ SOAT ↗</a>
-                <a class="boton secundario" href="${serviciosNacionales.multas}" target="_blank" rel="noopener noreferrer">⚠️ Multas ↗</a>
-                <a class="boton secundario" href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer">📄 Trámites ↗</a>
-            </div>`
-            : `<div class="acciones">
-                <button class="boton deshabilitado" disabled>Impuesto en construcción</button>
-                <a class="boton secundario" href="${serviciosNacionales.soat}" target="_blank" rel="noopener noreferrer">🛡️ SOAT ↗</a>
-                <a class="boton secundario" href="${serviciosNacionales.multas}" target="_blank" rel="noopener noreferrer">⚠️ Multas ↗</a>
-                <a class="boton secundario" href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer">📄 Trámites ↗</a>
-            </div>`;
-
-        return `<article class="card ${activo ? "activo" : "proximamente"}">
-            <div class="escudo">
-                <img src="${d.logo}" alt="Escudo de ${d.nombre}" loading="lazy"
-                     onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-                <b style="display:none">${iniciales}</b>
-            </div>
-            <div class="region">${d.region}</div>
-            <h3>${d.nombre}</h3>
-            <span class="estado">${activo ? "● Portal disponible" : "○ Próximamente"}</span>
-            ${acciones}
-        </article>`;
+        return `
+            <article class="card ${activo ? "activo" : "proximamente"}">
+                <div class="escudo">
+                    <img src="${d.logo}" alt="Escudo de ${d.nombre}" loading="lazy"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                    <b style="display:none">${iniciales}</b>
+                </div>
+                <div class="region">${d.region}</div>
+                <h3>${d.nombre}</h3>
+                <span class="estado">${activo ? "● Portal disponible" : "○ Próximamente"}</span>
+                ${activo}
+                    ? `<div class="acciones">
+                         <a class="boton" href="${d.url}" target="_blank" rel="noopener noreferrer">💰 Impuesto ↗</a>
+                         ${d.ficha ? '<button class="boton ficha" type="button" onclick="abrirCordoba()">🇨🇴 Ver ficha</button>' : ''}
+                         <a class="boton secundario" href="${serviciosNacionales.soat}" target="_blank" rel="noopener noreferrer">🛡️ SOAT ↗</a>
+                         <a class="boton secundario" href="${serviciosNacionales.multas}" target="_blank" rel="noopener noreferrer">⚠️ Multas ↗</a>
+                         <a class="boton secundario" href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer">📄 Trámites ↗</a>
+                       </div>`
+                    : `<div class="acciones">
+                         <button class="boton deshabilitado" disabled>Impuesto en construcción</button>
+                         <a class="boton secundario" href="${serviciosNacionales.soat}" target="_blank" rel="noopener noreferrer">🛡️ SOAT ↗</a>
+                         <a class="boton secundario" href="${serviciosNacionales.multas}" target="_blank" rel="noopener noreferrer">⚠️ Multas ↗</a>
+                         <a class="boton secundario" href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer">📄 Trámites ↗</a>
+                       </div>`
+                }
+            </article>
+        `;
     }).join("");
 
-    if (!resultados.length) contenedor.innerHTML = '<p class="sin-resultados">No encontramos ese departamento.</p>';
+    if (!resultados.length) {
+        contenedor.innerHTML = '<p class="sin-resultados">No encontramos ese departamento.</p>';
+    }
 }
 
 document.querySelectorAll(".filtro").forEach(boton => {
@@ -195,28 +208,23 @@ document.querySelectorAll(".filtro").forEach(boton => {
 
 function abrirCordoba() {
     const modal = document.getElementById("modalCordoba");
-    if (!modal) return;
     modal.classList.add("mostrar");
     modal.setAttribute("aria-hidden","false");
 }
 function cerrarCordoba() {
     const modal = document.getElementById("modalCordoba");
-    if (!modal) return;
     modal.classList.remove("mostrar");
     modal.setAttribute("aria-hidden","true");
 }
-
-const cerrarModal = document.getElementById("cerrarModal");
-const modalCordoba = document.getElementById("modalCordoba");
-if (cerrarModal) cerrarModal.addEventListener("click", cerrarCordoba);
-if (modalCordoba) modalCordoba.addEventListener("click", e => {
+document.getElementById("cerrarModal").addEventListener("click", cerrarCordoba);
+document.getElementById("modalCordoba").addEventListener("click", e => {
     if (e.target.id === "modalCordoba") cerrarCordoba();
 });
 document.addEventListener("keydown", e => {
     if (e.key === "Escape") cerrarCordoba();
 });
-if (buscador) buscador.addEventListener("input", mostrarDepartamentos);
 
+buscador.addEventListener("input", mostrarDepartamentos);
 document.getElementById("total").textContent = departamentos.length;
 document.getElementById("disponibles").textContent = departamentos.filter(d => d.url).length;
 mostrarDepartamentos();

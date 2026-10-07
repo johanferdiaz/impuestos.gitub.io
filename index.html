@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal informativo para consultar los sitios oficiales de impuesto vehicular de Colombia.">
     <title>Impuestos Vehiculares de Colombia</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -10,87 +11,132 @@
 
 <header class="hero">
     <div class="hero-content">
-        <span class="badge">PORTAL INFORMATIVO</span>
+        <span class="badge">🇨🇴 PORTAL NACIONAL</span>
         <h1>Impuestos Vehiculares de Colombia</h1>
-        <p>Consulta de manera rápida los portales oficiales de impuestos de vehículos por departamento.</p>
+        <p>Encuentra en un solo lugar los portales oficiales de las gobernaciones y Bogotá D.C. para consultar tu impuesto vehicular.</p>
     </div>
 </header>
 
 <main>
     <section class="intro">
-        <h2>Gobernaciones</h2>
-        <p>Selecciona tu departamento para consultar el impuesto vehicular.</p>
+        <h2>Consulta por departamento</h2>
+        <p>Busca tu departamento y accede directamente a su portal oficial.</p>
         <input type="search" id="buscador" placeholder="🔎 Buscar departamento..." aria-label="Buscar departamento">
+        <div class="estadisticas">
+            <span><strong id="total">0</strong> territorios</span>
+            <span><strong id="disponibles">0</strong> portales disponibles</span>
+        </div>
+    </section>
+
+    <div class="seguridad">
+        <strong>🛡️ Navega con seguridad</strong>
+        <span>Antes de realizar un pago, verifica que el sitio corresponda a la entidad oficial. Este portal no recibe pagos ni solicita datos bancarios.</span>
+    </div>
+
+    <section class="regiones">
+        <button class="filtro activo-filtro" data-region="Todos">Todos</button>
+        <button class="filtro" data-region="Caribe">Caribe</button>
+        <button class="filtro" data-region="Andina">Andina</button>
+        <button class="filtro" data-region="Pacífica">Pacífica</button>
+        <button class="filtro" data-region="Orinoquía">Orinoquía</button>
+        <button class="filtro" data-region="Amazonía">Amazonía</button>
     </section>
 
     <section id="departamentos" class="grid"></section>
 </main>
 
 <footer>
-    <p>Portal informativo • Los enlaces dirigen a sitios oficiales o plataformas autorizadas por cada entidad.</p>
+    <p>Portal informativo independiente • Los enlaces llevan a sitios oficiales o plataformas autorizadas por cada entidad.</p>
 </footer>
 
 <script>
 const departamentos = [
-    { nombre: "Amazonas" },
-    { nombre: "Antioquia", url: "https://www.vehiculosantioquia.com.co/impuestosWeb/index.jsp" },
-    { nombre: "Arauca", url: "https://arauca.gov.co/impuesto-de-vehiculo" },
-    { nombre: "Atlántico", url: "https://portalimpuestos.atlantico.gov.co/Portal-ATLRentas/vehiculos_declaracion.jsp" },
-    { nombre: "Bolívar", url: "https://impuestos.bolivar.gov.co/gobol_web/liquidaciones" },
-    { nombre: "Boyacá", url: "https://www.boyaca.gov.co/" },
-    { nombre: "Caldas", url: "https://vehiculos.caldas.gov.co/web/#/" },
-    { nombre: "Caquetá" },
-    { nombre: "Casanare", url: "https://impuestos.casanare.gov.co/" },
-    { nombre: "Cauca", url: "https://www.rentascauca.gov.co/" },
-    { nombre: "Cesar" },
-    { nombre: "Chocó" },
-    { nombre: "Córdoba", url: "https://impuestos.cordoba.gov.co/RentasCord/vehiculos_declaracion.jsp" },
-    { nombre: "Cundinamarca", url: "https://www.cundinamarca.gov.co/dependencias/sechacienda/impuestos/vehiculos/" },
-    { nombre: "Guainía" },
-    { nombre: "Guaviare" },
-    { nombre: "Huila", url: "https://vehiculos.huila.gobiernoit.com/HUIVehiculos/index.jsp" },
-    { nombre: "La Guajira", url: "https://edeskprisma.syc.com.co/guajira" },
-    { nombre: "Magdalena", url: "https://impuestos.gobernaciondelmagdalena.gov.co/" },
-    { nombre: "Meta", url: "https://meta.gov.co/" },
-    { nombre: "Nariño", url: "https://impuestovehicular.narino.gov.co/portal-narino/#/" },
-    { nombre: "Norte de Santander", url: "https://vehiculos.nortedesantander.gov.co/" },
-    { nombre: "Putumayo", url: "https://appsold.putumayo.gov.co/aplicaciones/tramites_gober/" },
-    { nombre: "Quindío", url: "https://isva.quindio.gov.co/portal-quindio/" },
-    { nombre: "Risaralda", url: "https://tributario.risaralda.siifweb.com/" },
-    { nombre: "San Andrés y Providencia", url: "https://ventanilla.sanandres.gov.co/tramites/154/impuesto-sobre-vehiculo-automotor/" },
-    { nombre: "Santander", url: "https://edeskprisma.syc.com.co/SANTANDER" },
-    { nombre: "Sucre", url: "https://impuestos.sucre.gobiernoit.com/Portal-VehiculoSucre/" },
-    { nombre: "Tolima", url: "https://aplicativosenlinea.net/sivervtolima/redirect/" },
-    { nombre: "Valle del Cauca", url: "https://www.vehiculosvalle.com.co/impuestosweb/#/public" },,
-    { nombre: "Vaupés" },
-    { nombre: "Vichada" },
-    { nombre: "Bogotá D.C." }
+    { nombre:"Amazonas", region:"Amazonía" },
+    { nombre:"Antioquia", region:"Andina", url:"https://www.vehiculosantioquia.com.co/impuestosWeb/index.jsp" },
+    { nombre:"Arauca", region:"Orinoquía", url:"https://arauca.gov.co/impuesto-de-vehiculo" },
+    { nombre:"Atlántico", region:"Caribe", url:"https://portalimpuestos.atlantico.gov.co/Portal-ATLRentas/vehiculos_declaracion.jsp" },
+    { nombre:"Bolívar", region:"Caribe", url:"https://impuestos.bolivar.gov.co/gobol_web/liquidaciones" },
+    { nombre:"Boyacá", region:"Andina", url:"https://www.boyaca.gov.co/" },
+    { nombre:"Caldas", region:"Andina", url:"https://vehiculos.caldas.gov.co/web/#/" },
+    { nombre:"Caquetá", region:"Amazonía" },
+    { nombre:"Casanare", region:"Orinoquía", url:"https://impuestos.casanare.gov.co/impuesto-vehiculos" },
+    { nombre:"Cauca", region:"Pacífica", url:"https://www.cauca.gov.co/" },
+    { nombre:"Cesar", region:"Caribe", url:"https://www.cesar.gov.co/d/es/atencion-ciudadano/tramites-servicios/46-tramites" },
+    { nombre:"Chocó", region:"Pacífica" },
+    { nombre:"Córdoba", region:"Caribe", url:"https://impuestos.cordoba.gov.co/RentasCord/vehiculos_declaracion.jsp" },
+    { nombre:"Cundinamarca", region:"Andina", url:"https://estampillas.cundinamarca.gov.co/preguntas-frecuentes/4/impuesto-sobre-vehiculos/" },
+    { nombre:"Guainía", region:"Amazonía" },
+    { nombre:"Guaviare", region:"Amazonía" },
+    { nombre:"Huila", region:"Andina", url:"https://vehiculos.huila.gobiernoit.com/HUIVehiculos/index.jsp" },
+    { nombre:"La Guajira", region:"Caribe", url:"https://edeskprisma.syc.com.co/guajira" },
+    { nombre:"Magdalena", region:"Caribe", url:"https://impuestos.gobernaciondelmagdalena.gov.co/" },
+    { nombre:"Meta", region:"Orinoquía", url:"https://meta.gov.co/" },
+    { nombre:"Nariño", region:"Pacífica", url:"https://impuestovehicular.narino.gov.co/portal-narino/#/" },
+    { nombre:"Norte de Santander", region:"Andina", url:"https://vehiculos.nortedesantander.gov.co/" },
+    { nombre:"Putumayo", region:"Amazonía", url:"https://appsold.putumayo.gov.co/aplicaciones/tramites_gober/" },
+    { nombre:"Quindío", region:"Andina", url:"https://isva.quindio.gov.co/portal-quindio/" },
+    { nombre:"Risaralda", region:"Andina", url:"https://tributario.risaralda.siifweb.com/" },
+    { nombre:"San Andrés y Providencia", region:"Caribe", url:"https://ventanilla.sanandres.gov.co/tramites/154/impuesto-sobre-vehiculo-automotor/" },
+    { nombre:"Santander", region:"Andina", url:"https://edeskprisma.syc.com.co/SANTANDER" },
+    { nombre:"Sucre", region:"Caribe", url:"https://impuestos.sucre.gobiernoit.com/Portal-VehiculoSucre/" },
+    { nombre:"Tolima", region:"Andina", url:"https://aplicativosenlinea.net/sivervtolima/redirect/" },
+    { nombre:"Valle del Cauca", region:"Pacífica", url:"https://www.vehiculosvalle.com.co/impuestosweb/#/public" },
+    { nombre:"Vaupés", region:"Amazonía" },
+    { nombre:"Vichada", region:"Orinoquía" },
+    { nombre:"Bogotá D.C.", region:"Andina", url:"https://www.haciendabogota.gov.co/es/impuestos/impuesto-sobre-vehiculos-automotores" }
 ];
 
 const contenedor = document.getElementById("departamentos");
 const buscador = document.getElementById("buscador");
+let regionActual = "Todos";
 
-function mostrarDepartamentos(filtro = "") {
-    const texto = filtro.toLowerCase().trim();
-    const resultados = departamentos.filter(departamento => departamento.nombre.toLowerCase().includes(texto));
+function mostrarDepartamentos() {
+    const texto = buscador.value.toLowerCase().trim();
 
-    contenedor.innerHTML = resultados.map(departamento => {
-        const activo = Boolean(departamento.url);
-        const iniciales = departamento.nombre.replace(" y Providencia", "").replace(" D.C.", "").split(" ").filter(Boolean).slice(0, 2).map(palabra => palabra[0]).join("");
+    const resultados = departamentos.filter(d =>
+        d.nombre.toLowerCase().includes(texto) &&
+        (regionActual === "Todos" || d.region === regionActual)
+    );
+
+    contenedor.innerHTML = resultados.map(d => {
+        const activo = Boolean(d.url);
+        const iniciales = d.nombre
+            .replace(" y Providencia","")
+            .replace(" D.C.","")
+            .split(" ").filter(Boolean).slice(0,2)
+            .map(p => p[0]).join("");
+
         return `
             <article class="card ${activo ? "activo" : "proximamente"}">
-                <div class="escudo">${iniciales}</div>
-                <h3>${departamento.nombre}</h3>
-                <span class="estado">${activo ? "Portal disponible" : "Próximamente"}</span>
-                ${activo ? `<a class="boton" href="${departamento.url}" target="_blank" rel="noopener noreferrer">Consultar impuesto ↗</a>` : `<button class="boton deshabilitado" disabled>En construcción</button>`}
+                <div class="escudo"><span>🏛️</span><b>${iniciales}</b></div>
+                <div class="region">${d.region}</div>
+                <h3>${d.nombre}</h3>
+                <span class="estado">${activo ? "● Portal disponible" : "○ Próximamente"}</span>
+                ${activo
+                    ? `<a class="boton" href="${d.url}" target="_blank" rel="noopener noreferrer">Consultar impuesto ↗</a>`
+                    : `<button class="boton deshabilitado" disabled>En construcción</button>`
+                }
             </article>
         `;
     }).join("");
 
-    if (!resultados.length) contenedor.innerHTML = '<p class="sin-resultados">No encontramos ese departamento.</p>';
+    if (!resultados.length) {
+        contenedor.innerHTML = '<p class="sin-resultados">No encontramos ese departamento.</p>';
+    }
 }
 
-buscador.addEventListener("input", () => mostrarDepartamentos(buscador.value));
+document.querySelectorAll(".filtro").forEach(boton => {
+    boton.addEventListener("click", () => {
+        document.querySelectorAll(".filtro").forEach(b => b.classList.remove("activo-filtro"));
+        boton.classList.add("activo-filtro");
+        regionActual = boton.dataset.region;
+        mostrarDepartamentos();
+    });
+});
+
+buscador.addEventListener("input", mostrarDepartamentos);
+document.getElementById("total").textContent = departamentos.length;
+document.getElementById("disponibles").textContent = departamentos.filter(d => d.url).length;
 mostrarDepartamentos();
 </script>
 

@@ -56,12 +56,12 @@ const departamentos = [
     { nombre: "Norte de Santander", url: "https://vehiculos.nortedesantander.gov.co/" },
     { nombre: "Putumayo", url: "https://appsold.putumayo.gov.co/aplicaciones/tramites_gober/" },
     { nombre: "Quindío", url: "https://isva.quindio.gov.co/portal-quindio/" },
-    { nombre: "Risaralda" },
-    { nombre: "San Andrés y Providencia" },
+    { nombre: "Risaralda", url: "https://tributario.risaralda.siifweb.com/" },
+    { nombre: "San Andrés y Providencia", url: "https://ventanilla.sanandres.gov.co/tramites/154/impuesto-sobre-vehiculo-automotor/" },
     { nombre: "Santander", url: "https://edeskprisma.syc.com.co/SANTANDER" },
-    { nombre: "Sucre" },
+    { nombre: "Sucre", url: "https://impuestos.sucre.gobiernoit.com/Portal-VehiculoSucre/" },
     { nombre: "Tolima", url: "https://aplicativosenlinea.net/sivervtolima/redirect/" },
-    { nombre: "Valle del Cauca" },
+    { nombre: "Valle del Cauca", url: "https://www.vehiculosvalle.com.co/impuestosweb/#/public" },,
     { nombre: "Vaupés" },
     { nombre: "Vichada" },
     { nombre: "Bogotá D.C." }
@@ -72,38 +72,22 @@ const buscador = document.getElementById("buscador");
 
 function mostrarDepartamentos(filtro = "") {
     const texto = filtro.toLowerCase().trim();
-
-    const resultados = departamentos.filter(departamento =>
-        departamento.nombre.toLowerCase().includes(texto)
-    );
+    const resultados = departamentos.filter(departamento => departamento.nombre.toLowerCase().includes(texto));
 
     contenedor.innerHTML = resultados.map(departamento => {
         const activo = Boolean(departamento.url);
-        const iniciales = departamento.nombre
-            .replace(" y Providencia", "")
-            .replace(" D.C.", "")
-            .split(" ")
-            .filter(Boolean)
-            .slice(0, 2)
-            .map(palabra => palabra[0])
-            .join("");
-
+        const iniciales = departamento.nombre.replace(" y Providencia", "").replace(" D.C.", "").split(" ").filter(Boolean).slice(0, 2).map(palabra => palabra[0]).join("");
         return `
             <article class="card ${activo ? "activo" : "proximamente"}">
                 <div class="escudo">${iniciales}</div>
                 <h3>${departamento.nombre}</h3>
                 <span class="estado">${activo ? "Portal disponible" : "Próximamente"}</span>
-                ${activo
-                    ? `<a class="boton" href="${departamento.url}" target="_blank" rel="noopener noreferrer">Consultar impuesto ↗</a>`
-                    : `<button class="boton deshabilitado" disabled>En construcción</button>`
-                }
+                ${activo ? `<a class="boton" href="${departamento.url}" target="_blank" rel="noopener noreferrer">Consultar impuesto ↗</a>` : `<button class="boton deshabilitado" disabled>En construcción</button>`}
             </article>
         `;
     }).join("");
 
-    if (!resultados.length) {
-        contenedor.innerHTML = '<p class="sin-resultados">No encontramos ese departamento.</p>';
-    }
+    if (!resultados.length) contenedor.innerHTML = '<p class="sin-resultados">No encontramos ese departamento.</p>';
 }
 
 buscador.addEventListener("input", () => mostrarDepartamentos(buscador.value));

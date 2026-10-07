@@ -1,57 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impuestos vehiculos </title>
-    <link rel="stylesheet" href="css/estilos.css" />
+    <title>Impuestos Vehiculares de Colombia</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <header>
-        <h1>IMPUESTOS DE VEHICULOS DE GOBERNACION Y SISTEMATIZACIÓN </h1>
-        
-    </header>
-    <main>
 
-        <h2>IMPUESTOS DE GOBERNACIONES</h2>
-
-        <div id="cabecera">
-
-           
-            <div id="cordoba">
-                
-                <a href="https://impuestos.cordoba.gov.co/RentasCord/vehiculos_declaracion.jsp"> <img id="logo" src="https://www.cordoba.gov.co/info/cordoba_se/media/bloque36.png" />
-                </a> 
-               
-            </div>
-             <hr/>
-             <div id="antioquia">
-           
-               <a href="https://www.vehiculosantioquia.com.co/impuestosWeb/index.jsp"><img id="logo" src="https://sedeelectronica.antioquia.gov.co/info/antioquia_se/media//bloquefooder4390.png" /></a>
-               
-            </div>
-        
-           
-           <hr/>
-           <div id="bolivar">
-         
-               <a href="https://impuestos.bolivar.gov.co/gobol_web/liquidaciones"><img id="logo" src="https://seeklogo.com/images/G/gobernacion-de-bolivar-logo-4B75CDD549-seeklogo.com.png" /> </a>
-               
-          
-            </div>
-            <hr/>
-            <div id="atlantico">
-            
-            
-               <a href="https://portalimpuestos.atlantico.gov.co/Portal-ATLRentas/vehiculos_declaracion.jsp"> <img id="logo" src="https://cesar.gov.co/d/images/institucionales/caribe/atl.png" /></a>
-              
-         
-            </div>
-        
-        <div>
-
+<header class="hero">
+    <div class="hero-content">
+        <span class="badge">PORTAL INFORMATIVO</span>
+        <h1>Impuestos Vehiculares de Colombia</h1>
+        <p>Consulta de manera rápida los portales oficiales de impuestos de vehículos por departamento.</p>
     </div>
-    </main>
+</header>
+
+<main>
+    <section class="intro">
+        <h2>Gobernaciones</h2>
+        <p>Selecciona tu departamento para consultar el impuesto vehicular.</p>
+        <input type="search" id="buscador" placeholder="🔎 Buscar departamento..." aria-label="Buscar departamento">
+    </section>
+
+    <section id="departamentos" class="grid"></section>
+</main>
+
+<footer>
+    <p>Portal informativo • Los enlaces dirigen a los sitios oficiales de cada entidad.</p>
+</footer>
+
+<script>
+const departamentos = [
+    { nombre: "Amazonas" },
+    { nombre: "Antioquia", url: "https://www.vehiculosantioquia.com.co/impuestosWeb/index.jsp" },
+    { nombre: "Arauca" },
+    { nombre: "Atlántico", url: "https://portalimpuestos.atlantico.gov.co/Portal-ATLRentas/vehiculos_declaracion.jsp" },
+    { nombre: "Bolívar", url: "https://impuestos.bolivar.gov.co/gobol_web/liquidaciones" },
+    { nombre: "Boyacá" },
+    { nombre: "Caldas" },
+    { nombre: "Caquetá" },
+    { nombre: "Casanare" },
+    { nombre: "Cauca" },
+    { nombre: "Cesar" },
+    { nombre: "Chocó" },
+    { nombre: "Córdoba", url: "https://impuestos.cordoba.gov.co/RentasCord/vehiculos_declaracion.jsp" },
+    { nombre: "Cundinamarca" },
+    { nombre: "Guainía" },
+    { nombre: "Guaviare" },
+    { nombre: "Huila" },
+    { nombre: "La Guajira" },
+    { nombre: "Magdalena" },
+    { nombre: "Meta" },
+    { nombre: "Nariño" },
+    { nombre: "Norte de Santander" },
+    { nombre: "Putumayo" },
+    { nombre: "Quindío" },
+    { nombre: "Risaralda" },
+    { nombre: "San Andrés y Providencia" },
+    { nombre: "Santander" },
+    { nombre: "Sucre" },
+    { nombre: "Tolima" },
+    { nombre: "Valle del Cauca" },
+    { nombre: "Vaupés" },
+    { nombre: "Vichada" },
+    { nombre: "Bogotá D.C." }
+];
+
+const contenedor = document.getElementById("departamentos");
+const buscador = document.getElementById("buscador");
+
+function mostrarDepartamentos(filtro = "") {
+    const texto = filtro.toLowerCase().trim();
+
+    const resultados = departamentos.filter(departamento =>
+        departamento.nombre.toLowerCase().includes(texto)
+    );
+
+    contenedor.innerHTML = resultados.map(departamento => {
+        const activo = Boolean(departamento.url);
+        const iniciales = departamento.nombre
+            .replace(" y Providencia", "")
+            .replace(" D.C.", "")
+            .split(" ")
+            .filter(Boolean)
+            .slice(0, 2)
+            .map(palabra => palabra[0])
+            .join("");
+
+        return `
+            <article class="card ${activo ? "activo" : "proximamente"}">
+                <div class="escudo">${iniciales}</div>
+                <h3>${departamento.nombre}</h3>
+                <span class="estado">${activo ? "Portal disponible" : "Próximamente"}</span>
+                ${activo
+                    ? `<a class="boton" href="${departamento.url}" target="_blank" rel="noopener noreferrer">Consultar impuesto ↗</a>`
+                    : `<button class="boton deshabilitado" disabled>En construcción</button>`
+                }
+            </article>
+        `;
+    }).join("");
+
+    if (!resultados.length) {
+        contenedor.innerHTML = '<p class="sin-resultados">No encontramos ese departamento.</p>';
+    }
+}
+
+buscador.addEventListener("input", () => mostrarDepartamentos(buscador.value));
+mostrarDepartamentos();
+</script>
 
 </body>
 </html>

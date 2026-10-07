@@ -173,7 +173,7 @@ function mostrarDepartamentos() {
                 <div class="region">${d.region}</div>
                 <h3>${d.nombre}</h3>
                 <span class="estado">${activo ? "● Portal disponible" : "○ Próximamente"}</span>
-                ${activo}
+                ${activo
                     ? `<div class="acciones">
                          <a class="boton" href="${d.url}" target="_blank" rel="noopener noreferrer">💰 Impuesto ↗</a>
                          ${d.ficha ? '<button class="boton ficha" type="button" onclick="abrirCordoba()">🇨🇴 Ver ficha</button>' : ''}
@@ -188,7 +188,6 @@ function mostrarDepartamentos() {
                          <a class="boton secundario" href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer">📄 Trámites ↗</a>
                        </div>`
                 }
-            </article>
         `;
     }).join("");
 

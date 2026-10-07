@@ -244,11 +244,25 @@ const contenedor = document.getElementById("departamentos");
 const buscador = document.getElementById("buscador");
 let regionActual = "Todos";
 
+function normalizarTexto(texto) {
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+}
+
 function mostrarDepartamentos() {
-    const texto = buscador.value.toLowerCase().trim();
+    const texto = normalizarTexto(buscador.value);
+    const region = normalizarTexto(regionActual);
+
     document.querySelectorAll("#departamentos .card").forEach(card => {
-        const coincideNombre = card.dataset.nombre.includes(texto);
-        const coincideRegion = regionActual === "Todos" || card.dataset.region === regionActual;
+        const nombre = normalizarTexto(card.dataset.nombre);
+        const regionCard = normalizarTexto(card.dataset.region);
+
+        const coincideNombre = nombre.includes(texto);
+        const coincideRegion = regionActual === "Todos" || regionCard === region;
+
         card.hidden = !(coincideNombre && coincideRegion);
     });
 }

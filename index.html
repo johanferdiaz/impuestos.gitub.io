@@ -42,6 +42,19 @@
         <button class="filtro" data-region="Amazonía">Amazonía</button>
     </section>
 
+    <section class="servicios-nacionales">
+        <div>
+            <span class="mini-badge">🇨🇴 SERVICIOS NACIONALES</span>
+            <h2>Consultas vehiculares rápidas</h2>
+            <p>Accesos oficiales para consultar información que aplica a todo el país.</p>
+        </div>
+        <div class="servicios-grid">
+            <a href="${serviciosNacionales.soat}" target="_blank" rel="noopener noreferrer" class="servicio"><span>🛡️</span><strong>Consultar SOAT</strong><small>RUNT</small></a>
+            <a href="${serviciosNacionales.multas}" target="_blank" rel="noopener noreferrer" class="servicio"><span>⚠️</span><strong>Consultar multas</strong><small>SIMIT</small></a>
+            <a href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer" class="servicio"><span>📄</span><strong>Trámites de tránsito</strong><small>RUNT</small></a>
+        </div>
+    </section>
+
     <section id="departamentos" class="grid"></section>
 </main>
 
@@ -51,6 +64,12 @@
 
 <script>
 const escudo = nombre => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(nombre)}`;
+
+const serviciosNacionales = {
+    soat: "https://www.runt.gov.co/consultaCiudadana/#/consultaVehiculo",
+    multas: "https://www.simit.org.co/",
+    tramites: "https://www.runt.gov.co/"
+};
 
 const departamentos = [
     { nombre:"Amazonas", region:"Amazonía", logo:escudo("Escudo de Amazonas (Colombia).svg") },
@@ -118,9 +137,19 @@ function mostrarDepartamentos() {
                 <div class="region">${d.region}</div>
                 <h3>${d.nombre}</h3>
                 <span class="estado">${activo ? "● Portal disponible" : "○ Próximamente"}</span>
-                ${activo
-                    ? `<a class="boton" href="${d.url}" target="_blank" rel="noopener noreferrer">Consultar impuesto ↗</a>`
-                    : `<button class="boton deshabilitado" disabled>En construcción</button>`
+                ${activo}
+                    ? `<div class="acciones">
+                         <a class="boton" href="${d.url}" target="_blank" rel="noopener noreferrer">💰 Impuesto ↗</a>
+                         <a class="boton secundario" href="${serviciosNacionales.soat}" target="_blank" rel="noopener noreferrer">🛡️ SOAT ↗</a>
+                         <a class="boton secundario" href="${serviciosNacionales.multas}" target="_blank" rel="noopener noreferrer">⚠️ Multas ↗</a>
+                         <a class="boton secundario" href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer">📄 Trámites ↗</a>
+                       </div>`
+                    : `<div class="acciones">
+                         <button class="boton deshabilitado" disabled>Impuesto en construcción</button>
+                         <a class="boton secundario" href="${serviciosNacionales.soat}" target="_blank" rel="noopener noreferrer">🛡️ SOAT ↗</a>
+                         <a class="boton secundario" href="${serviciosNacionales.multas}" target="_blank" rel="noopener noreferrer">⚠️ Multas ↗</a>
+                         <a class="boton secundario" href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer">📄 Trámites ↗</a>
+                       </div>`
                 }
             </article>
         `;

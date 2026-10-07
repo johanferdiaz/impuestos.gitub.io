@@ -12,7 +12,9 @@ main{width:min(1200px,92%);margin:-34px auto 50px}.intro{background:#fff;border-
 .regiones{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:20px 0}.filtro{border:1px solid #d7dee8;background:#fff;color:#465268;padding:9px 16px;border-radius:25px;cursor:pointer;font-weight:bold}.filtro:hover,.activo-filtro{background:#126e82;color:#fff;border-color:#126e82}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
 .card{background:#fff;border:1px solid #e4e9f0;border-radius:18px;padding:21px 17px;text-align:center;box-shadow:0 7px 20px rgba(20,40,70,.06);transition:.2s;position:relative}
-.card.activo:hover{transform:translateY(-5px);box-shadow:0 14px 28px rgba(20,40,70,.12)}.escudo{width:70px;height:70px;margin:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:18px;background:linear-gradient(145deg,#e8f4f6,#f7fbfc);color:#126e82;border:1px solid #d9edf0}.escudo span{font-size:25px;line-height:25px}.escudo b{font-size:13px;margin-top:3px}
+.card.activo:hover{transform:translateY(-5px);box-shadow:0 14px 28px rgba(20,40,70,.12)}
+.escudo{width:76px;height:76px;margin:auto;display:flex;align-items:center;justify-content:center;border-radius:18px;background:linear-gradient(145deg,#e8f4f6,#f7fbfc);color:#126e82;border:1px solid #d9edf0;overflow:hidden;padding:7px}
+.escudo img{width:100%;height:100%;object-fit:contain;display:block}.escudo b{font-size:13px}
 .region{margin-top:13px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#8993a4;font-weight:bold}.card h3{min-height:42px;margin:8px 0;font-size:18px}.estado{display:block;font-size:13px;color:#687386;margin-bottom:17px}.activo .estado{color:#198754;font-weight:bold}
 .boton{display:inline-block;width:100%;padding:12px 10px;border:0;border-radius:10px;background:#126e82;color:#fff;text-decoration:none;font-weight:bold;cursor:pointer}.boton:hover{background:#0b5969}.deshabilitado{background:#e9edf2;color:#8a94a3;cursor:not-allowed}
 footer{text-align:center;padding:30px 20px;color:#778195;font-size:13px}.sin-resultados{grid-column:1/-1;text-align:center;padding:40px;color:#687386}

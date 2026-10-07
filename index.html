@@ -189,31 +189,6 @@
 <div class="acciones"><a class="boton" href="https://www.haciendabogota.gov.co/es/impuestos/impuesto-sobre-vehiculos-automotores" target="_blank" rel="noopener noreferrer">💰 Impuesto ↗</a></div></article>
     </section>
 
-    <div id="modalCordoba" class="modal" aria-hidden="true">
-        <div class="modal-contenido">
-            <button class="cerrar-modal" id="cerrarModal" aria-label="Cerrar">×</button>
-            <span class="mini-badge">🇨🇴 FICHA DEPARTAMENTAL</span>
-            <div class="modal-titulo">
-                <div class="escudo modal-escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20oficial%20de%20C%C3%B3rdoba%20(Colombia).svg" alt="Escudo de Córdoba"></div>
-                <div><h2>Córdoba</h2><p>Servicios oficiales para propietarios de vehículos</p></div>
-            </div>
-            <div class="cordoba-alerta">🛡️ Para pagos y consultas tributarias, utiliza únicamente los portales oficiales de la Gobernación de Córdoba.</div>
-            <div class="cordoba-servicios">
-                <a href="https://impuestos.cordoba.gov.co/VehiculosCor/IUVA_001.jsp?opcionSeleccionada=2" target="_blank" rel="noopener noreferrer">🔎 <strong>Consultar vehículo</strong><small>Consulta por placa</small></a>
-                <a href="https://impuestos.cordoba.gov.co/VehiculosCor/DecVeh.jsp" target="_blank" rel="noopener noreferrer">💰 <strong>Liquidar impuesto</strong><small>Declaración y pago</small></a>
-                <a href="https://impuestos.cordoba.gov.co/VehiculosCor/Solicitud_PazySalvo.jsp" target="_blank" rel="noopener noreferrer">📄 <strong>Paz y salvo</strong><small>Solicitud en línea</small></a>
-                <a href="https://impuestos.cordoba.gov.co/VehiculosCor/calendario.jsp" target="_blank" rel="noopener noreferrer">📅 <strong>Calendario</strong><small>Fechas y beneficios</small></a>
-                <a href="https://www.simit.org.co/" target="_blank" rel="noopener noreferrer">⚠️ <strong>Multas</strong><small>Consulta nacional SIMIT</small></a>
-                <a href="https://www.runt.gov.co/" target="_blank" rel="noopener noreferrer">🚗 <strong>RUNT</strong><small>Consulta nacional</small></a>
-                <a href="https://www.cordoba.gov.co/" target="_blank" rel="noopener noreferrer">🏛️ <strong>Gobernación</strong><small>Portal oficial</small></a>
-            </div>
-            <div class="contacto-cordoba">
-                <strong>Gobernación de Córdoba · Secretaría de Hacienda</strong>
-                <span>Centro Comercial Places Mall, 2.º piso · Cra. 6 # 65-24 · Montería</span>
-                <span>Atención: lunes a viernes, 8:00 a. m. – 5:00 p. m.</span>
-            </div>
-        </div>
-    </div>
 </main>
 
 <footer>
@@ -241,15 +216,7 @@ const departamentos = [
     { nombre:"Cauca", region:"Pacífica", logo:escudo("Escudo del Cauca.svg"), url:"https://www.cauca.gov.co/" },
     { nombre:"Cesar", region:"Caribe", logo:escudo("Coat of arms of Cesar (Colombia).svg"), url:"https://www.cesar.gov.co/d/es/atencion-ciudadano/tramites-servicios/46-tramites" },
     { nombre:"Chocó", region:"Pacífica", logo:escudo("Escudo del Chocó.svg") },
-    { nombre:"Córdoba", region:"Caribe", logo:escudo("Escudo oficial de Córdoba (Colombia).svg"), url:"https://impuestos.cordoba.gov.co/RentasCord/vehiculos_declaracion.jsp",
-      ficha:true,
-      servicios:{
-          consulta:"https://impuestos.cordoba.gov.co/VehiculosCor/IUVA_001.jsp?opcionSeleccionada=2",
-          liquidacion:"https://impuestos.cordoba.gov.co/VehiculosCor/DecVeh.jsp",
-          pazsalvo:"https://impuestos.cordoba.gov.co/VehiculosCor/Solicitud_PazySalvo.jsp",
-          calendario:"https://impuestos.cordoba.gov.co/VehiculosCor/calendario.jsp",
-          gobernacion:"https://www.cordoba.gov.co/"
-      }
+    { nombre:"Córdoba", region:"Caribe", logo:escudo("Escudo oficial de Córdoba (Colombia).svg"), url:"https://impuestos.cordoba.gov.co/RentasCord/vehiculos_declaracion.jsp"
     },
     { nombre:"Cundinamarca", region:"Andina", logo:escudo("Escudo de Cundinamarca.svg"), url:"https://estampillas.cundinamarca.gov.co/preguntas-frecuentes/4/impuesto-sobre-vehiculos/" },
     { nombre:"Guainía", region:"Amazonía", logo:escudo("Escudo del Guainía.svg") },
@@ -293,24 +260,6 @@ document.querySelectorAll(".filtro").forEach(boton => {
         regionActual = boton.dataset.region;
         mostrarDepartamentos();
     });
-});
-
-function abrirCordoba() {
-    const modal = document.getElementById("modalCordoba");
-    modal.classList.add("mostrar");
-    modal.setAttribute("aria-hidden","false");
-}
-function cerrarCordoba() {
-    const modal = document.getElementById("modalCordoba");
-    modal.classList.remove("mostrar");
-    modal.setAttribute("aria-hidden","true");
-}
-document.getElementById("cerrarModal").addEventListener("click", cerrarCordoba);
-document.getElementById("modalCordoba").addEventListener("click", e => {
-    if (e.target.id === "modalCordoba") cerrarCordoba();
-});
-document.addEventListener("keydown", e => {
-    if (e.key === "Escape") cerrarCordoba();
 });
 
 buscador.addEventListener("input", mostrarDepartamentos);

@@ -49,9 +49,8 @@
             <p>Accesos oficiales para consultar información que aplica a todo el país.</p>
         </div>
         <div class="servicios-grid">
-            <a href="https://www.runt.gov.co/consultaCiudadana/#/consultaVehiculo" target="_blank" rel="noopener noreferrer" class="servicio"><span>🛡️</span><strong>Consultar SOAT</strong><small>RUNT</small></a>
             <a href="https://www.simit.org.co/" target="_blank" rel="noopener noreferrer" class="servicio"><span>⚠️</span><strong>Consultar multas</strong><small>SIMIT</small></a>
-            <a href="https://www.runt.gov.co/" target="_blank" rel="noopener noreferrer" class="servicio"><span>📄</span><strong>Trámites de tránsito</strong><small>RUNT</small></a>
+            <a href="https://www.runt.gov.co/" target="_blank" rel="noopener noreferrer" class="servicio"><span>🚗</span><strong>Consultar RUNT</strong><small>RUNT</small></a>
         </div>
     </section>
 
@@ -71,9 +70,8 @@
                 <a href="https://impuestos.cordoba.gov.co/VehiculosCor/DecVeh.jsp" target="_blank" rel="noopener noreferrer">💰 <strong>Liquidar impuesto</strong><small>Declaración y pago</small></a>
                 <a href="https://impuestos.cordoba.gov.co/VehiculosCor/Solicitud_PazySalvo.jsp" target="_blank" rel="noopener noreferrer">📄 <strong>Paz y salvo</strong><small>Solicitud en línea</small></a>
                 <a href="https://impuestos.cordoba.gov.co/VehiculosCor/calendario.jsp" target="_blank" rel="noopener noreferrer">📅 <strong>Calendario</strong><small>Fechas y beneficios</small></a>
-                <a href="https://www.runt.gov.co/consultaCiudadana/#/consultaVehiculo" target="_blank" rel="noopener noreferrer">🛡️ <strong>SOAT</strong><small>Consulta nacional RUNT</small></a>
                 <a href="https://www.simit.org.co/" target="_blank" rel="noopener noreferrer">⚠️ <strong>Multas</strong><small>Consulta nacional SIMIT</small></a>
-                <a href="https://www.runt.gov.co/" target="_blank" rel="noopener noreferrer">🚗 <strong>Trámites</strong><small>RUNT</small></a>
+                <a href="https://www.runt.gov.co/" target="_blank" rel="noopener noreferrer">🚗 <strong>RUNT</strong><small>Consulta nacional</small></a>
                 <a href="https://www.cordoba.gov.co/" target="_blank" rel="noopener noreferrer">🏛️ <strong>Gobernación</strong><small>Portal oficial</small></a>
             </div>
             <div class="contacto-cordoba">
@@ -93,9 +91,8 @@
 const escudo = nombre => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(nombre)}`;
 
 const serviciosNacionales = {
-    soat: "https://www.runt.gov.co/consultaCiudadana/#/consultaVehiculo",
     multas: "https://www.simit.org.co/",
-    tramites: "https://www.runt.gov.co/"
+    runt: "https://www.runt.gov.co/"
 };
 
 const departamentos = [
@@ -177,18 +174,16 @@ function mostrarDepartamentos() {
                     ? `<div class="acciones">
                          <a class="boton" href="${d.url}" target="_blank" rel="noopener noreferrer">💰 Impuesto ↗</a>
                          ${d.ficha ? '<button class="boton ficha" type="button" onclick="abrirCordoba()">🇨🇴 Ver ficha</button>' : ''}
-                         <a class="boton secundario" href="${serviciosNacionales.soat}" target="_blank" rel="noopener noreferrer">🛡️ SOAT ↗</a>
                          <a class="boton secundario" href="${serviciosNacionales.multas}" target="_blank" rel="noopener noreferrer">⚠️ Multas ↗</a>
-                         <a class="boton secundario" href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer">📄 Trámites ↗</a>
+                         <a class="boton secundario" href="${serviciosNacionales.runt}" target="_blank" rel="noopener noreferrer">🚗 RUNT ↗</a>
                        </div>`
                     : `<div class="acciones">
                          <button class="boton deshabilitado" disabled>Impuesto en construcción</button>
-                         <a class="boton secundario" href="${serviciosNacionales.soat}" target="_blank" rel="noopener noreferrer">🛡️ SOAT ↗</a>
                          <a class="boton secundario" href="${serviciosNacionales.multas}" target="_blank" rel="noopener noreferrer">⚠️ Multas ↗</a>
-                         <a class="boton secundario" href="${serviciosNacionales.tramites}" target="_blank" rel="noopener noreferrer">📄 Trámites ↗</a>
+                         <a class="boton secundario" href="${serviciosNacionales.runt}" target="_blank" rel="noopener noreferrer">🚗 RUNT ↗</a>
                        </div>`
                 }
-        `;
+                </article>
     }).join("");
 
     if (!resultados.length) {

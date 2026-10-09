@@ -330,6 +330,33 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Fuente de referencia", "Abrir resolución oficial del calendario tributario 2026 de Antioquia."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
+        "santander": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal tributario en línea de Santander; la Gobernación también publica puntos presenciales."],
+            ["Calendario tributario 2026", "La Gobernación publicó plazo del 1 de enero al 30 de junio de 2026 para declarar y pagar sin sanciones ni intereses. Ese plazo ya venció."],
+            ["Medios de pago", "Portal en línea; bancos Bancolombia, Banco Popular, Banco de Occidente, Davivienda, BBVA, AV Villas y Banco Agrario; corresponsales Éxito y Efecty; Casa del Libro Total en Bucaramanga, Barrancabermeja y San Gil."],
+            ["Canales de contacto", "Para dudas, consultar los canales de atención de la Gobernación en su sitio oficial; no se incorpora un teléfono no verificado."],
+            ["Fuente de referencia", "Abrir comunicado oficial de Santander sobre el impuesto vehicular 2026."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "huila": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal departamental para consultar por placa o documento, generar estado de deuda y liquidar."],
+            ["Calendario tributario 2026", "10 % de descuento hasta el 31 de mayo; pago sin descuento, sanción ni intereses hasta el 31 de julio. Desde el 1 de agosto se aplican sanciones e intereses. Los dos plazos ya vencieron."],
+            ["Medios de pago", "PSE; Banco de Occidente; Bancolombia y Davivienda; corresponsales autorizados Efecty, SuperGIROS, Puntored y Su Chance. Atención presencial en Casa del Libro Total, C. C. San Juan Plaza, primer piso, Neiva."],
+            ["Canales de contacto", "Consultar los canales de atención de Hacienda en el sitio oficial de la Gobernación del Huila."],
+            ["Fuente de referencia", "Abrir publicación oficial de descuentos del impuesto vehicular 2026 en Huila."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "cauca": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "La Gobernación remite a www.rentascauca.gov.co para liquidación y pago; la dirección debe abrirse desde la publicación oficial."],
+            ["Calendario tributario 2026", "La publicación oficial indicó 15 % de descuento en enero y febrero, 10 % durante marzo y tarifa plena entre abril y el 30 de junio. El plazo ordinario ya venció."],
+            ["Medios de pago", "Pago en línea por PSE. También se publicaron puntos presenciales en Popayán, Santander de Quilichao y El Bordo-Patía."],
+            ["Canales de contacto", "Consultar los puntos y canales vigentes en las publicaciones oficiales de Rentas Cauca."],
+            ["Fuente de referencia", "Abrir publicación oficial de calendario tributario del Cauca."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
         "cordoba": [
             ["Jurisdicción", titulo],
             ["Portal de liquidación", "Portal de Impuestos de la Gobernación de Córdoba con opciones de declaración y pago de impuesto vehicular."],
@@ -352,7 +379,10 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
                 "casanare": "https://impuestos.casanare.gov.co/impuesto-vehiculos/calendario-tributario",
                 "bogota d.c.": "https://www.haciendabogota.gov.co/es/impuestos/impuesto-sobre-vehiculos-automotores",
                 "antioquia": "https://www.antioquia.gov.co/images/PDF2/Hacienda/2026/02/resolucion-2025061416038-de-2025-calendario-tributario-2026.pdf",
-                "cordoba": "https://impuestos.cordoba.gov.co/RentasCord/vehiculos_calendario.jsp"
+                "cordoba": "https://impuestos.cordoba.gov.co/RentasCord/vehiculos_calendario.jsp",
+                "santander": "https://santander.gov.co/publicaciones/11394/es-tiempo-de-ponerse-al-dia-con-el-pago-del-impuesto-vehicular-2026/",
+                "huila": "https://www.huila.gov.co/publicaciones/16542/conozca-los-descuentos-del-impuesto-vehicular-para-este-2026/",
+                "cauca": "https://www.cauca.gov.co/Prensa/SaladePrensa/Paginas/Gobernaci%C3%B3n-del-Cauca-define-calendario-tributario-2026-y-otorga-descuentos-por-pronto-pago-en-impuestos.aspx"
             };
             const destino = fuentes[normalizarTexto(titulo)] || url;
             if (destino) {

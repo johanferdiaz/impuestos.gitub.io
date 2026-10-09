@@ -402,6 +402,42 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Fuente de referencia", "Abrir la circular oficial del calendario tributario 2026."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
+        "cesar": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal oficial de la Gobernación del Cesar para liquidar y pagar el impuesto vehicular en línea; también existe atención presencial en la Oficina de Rentas."],
+            ["Calendario tributario 2026", "Resolución 022936 del 29 de diciembre de 2025: descuento del 15 % para pagos entre el 1 de enero y el 30 de abril; descuento del 10 % del 1 de mayo al 30 de junio. La fecha máxima para declarar y pagar fue el 30 de junio de 2026. Los plazos ya vencieron."],
+            ["Medios de pago", "Pago en línea desde cesar.gov.co en la opción Pague aquí impuesto Vehicular, o presencialmente en la Oficina de Rentas de la Gobernación."],
+            ["Canales de contacto", "Gobernación del Cesar: Calle 16 # 12-120, edificio Alfonso López Michelsen, Valledupar · (605) 588 5602 · contactenos@cesar.gov.co. Confirma con la entidad el canal específico de Rentas."],
+            ["Fuente de referencia", "Abrir Resolución 022936 del 29 de diciembre de 2025 y calendario oficial."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "nariño": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal oficial de impuesto vehicular de Nariño: impuestovehicular.narino.gov.co."],
+            ["Calendario tributario 2026", "La Gobernación anunció un descuento del 20 % por pronto pago hasta el 30 de abril de 2026. Desde el 1 de mayo hasta el 30 de diciembre de 2026, el impuesto se mantiene sin sanciones ni intereses, según el comunicado oficial consultado. El descuento ordinario ya venció."],
+            ["Medios de pago", "Liquidación y pago por el portal oficial; la Gobernación también reporta atención presencial en sedes fiscales de Pasto, Samaniego, La Unión, Ipiales, Tumaco y Túquerres. Confirma los medios concretos disponibles al liquidar."],
+            ["Canales de contacto", "La fuente oficial menciona la Subsecretaría de Rentas y puntos de atención departamentales; verificar el teléfono y correo vigentes en el portal oficial."],
+            ["Fuente de referencia", "Abrir comunicado oficial sobre el incentivo del 20 % para la vigencia 2026."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "choco": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "La tarjeta enlaza al sitio institucional de la Gobernación del Chocó; no se confirmó un portal específico de liquidación vehicular en las fuentes consultadas."],
+            ["Calendario tributario 2026", "Información no localizada en las fuentes públicas oficiales consultadas sobre las fechas exactas de vencimiento o descuentos del impuesto vehicular 2026. Pendiente de verificación oficial."],
+            ["Medios de pago", "No confirmados en una fuente oficial específica. Verificar con la Secretaría de Hacienda antes de efectuar pagos."],
+            ["Canales de contacto", "Consultar los canales institucionales de la Gobernación del Chocó; falta confirmar el contacto específico de Rentas."],
+            ["Fuente de referencia", "Abrir sitio institucional de la Gobernación del Chocó."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "boyaca": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal y canales digitales habilitados por la Gobernación de Boyacá para declarar y pagar el impuesto vehicular."],
+            ["Calendario tributario 2026", "El calendario inicial asignó vencimientos según el último dígito: placas 1, 2 y 3; 4, 5 y 6; 7, 8, 9 y 0. La Gobernación modificó los plazos para las placas terminadas en 1 a 6 hasta el 6 de marzo de 2026 por una interrupción técnica; para las terminadas en 7, 8, 9 y 0 el límite permaneció el 31 de marzo. Todos los plazos ya vencieron."],
+            ["Medios de pago", "Declaración y pago simultáneos por canales digitales habilitados o entidades financieras con convenio vigente. Verificar el canal disponible en el portal oficial."],
+            ["Canales de contacto", "Gobernación de Boyacá: PBX +57 608 742 0150, extensiones 2126 y 2147; WhatsApp institucional publicado: 318 311 9821. Confirma la atención específica de Rentas."],
+            ["Fuente de referencia", "Abrir comunicado oficial de ampliación de plazo de marzo de 2026."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
         "la guajira": [
             ["Jurisdicción", titulo],
             ["Portal de liquidación", "Portal de consulta y liquidación del impuesto vehicular enlazado desde la Gobernación de La Guajira."],
@@ -492,7 +528,11 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
                 "la guajira": "https://www.laguajira.gov.co/NuestraGestion/Normatividad/Resolucion%20No.%2005%20de%202025.pdf",
                 "sucre": "https://impuestos.sucre.gobiernoit.com/Portal-VehiculoSucre/",
                 "tolima": "https://tolima.gov.co/hacienda/rentas-e-ingresos/impuestos/impuesto-de-vehiculos/formas-de-pago",
-                "quindio": "https://www.quindio.gov.co/"
+                "quindio": "https://www.quindio.gov.co/",
+                "cesar": "https://cesar.gov.co/d/filesmain/actos/resolucion_022936_del_29_dic_2025.pdf",
+                "nariño": "https://narino.gov.co/noticias/narino-impulsa-el-ahorro-ciudadano-con-incentivo-del-20-en-el-impuesto-vehicular/",
+                "choco": "https://www.choco.gov.co/",
+                "boyaca": "https://www.boyaca.gov.co/se-amplia-plazo-para-declaracion-y-pago-del-impuesto-de-vehiculo-en-boyaca/"
             };
             const destino = fuentes[normalizarTexto(titulo)] || url;
             if (destino) {

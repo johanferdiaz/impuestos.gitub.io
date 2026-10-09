@@ -147,7 +147,7 @@
 <article class="card activo" data-nombre="córdoba" data-region="Caribe">
 <div class="escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20oficial%20de%20C%C3%B3rdoba%20(Colombia).svg" alt="Escudo de Córdoba" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">C</b></div>
 <div class="region">Caribe</div><h3>Córdoba</h3><span class="estado">● Portal disponible</span>
-<div class="acciones"><a class="boton" href="https://impuestos.cordoba.gov.co/RentasCord/vehiculos_declaracion.jsp" target="_blank" rel="noopener noreferrer">💰 Impuesto ↗</a></div></article>
+<div class="acciones"><a class="boton" href="https://impuestos.cordoba.gov.co/RentasCord/index.jsp" target="_blank" rel="noopener noreferrer">💰 Impuesto ↗</a></div></article>
 <article class="card activo" data-nombre="cundinamarca" data-region="Andina">
 <div class="escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20de%20Cundinamarca.svg" alt="Escudo de Cundinamarca" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">C</b></div>
 <div class="region">Andina</div><h3>Cundinamarca</h3><span class="estado">Enlace institucional</span>
@@ -257,8 +257,7 @@ const departamentos = [
     { nombre:"Cauca", region:"Pacifica", logo:escudo("Escudo del Cauca.svg"), url:"https://www.cauca.gov.co/" },
     { nombre:"Cesar", region:"Caribe", logo:escudo("Coat of arms of Cesar (Colombia).svg"), url:"https://www.cesar.gov.co/d/es/atencion-ciudadano/tramites-servicios/46-tramites" },
     { nombre:"Choco", region:"Pacifica", logo:escudo("Escudo del Choco.svg"), url:"https://www.choco.gov.co/" },
-    { nombre:"Cordoba", region:"Caribe", logo:escudo("Escudo oficial de Cordoba (Colombia).svg"), url:"https://impuestos.cordoba.gov.co/RentasCord/vehiculos_declaracion.jsp"
-    },
+    { nombre:"Cordoba", region:"Caribe", logo:escudo("Escudo oficial de Cordoba (Colombia).svg"), url:"https://impuestos.cordoba.gov.co/RentasCord/index.jsp" },
     { nombre:"Cundinamarca", region:"Andina", logo:escudo("Escudo de Cundinamarca.svg"), url:"https://estampillas.cundinamarca.gov.co/preguntas-frecuentes/4/impuesto-sobre-vehiculos/" },
     { nombre:"Guainia", region:"Amazonia", logo:escudo("Escudo del Guainia.svg"), url:"https://guainia.gov.co/" },
     { nombre:"Guaviare", region:"Amazonia", logo:escudo("Escudo del Guaviare.svg"), url:"https://www.guaviare.gov.co/" },
@@ -382,10 +381,12 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         ],
         "cordoba": [
             ["Jurisdicción", titulo],
-            ["Portal de liquidación", "Portal de Impuestos de la Gobernación de Córdoba con opciones de declaración y pago de impuesto vehicular."],
-            ["Calendario tributario 2026", "La Gobernación de Córdoba informó 15 % de descuento por pronto pago hasta el 31 de marzo de 2026, 10 % hasta el 29 de mayo y 5 % hasta el 30 de junio. El plazo y los tres descuentos ya vencieron al 9 de octubre de 2026. Para vigencias 2024 y anteriores, el comunicado anunció descuentos separados en sanciones e intereses; verifica condiciones y vigencias con Rentas antes de pagar."],
-            ["Medios de pago", "La Gobernación informó pago en línea y puntos de recaudo Record, SuperGiros y almacenes Éxito, además de los canales bancarios y portal de impuestos indicados por la entidad. Confirma disponibilidad en el portal oficial antes de pagar."],
-            ["Canales de contacto", "RECAUDO.IMPUESTOS@CORDOBA.GOV.CO · Cra. 6 No. 65-24, local 44, segundo piso, CC Places Mall, Montería."],
+            ["Portal de liquidación", "Portal oficial de Impuestos de la Gobernación de Córdoba. El portal institucional incluye declaración y pago del impuesto vehicular, consulta de pagos y declaraciones, estado de cartera, calendario, normatividad y canales de atención."],
+            ["Consulta de cartera", "La Gobernación ofrece una consulta de estado de cartera por placa. Este reporte no es un recibo oficial de pago; para generar la declaración debe usarse el flujo de liquidación oficial."],
+            ["Calendario tributario 2026", "La Gobernación informó 15 % de descuento por pronto pago hasta el 31 de marzo de 2026, 10 % hasta el 29 de mayo y 5 % hasta el 30 de junio. Los tres plazos ya vencieron al 9 de octubre de 2026. No se encontró confirmación oficial de una prórroga posterior en las fuentes consultadas. Para vigencias 2024 y anteriores, los alivios publicados de sanciones e intereses también vencieron el 30 de junio de 2026; confirma la liquidación actual con Rentas."],
+            ["Medios de pago", "Comunicado oficial del 5 de septiembre de 2026 informó que se restablecieron los servicios digitales para radicación y pago en línea. La entidad también informó pagos presenciales en Banco de Occidente, Banco Davivienda, puntos Record en Córdoba, SuperGiros a nivel nacional y almacenes Éxito. Verifica los medios disponibles al generar la liquidación."],
+            ["Canales de contacto", "RECAUDO.IMPUESTOS@CORDOBA.GOV.CO · Cra. 6 No. 65-24, local 44, segundo piso, CC Places Mall, Montería. Atención presencial publicada: lunes a viernes, 8:00 a. m. a 5:00 p. m.; confirma cualquier cambio con la entidad."],
+            ["Estado del portal", "La Gobernación informó el 5 de septiembre de 2026 que restableció los servicios digitales luego de acciones de seguridad informática."],
             ["Fuente de referencia", "Abrir comunicado oficial de Córdoba sobre descuentos y puntos de pago de la vigencia 2026."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
@@ -694,8 +695,17 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
     menuTitulo.textContent = "Impuesto Vehicular " + titulo + " 2026";
     menuTitulo.style.cssText = "margin:0 0 8px;font-size:1rem;";
     menu.appendChild(menuTitulo);
+    const opcionesPorDepartamento = {
+        "cordoba": {
+            0: { url: "https://impuestos.cordoba.gov.co/VehiculosCor/EstadoCartera.jsp", texto: "Consultar estado de cartera ↗" },
+            1: { url: "https://impuestos.cordoba.gov.co/VehiculosCor/DecVeh.jsp", texto: "Iniciar declaración y liquidación ↗" },
+            2: { url: "https://impuestos.cordoba.gov.co/RentasCord/index.jsp", texto: "Abrir portal de pago oficial ↗" },
+            7: { url: "https://impuestos.cordoba.gov.co/RentasCord/index.jsp", texto: "Abrir portal oficial ↗" }
+        }
+    };
+    const enlacesDepartamento = opcionesPorDepartamento[normalizarTexto(titulo)] || {};
     const opciones = [
-        ["Consultar impuesto", "Consultar por placa o datos del vehículo; función específica por confirmar en el portal."],
+        ["Consultar impuesto", "Consulta de estado de cartera por placa; el reporte no es recibo oficial de pago."],
         ["Liquidar", "Abrir el portal de referencia y buscar la opción de declaración o liquidación."],
         ["Pagar en línea", "Usar únicamente el flujo de pago oficial, si está habilitado."],
         ["Fechas de vencimiento", "Revisar el calendario 2026 en la ficha y en la fuente oficial."],
@@ -718,12 +728,13 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         detalleOpcion.textContent = descripcion;
         detalleOpcion.style.cssText = "display:block;font-size:.86rem;line-height:1.4;";
         item.append(encabezado, detalleOpcion);
-        if (url && [0, 1, 2, 7].includes(indice)) {
+        const enlaceEspecifico = enlacesDepartamento[indice];
+        if (enlaceEspecifico || (url && [0, 1, 2, 7].includes(indice))) {
             const a = document.createElement("a");
-            a.href = url;
+            a.href = enlaceEspecifico ? enlaceEspecifico.url : url;
             a.target = "_blank";
             a.rel = "noopener noreferrer";
-            a.textContent = indice === 7 ? "Abrir enlace oficial ↗" : "Ir al portal de referencia ↗";
+            a.textContent = enlaceEspecifico ? enlaceEspecifico.texto : (indice === 7 ? "Abrir enlace oficial ↗" : "Ir al portal de referencia ↗");
             a.style.cssText = "display:inline-block;margin-top:7px;font-weight:600;";
             item.appendChild(a);
         } else if ([3, 4, 5, 6, 8, 9].includes(indice)) {

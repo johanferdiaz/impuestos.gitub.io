@@ -66,6 +66,12 @@
         </div>
     </section>
 
+    <section class="nota-metodologia" aria-labelledby="titulo-fichas">
+        <h2 id="titulo-fichas">Fichas departamentales: estado de verificación</h2>
+        <p>Cada tarjeta incluye una ficha desplegable. Los campos que aún no tienen respaldo oficial suficiente se muestran como pendientes; no se publican fechas de vencimiento, descuentos ni medios de pago por suposición.</p>
+        <p><small>Fecha de revisión editorial de esta versión: 9 de octubre de 2026. Esta fecha no significa que cada dato haya sido verificado individualmente en esa jornada.</small></p>
+    </section>
+
     <section id="departamentos" class="grid">
 <article class="card proximamente" data-nombre="amazonas" data-region="Amazonia">
 <div class="escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20de%20Amazonas%20(Colombia).svg" alt="Escudo de Amazonas" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">A</b></div>
@@ -263,6 +269,61 @@ function normalizarTexto(texto) {
         .toLowerCase()
         .trim();
 }
+
+// Añade una ficha homogénea a cada jurisdicción sin presentar campos pendientes como confirmados.
+document.querySelectorAll("#departamentos .card").forEach(card => {
+    if (card.querySelector(".ficha-departamental")) return;
+    const titulo = card.querySelector("h3")?.textContent?.trim() || "Jurisdicción";
+    const estado = card.querySelector(".estado")?.textContent?.trim() || "";
+    const enlace = card.querySelector(".acciones a");
+    const url = enlace?.getAttribute("href") || "";
+    const tipoEnlace = normalizarTexto(estado).includes("enlace institucional")
+        ? "Enlace institucional de referencia"
+        : normalizarTexto(estado).includes("informacion no localizada")
+            ? "Portal específico no localizado en las fuentes públicas consultadas; se ofrece la página institucional"
+            : "Enlace principal listado; tipo de portal y acceso directo pendientes de validación individual";
+    const details = document.createElement("details");
+    details.className = "ficha-departamental";
+    details.style.cssText = "margin-top:12px;padding:10px;border:1px solid #dbe3ea;border-radius:10px;text-align:left;background:#f8fafc;";
+    const summary = document.createElement("summary");
+    summary.textContent = "Ver ficha de consulta";
+    summary.style.cssText = "cursor:pointer;font-weight:600;";
+    details.appendChild(summary);
+    const contenido = document.createElement("div");
+    contenido.style.cssText = "font-size:.92rem;line-height:1.5;margin-top:10px;overflow-wrap:anywhere;";
+    const lista = document.createElement("dl");
+    lista.style.cssText = "margin:0;";
+    const campos = [
+        ["Jurisdicción", titulo],
+        ["Portal de liquidación", tipoEnlace],
+        ["Calendario tributario 2026", "Pendiente de verificación oficial individual. No usar fechas históricas como si siguieran vigentes."],
+        ["Medios de pago", "Pendientes de confirmación en una fuente oficial de esta jurisdicción."],
+        ["Canales de contacto", "Pendientes de confirmar en una fuente oficial de esta jurisdicción."],
+        ["Fuente de referencia", url ? "Abrir el enlace principal listado en esta tarjeta." : "No hay enlace disponible en la tarjeta."],
+        ["Fecha de revisión editorial", "9 de octubre de 2026. La ficha requiere verificación individual antes de marcar sus datos como confirmados."]
+    ];
+    campos.forEach(([etiqueta, valor]) => {
+        const dt = document.createElement("dt");
+        dt.textContent = etiqueta;
+        dt.style.cssText = "font-weight:700;margin-top:8px;";
+        const dd = document.createElement("dd");
+        dd.style.cssText = "margin:2px 0 0;";
+        if (etiqueta === "Fuente de referencia" && url) {
+            const a = document.createElement("a");
+            a.href = url;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+            a.textContent = valor;
+            dd.appendChild(a);
+        } else {
+            dd.textContent = valor;
+        }
+        lista.append(dt, dd);
+    });
+    contenido.appendChild(lista);
+    details.appendChild(contenido);
+    card.appendChild(details);
+});
 
 function mostrarDepartamentos() {
     const texto = normalizarTexto(buscador.value);

@@ -402,6 +402,42 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Fuente de referencia", "Abrir la circular oficial del calendario tributario 2026."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
+        "la guajira": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal de consulta y liquidación del impuesto vehicular enlazado desde la Gobernación de La Guajira."],
+            ["Calendario tributario 2026", "La Resolución No. 05 de 2025, que adopta el calendario tributario 2026, fija el plazo para declarar y/o pagar el impuesto vehicular el 30 de mayo de cada año. La fecha ya pasó al 9 de octubre de 2026."],
+            ["Medios de pago", "Confirmar los medios habilitados en el portal de liquidación antes de realizar el pago."],
+            ["Canales de contacto", "Gobernación de La Guajira: Calle 1 No. 6-05, Centro Administrativo Departamental, Riohacha · línea de servicio 018000931074 · contactenos@laguajira.gov.co."],
+            ["Fuente de referencia", "Abrir Resolución No. 05 de 2025, calendario tributario oficial."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "sucre": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal de Impuesto Vehicular de Sucre enlazado en esta tarjeta."],
+            ["Calendario tributario 2026", "Información no localizada en las fuentes públicas oficiales consultadas sobre la fecha exacta de vencimiento y posibles descuentos de la vigencia 2026. Pendiente de verificación oficial."],
+            ["Medios de pago", "Confirmar en el portal oficial los medios habilitados para la liquidación generada."],
+            ["Canales de contacto", "Pendientes de confirmar en una fuente oficial específica del impuesto vehicular."],
+            ["Fuente de referencia", "Abrir portal de Impuesto Vehicular de Sucre."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "tolima": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal oficial de liquidación del impuesto vehicular de la Gobernación del Tolima."],
+            ["Calendario tributario 2026", "La Gobernación informó que el plazo para pagar la vigencia 2026 sin sanciones ni intereses venció el 30 de junio de 2026. Al 9 de octubre de 2026, el plazo ordinario ya pasó."],
+            ["Medios de pago", "Pago en línea por PSE o botón Bancolombia; pago presencial en Banco de Occidente, Bancolombia, Davivienda, AV Villas e Itaú. La Gobernación también indica atención para pagos con tarjeta débito, crédito o efectivo en su centro de atención al contribuyente."],
+            ["Canales de contacto", "Centro de Atención al Contribuyente, Dirección Financiera de Rentas e Ingresos: carrera 4.ª No. 9-67, barrio La Pola, Ibagué. Verifica el contacto vigente en la web oficial."],
+            ["Fuente de referencia", "Abrir instrucciones oficiales de formas de pago del impuesto vehicular del Tolima."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "quindio": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal de Impuesto Vehicular del Gobierno del Quindío."],
+            ["Calendario tributario 2026", "El Gobierno del Quindío publicó el 26 de agosto de 2026 un anuncio de extensión del plazo para pagar el impuesto vehicular. La fecha límite modificada exacta queda pendiente de verificar en la publicación completa; no se registra aquí una fecha sin confirmación."],
+            ["Medios de pago", "El Gobierno departamental indica que el recaudo puede realizarse presencialmente o por su portal web. Confirma las opciones habilitadas al generar la liquidación."],
+            ["Canales de contacto", "Línea de atención a la ciudadanía de la Gobernación: (606) 735 9919. Dirección: Calle 20 No. 13-22, Centro Administrativo Departamental Ancízar López López, Armenia."],
+            ["Fuente de referencia", "Abrir portal oficial de Impuesto Vehicular del Quindío."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
         "caldas": [
             ["Jurisdicción", titulo],
             ["Portal de liquidación", "Portal oficial de Rentas de Caldas para descargar la declaración por placa y pagar en línea."],
@@ -452,7 +488,11 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
                 "atlantico": "https://www.atlantico.gov.co/index.php/impuestos-departamentales",
                 "bolivar": "https://impuestos.bolivar.gov.co/gobol_web/liquidaciones",
                 "magdalena": "https://www.gobernaciondelmagdalena.gov.co/descuentos-de-hasta-el-100-en-intereses-por-impuestos-vehiculares-tasas-y-multas-de-transito/",
-                "norte de santander": "https://administrador.nortedesantander.gov.co/gaceta-departamental/circular-externa-05-de-enero-de-2026-2/"
+                "norte de santander": "https://administrador.nortedesantander.gov.co/gaceta-departamental/circular-externa-05-de-enero-de-2026-2/",
+                "la guajira": "https://www.laguajira.gov.co/NuestraGestion/Normatividad/Resolucion%20No.%2005%20de%202025.pdf",
+                "sucre": "https://impuestos.sucre.gobiernoit.com/Portal-VehiculoSucre/",
+                "tolima": "https://tolima.gov.co/hacienda/rentas-e-ingresos/impuestos/impuesto-de-vehiculos/formas-de-pago",
+                "quindio": "https://www.quindio.gov.co/
             };
             const destino = fuentes[normalizarTexto(titulo)] || url;
             if (destino) {

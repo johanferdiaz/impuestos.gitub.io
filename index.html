@@ -24,7 +24,7 @@
         <input type="search" id="buscador" placeholder="🔎 Buscar departamento..." aria-label="Buscar departamento">
         <div class="estadisticas">
             <span><strong id="total">33</strong> territorios</span>
-            <span><strong id="disponibles">26</strong> portales disponibles</span>
+            <span><strong id="disponibles">26</strong> enlaces de consulta disponibles</span>
         </div>
     </section>
 
@@ -32,6 +32,17 @@
         <strong>🛡️ Navega con seguridad</strong>
         <span>Antes de realizar un pago, verifica que el sitio corresponda a la entidad oficial. Este portal no recibe pagos ni solicita datos bancarios.</span>
     </div>
+
+    <section class="nota-metodologia" aria-labelledby="titulo-metodologia">
+        <h2 id="titulo-metodologia">Cómo presentamos la información</h2>
+        <p>Priorizamos fuentes oficiales de las gobernaciones y de Bogotá D. C. Si no encontramos un portal específico de impuesto vehicular en las fuentes públicas consultadas, indicamos esa limitación y ofrecemos el enlace institucional para que puedas consultar con Hacienda o Rentas.</p>
+        <ul>
+            <li><strong>Portal de consulta:</strong> enlace identificado para consultar o gestionar el impuesto.</li>
+            <li><strong>Información no localizada:</strong> no encontramos el dato o portal específico en las fuentes públicas revisadas; esto no significa que la entidad no lo haya publicado.</li>
+            <li><strong>Verificación pendiente:</strong> comprueba las fechas, condiciones y canales de pago directamente con la entidad antes de pagar.</li>
+        </ul>
+        <p><small>Este directorio es informativo. No recauda pagos ni reemplaza las instrucciones oficiales de cada entidad.</small></p>
+    </section>
 
     <section class="regiones">
         <button class="filtro activo-filtro" data-region="Todos">Todos</button>
@@ -204,23 +215,23 @@ const serviciosNacionales = {
 };
 
 const departamentos = [
-    { nombre:"Amazonas", region:"Amazonia", logo:escudo("Escudo de Amazonas (Colombia).svg") },
+    { nombre:"Amazonas", region:"Amazonia", logo:escudo("Escudo de Amazonas (Colombia).svg"), url:"https://www.amazonas.gov.co/" },
     { nombre:"Antioquia", region:"Andina", logo:escudo("Escudo de Antioquia.svg"), url:"https://www.vehiculosantioquia.com.co/impuestosWeb/index.jsp" },
     { nombre:"Arauca", region:"Orinoquia", logo:escudo("Escudo de Arauca.svg"), url:"https://arauca.gov.co/impuesto-de-vehiculo" },
     { nombre:"Atlantico", region:"Caribe", logo:escudo("Escudo del Atlantico.svg"), url:"https://portalimpuestos.atlantico.gov.co/Portal-ATLRentas/vehiculos_declaracion.jsp" },
     { nombre:"Bolivar", region:"Caribe", logo:escudo("Escudo de Bolivar (Colombia).svg"), url:"https://impuestos.bolivar.gov.co/gobol_web/liquidaciones" },
     { nombre:"Boyaca", region:"Andina", logo:escudo("Escudo de Boyaca.svg"), url:"https://www.boyaca.gov.co/" },
     { nombre:"Caldas", region:"Andina", logo:escudo("Coat of Arms of the Department of Caldas.svg"), url:"https://vehiculos.caldas.gov.co/web/#/" },
-    { nombre:"Caqueta", region:"Amazonia", logo:escudo("Escudo del Caqueta.svg") },
+    { nombre:"Caqueta", region:"Amazonia", logo:escudo("Escudo del Caqueta.svg"), url:"https://www.caqueta.gov.co/" },
     { nombre:"Casanare", region:"Orinoquia", logo:escudo("Escudo oficial de Casanare.svg"), url:"https://impuestos.casanare.gov.co/impuesto-vehiculos" },
     { nombre:"Cauca", region:"Pacifica", logo:escudo("Escudo del Cauca.svg"), url:"https://www.cauca.gov.co/" },
     { nombre:"Cesar", region:"Caribe", logo:escudo("Coat of arms of Cesar (Colombia).svg"), url:"https://www.cesar.gov.co/d/es/atencion-ciudadano/tramites-servicios/46-tramites" },
-    { nombre:"Choco", region:"Pacifica", logo:escudo("Escudo del Choco.svg") },
+    { nombre:"Choco", region:"Pacifica", logo:escudo("Escudo del Choco.svg"), url:"https://www.choco.gov.co/" },
     { nombre:"Cordoba", region:"Caribe", logo:escudo("Escudo oficial de Cordoba (Colombia).svg"), url:"https://impuestos.cordoba.gov.co/RentasCord/vehiculos_declaracion.jsp"
     },
     { nombre:"Cundinamarca", region:"Andina", logo:escudo("Escudo de Cundinamarca.svg"), url:"https://estampillas.cundinamarca.gov.co/preguntas-frecuentes/4/impuesto-sobre-vehiculos/" },
-    { nombre:"Guainia", region:"Amazonia", logo:escudo("Escudo del Guainia.svg") },
-    { nombre:"Guaviare", region:"Amazonia", logo:escudo("Escudo del Guaviare.svg") },
+    { nombre:"Guainia", region:"Amazonia", logo:escudo("Escudo del Guainia.svg"), url:"https://guainia.gov.co/" },
+    { nombre:"Guaviare", region:"Amazonia", logo:escudo("Escudo del Guaviare.svg"), url:"https://www.guaviare.gov.co/" },
     { nombre:"Huila", region:"Andina", logo:escudo("Escudo del Huila.svg"), url:"https://vehiculos.huila.gobiernoit.com/HUIVehiculos/index.jsp" },
     { nombre:"La Guajira", region:"Caribe", logo:escudo("Escudo de La Guajira.svg"), url:"https://edeskprisma.syc.com.co/guajira" },
     { nombre:"Magdalena", region:"Caribe", logo:escudo("Escudo del Magdalena.svg"), url:"https://impuestos.gobernaciondelmagdalena.gov.co/" },
@@ -235,8 +246,8 @@ const departamentos = [
     { nombre:"Sucre", region:"Caribe", logo:escudo("Escudo de Sucre.svg"), url:"https://impuestos.sucre.gobiernoit.com/Portal-VehiculoSucre/" },
     { nombre:"Tolima", region:"Andina", logo:escudo("Escudo del Tolima.svg"), url:"https://aplicativosenlinea.net/sivervtolima/redirect/" },
     { nombre:"Valle del Cauca", region:"Pacifica", logo:escudo("Escudo del Valle del Cauca.svg"), url:"https://www.vehiculosvalle.com.co/impuestosweb/#/public" },
-    { nombre:"Vaupes", region:"Amazonia", logo:escudo("Escudo del Vaupes.svg") },
-    { nombre:"Vichada", region:"Orinoquia", logo:escudo("Escudo del Vichada.svg") },
+    { nombre:"Vaupes", region:"Amazonia", logo:escudo("Escudo del Vaupes.svg"), url:"https://vaupes.gov.co/" },
+    { nombre:"Vichada", region:"Orinoquia", logo:escudo("Escudo del Vichada.svg"), url:"https://www.vichada.gov.co/" },
     { nombre:"Bogota D.C.", region:"Andina", logo:escudo("Escudo de Bogotá.svg"), url:"https://www.haciendabogota.gov.co/es/impuestos/impuesto-sobre-vehiculos-automotores" }
 ];
 

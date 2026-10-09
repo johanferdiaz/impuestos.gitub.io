@@ -100,7 +100,7 @@
 <article class="card activo" data-nombre="caldas" data-region="Andina">
 <div class="escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20the%20Department%20of%20Caldas.svg" alt="Escudo de Caldas" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">C</b></div>
 <div class="region">Andina</div><h3>Caldas</h3><span class="estado">● Portal disponible</span>
-<div class="acciones"><a class="boton" href="https://vehiculos.caldas.gov.co/web/#/" target="_blank" rel="noopener noreferrer">💰 Impuesto ↗</a></div></article>
+<div class="acciones"><a class="boton" href="https://rentas.caldas.gov.co/" target="_blank" rel="noopener noreferrer">💰 Impuesto ↗</a></div></article>
 <article class="card proximamente" data-nombre="caquetá" data-region="Amazonia">
 <div class="escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20del%20Caquet%C3%A1.svg" alt="Escudo de Caqueta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">C</b></div>
 <div class="region">Amazonia</div><h3>Caqueta</h3><span class="estado">Información no localizada en fuentes públicas consultadas</span>
@@ -228,7 +228,7 @@ const departamentos = [
     { nombre:"Atlantico", region:"Caribe", logo:escudo("Escudo del Atlantico.svg"), url:"https://portalimpuestos.atlantico.gov.co/Portal-ATLRentas/vehiculos_declaracion.jsp" },
     { nombre:"Bolivar", region:"Caribe", logo:escudo("Escudo de Bolivar (Colombia).svg"), url:"https://impuestos.bolivar.gov.co/gobol_web/liquidaciones" },
     { nombre:"Boyaca", region:"Andina", logo:escudo("Escudo de Boyaca.svg"), url:"https://www.boyaca.gov.co/" },
-    { nombre:"Caldas", region:"Andina", logo:escudo("Coat of Arms of the Department of Caldas.svg"), url:"https://vehiculos.caldas.gov.co/web/#/" },
+    { nombre:"Caldas", region:"Andina", logo:escudo("Coat of Arms of the Department of Caldas.svg"), url:"https://rentas.caldas.gov.co/" },
     { nombre:"Caqueta", region:"Amazonia", logo:escudo("Escudo del Caqueta.svg"), url:"https://www.caqueta.gov.co/" },
     { nombre:"Casanare", region:"Orinoquia", logo:escudo("Escudo oficial de Casanare.svg"), url:"https://impuestos.casanare.gov.co/impuesto-vehiculos" },
     { nombre:"Cauca", region:"Pacifica", logo:escudo("Escudo del Cauca.svg"), url:"https://www.cauca.gov.co/" },
@@ -365,6 +365,33 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Canales de contacto", "RECAUDO.IMPUESTOS@CORDOBA.GOV.CO · Cra. 6 No. 65-24, local 44, segundo piso, CC Places Mall, Montería."],
             ["Fuente de referencia", "Abrir portal oficial de impuestos de Córdoba."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "caldas": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal oficial de Rentas de Caldas para descargar la declaración por placa y pagar en línea."],
+            ["Calendario tributario 2026", "La Gobernación publicó descuento del 10 % hasta el 6 de abril de 2026 para contribuyentes al día. El pago sin intereses ni sanciones venció el 6 de julio; desde el 7 de julio se generan sanciones e intereses. Estos plazos ya vencieron."],
+            ["Medios de pago", "Portal oficial con PSE; bancos Davivienda y AV Villas con declaración impresa; puntos Susuerte (pago en efectivo); datáfono con tarjeta débito o crédito en el edificio de la Licorera, primer piso, Manizales."],
+            ["Canales de contacto", "WhatsApp de Hacienda publicado por la Gobernación: 315 337 67 81. Confirma horarios y disponibilidad directamente con la entidad."],
+            ["Fuente de referencia", "Abrir comunicado oficial de la Gobernación de Caldas sobre el recaudo 2026."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "risaralda": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal Tributario de la Gobernación de Risaralda, que identifica el impuesto vehicular para la vigencia 2026."],
+            ["Calendario tributario 2026", "La fecha exacta de vencimiento y las condiciones de mora no quedaron confirmadas en la fuente oficial consultada. Verificar en el portal antes de pagar."],
+            ["Medios de pago", "Consultar las opciones que aparezcan en el portal tributario oficial al generar la liquidación; no se agregan medios no confirmados."],
+            ["Canales de contacto", "Gobernación de Risaralda: Calle 19 No. 13-17, Pereira; línea local (606) 3398300; contactenos@risaralda.gov.co. Confirmar canal específico de Rentas."],
+            ["Fuente de referencia", "Abrir Portal Tributario de Risaralda y la ficha oficial del trámite."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "valle del cauca": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal de impuesto vehicular del Valle del Cauca para consulta pública."],
+            ["Calendario tributario 2026", "Las fechas de vencimiento y los descuentos de la vigencia 2026 quedan pendientes de confirmar en un acto oficial específico. No se infieren a partir de la resolución de tarifas."],
+            ["Medios de pago", "Verificar los medios habilitados en el portal oficial al liquidar; la fuente consultada no permitió confirmar aquí la lista completa."],
+            ["Canales de contacto", "Pendientes de confirmar en una fuente oficial específica de atención del impuesto vehicular."],
+            ["Fuente de referencia", "Abrir portal oficial de impuesto vehicular del Valle del Cauca."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ]
     };
     const campos = fichasVerificadas[normalizarTexto(titulo)] || fichaBase;
@@ -382,7 +409,10 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
                 "cordoba": "https://impuestos.cordoba.gov.co/RentasCord/vehiculos_calendario.jsp",
                 "santander": "https://santander.gov.co/publicaciones/11394/es-tiempo-de-ponerse-al-dia-con-el-pago-del-impuesto-vehicular-2026/",
                 "huila": "https://www.huila.gov.co/publicaciones/16542/conozca-los-descuentos-del-impuesto-vehicular-para-este-2026/",
-                "cauca": "https://www.cauca.gov.co/Prensa/SaladePrensa/Paginas/Gobernaci%C3%B3n-del-Cauca-define-calendario-tributario-2026-y-otorga-descuentos-por-pronto-pago-en-impuestos.aspx"
+                "cauca": "https://www.cauca.gov.co/Prensa/SaladePrensa/Paginas/Gobernaci%C3%B3n-del-Cauca-define-calendario-tributario-2026-y-otorga-descuentos-por-pronto-pago-en-impuestos.aspx",
+                "caldas": "https://www.caldas.gov.co/noticias-gobernacion/183-hacienda/15978-caldas-inicia-recaudo-del-impuesto-vehicular-2026-con-beneficio-por-pronto-pago-descuento-ira-hasta-el-6-de-abril",
+                "risaralda": "https://tributario.risaralda.siifweb.com/",
+                "valle del cauca": "https://www.vehiculosvalle.com.co/impuestosweb/#/public"
             };
             const destino = fuentes[normalizarTexto(titulo)] || url;
             if (destino) {

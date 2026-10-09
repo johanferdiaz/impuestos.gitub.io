@@ -6,6 +6,14 @@
     <meta name="description" content="Portal informativo para consultar el impuesto vehicular en Colombia y acceder a los portales oficiales por departamento.">
     <title>Impuesto Vehicular en Colombia | Consulta por Departamento</title>
     <link rel="stylesheet" href="css/estilos.css">
+
+<style>
+.directorio-nacional-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:14px 0}
+.directorio-nacional-grid a{display:flex;flex-direction:column;gap:6px;padding:13px;border:1px solid #dbe3ea;border-radius:10px;background:#fff;color:inherit;text-decoration:none}
+.directorio-nacional-grid a:hover{border-color:#64748b}
+.directorio-nacional-grid span{font-size:.9rem;line-height:1.45}
+</style>
+
 </head>
 <body>
 
@@ -43,6 +51,21 @@
             <li><strong>Verificación pendiente:</strong> comprueba las fechas, condiciones y canales de pago directamente con la entidad antes de pagar.</li>
         </ul>
         <p><small>Este directorio es informativo. No recauda pagos ni reemplaza las instrucciones oficiales de cada entidad.</small></p>
+    </section>
+
+
+    <section class="nota-metodologia" id="directorio-nacional" aria-labelledby="titulo-directorio-nacional">
+        <h2 id="titulo-directorio-nacional">🇨🇴 Directorio nacional de trámites de vehículos</h2>
+        <p>Primera fase: impuesto vehicular por departamento. Esta sección nacional reúne accesos de referencia a sistemas oficiales. Las funciones y los pagos se realizan en los portales de las entidades competentes, no en este directorio.</p>
+        <div class="directorio-nacional-grid">
+            <a href="https://www.runt.gov.co/" target="_blank" rel="noopener noreferrer"><strong>RUNT</strong><span>Consultas de vehículos, vigencia de SOAT y revisión técnico-mecánica.</span></a>
+            <a href="https://www.fcm.org.co/simit/" target="_blank" rel="noopener noreferrer"><strong>SIMIT</strong><span>Consulta nacional de multas y comparendos.</span></a>
+            <a href="https://www.superfinanciera.gov.co/" target="_blank" rel="noopener noreferrer"><strong>SOAT</strong><span>Verifica aseguradoras autorizadas; confirma la vigencia en el RUNT.</span></a>
+            <a href="https://www.runt.gov.co/" target="_blank" rel="noopener noreferrer"><strong>Tecnomecánica (RTM)</strong><span>Consulta la vigencia registrada en el RUNT.</span></a>
+            <a href="https://mintransporte.gov.co/" target="_blank" rel="noopener noreferrer"><strong>Tránsito y tarifas nacionales</strong><span>Normativa, trámites y tarifas publicadas por el Ministerio de Transporte.</span></a>
+            <a href="https://www.gov.co/" target="_blank" rel="noopener noreferrer"><strong>Pico y placa</strong><span>La regulación es local: consulta la alcaldía o autoridad de movilidad de tu ciudad.</span></a>
+        </div>
+        <p><small>Seguridad: no ofrecemos intermediación ni recibimos pagos. En SOAT, multas, trámites y pico y placa, verifica siempre el dominio oficial de la entidad competente.</small></p>
     </section>
 
     <section class="regiones">
@@ -661,6 +684,63 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         lista.append(dt, dd);
     });
     contenido.appendChild(lista);
+
+    // Menú común de trámites. Los enlaces se presentan como portales de referencia,
+    // no como confirmación de que cada función esté disponible en cada jurisdicción.
+    const menu = document.createElement("section");
+    menu.setAttribute("aria-label", "Opciones de impuesto vehicular");
+    menu.style.cssText = "margin-top:16px;";
+    const menuTitulo = document.createElement("h4");
+    menuTitulo.textContent = "Impuesto Vehicular " + titulo + " 2026";
+    menuTitulo.style.cssText = "margin:0 0 8px;font-size:1rem;";
+    menu.appendChild(menuTitulo);
+    const opciones = [
+        ["Consultar impuesto", "Consultar por placa o datos del vehículo; función específica por confirmar en el portal."],
+        ["Liquidar", "Abrir el portal de referencia y buscar la opción de declaración o liquidación."],
+        ["Pagar en línea", "Usar únicamente el flujo de pago oficial, si está habilitado."],
+        ["Fechas de vencimiento", "Revisar el calendario 2026 en la ficha y en la fuente oficial."],
+        ["Descuentos", "Consultar beneficios y condiciones vigentes o ya vencidas en la ficha."],
+        ["Sanciones", "Confirmar intereses y sanciones directamente con Rentas o Hacienda."],
+        ["Tarifas", "Consultar base gravable y tarifas oficiales aplicables al vehículo."],
+        ["Portal oficial", "Abrir el enlace institucional o tributario registrado para esta jurisdicción."],
+        ["Contacto", "Revisar teléfonos, correos y canales disponibles en la ficha."],
+        ["Preguntas frecuentes", "Consultar las orientaciones oficiales; las respuestas específicas se completarán al verificar cada fuente."]
+    ];
+    const rejilla = document.createElement("div");
+    rejilla.style.cssText = "display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px;";
+    opciones.forEach(([nombre, descripcion], indice) => {
+        const item = document.createElement("div");
+        item.style.cssText = "border:1px solid #dbe3ea;border-radius:8px;padding:10px;background:#fff;";
+        const encabezado = document.createElement("strong");
+        encabezado.textContent = nombre;
+        encabezado.style.cssText = "display:block;margin-bottom:4px;";
+        const detalleOpcion = document.createElement("span");
+        detalleOpcion.textContent = descripcion;
+        detalleOpcion.style.cssText = "display:block;font-size:.86rem;line-height:1.4;";
+        item.append(encabezado, detalleOpcion);
+        if (url && [0, 1, 2, 7].includes(indice)) {
+            const a = document.createElement("a");
+            a.href = url;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+            a.textContent = indice === 7 ? "Abrir enlace oficial ↗" : "Ir al portal de referencia ↗";
+            a.style.cssText = "display:inline-block;margin-top:7px;font-weight:600;";
+            item.appendChild(a);
+        } else if ([3, 4, 5, 6, 8, 9].includes(indice)) {
+            const nota = document.createElement("span");
+            nota.textContent = "Ver ficha y confirmar con la entidad";
+            nota.style.cssText = "display:block;margin-top:7px;font-size:.82rem;color:#475569;";
+            item.appendChild(nota);
+        } else {
+            const nota = document.createElement("span");
+            nota.textContent = "Enlace directo no localizado";
+            nota.style.cssText = "display:block;margin-top:7px;font-size:.82rem;color:#475569;";
+            item.appendChild(nota);
+        }
+        rejilla.appendChild(item);
+    });
+    menu.appendChild(rejilla);
+    contenido.appendChild(menu);
     details.appendChild(contenido);
     card.appendChild(details);
 });

@@ -366,6 +366,42 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Fuente de referencia", "Abrir portal oficial de impuestos de Córdoba."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
+        "atlantico": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal oficial de Impuestos Departamentales del Atlántico, con acceso a liquidación del impuesto sobre vehículos automotores."],
+            ["Calendario tributario 2026", "La Gobernación publicó el calendario tributario 2026 mediante la Resolución 000476 del 11 de diciembre de 2025. Las fechas específicas deben consultarse en el documento firmado; no se transcriben aquí sin revisión individual."],
+            ["Medios de pago", "El portal departamental ofrece acceso a liquidación de impuesto vehicular. Confirma los medios habilitados en el flujo oficial antes de pagar."],
+            ["Canales de contacto", "Consultar Secretaría de Hacienda Departamental desde el sitio oficial de la Gobernación."],
+            ["Fuente de referencia", "Abrir página oficial de Impuestos Departamentales del Atlántico."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "bolivar": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal de la Gobernación de Bolívar para consultar el impuesto por placa y revisar vigencias pendientes."],
+            ["Calendario tributario 2026", "Las fechas de vencimiento y descuentos ordinarios de la vigencia 2026 quedan pendientes de confirmación en un calendario oficial específico."],
+            ["Medios de pago", "El portal oficial permite generar la liquidación y pagar por PSE o descargar el recibo para pago."],
+            ["Canales de contacto", "Teléfono (605) 6517444, extensión 8000 · contactenos@bolivar.gov.co. Dirección publicada: Km 3, sector Turbaco, Hacienda Bajo Miranda."],
+            ["Fuente de referencia", "Abrir portal oficial de liquidación del impuesto vehicular de Bolívar."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "magdalena": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal oficial de Impuestos del Magdalena para consulta y pago en línea por placa."],
+            ["Calendario tributario 2026", "La Gobernación anunció un beneficio temporal para deudas de impuesto vehicular, tasas y multas de tránsito de vigencias 2025 y anteriores: descuento en intereses del 75 % hasta el 31 de agosto, 50 % hasta el 31 de octubre y 25 % hasta el 30 de diciembre de 2026. Al 9 de octubre de 2026, el tramo anunciado es del 50 % hasta el 31 de octubre. Verifica los requisitos y el decreto antes de pagar."],
+            ["Medios de pago", "El portal ofrece pago en línea por PSE y consulta por placa; también permite consultar facturas y certificados de paz y salvo."],
+            ["Canales de contacto", "La Gobernación publicó atención para el beneficio en la Oficina de Gestión Tributaria, calle 22 # 15-21. Confirma horarios directamente con la entidad."],
+            ["Fuente de referencia", "Abrir comunicado oficial sobre descuentos en intereses del Magdalena."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "norte de santander": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal de consulta del impuesto vehicular de Norte de Santander listado en esta tarjeta."],
+            ["Calendario tributario 2026", "La Gobernación publicó una circular externa del 5 de enero de 2026 con el calendario tributario. Las fechas concretas de impuesto vehicular quedan pendientes de extracción y verificación individual."],
+            ["Medios de pago", "Confirmar los medios habilitados directamente en el portal oficial al generar la liquidación."],
+            ["Canales de contacto", "Pendientes de confirmar en una fuente oficial específica del impuesto vehicular."],
+            ["Fuente de referencia", "Abrir la circular oficial del calendario tributario 2026."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
         "caldas": [
             ["Jurisdicción", titulo],
             ["Portal de liquidación", "Portal oficial de Rentas de Caldas para descargar la declaración por placa y pagar en línea."],
@@ -412,7 +448,11 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
                 "cauca": "https://www.cauca.gov.co/Prensa/SaladePrensa/Paginas/Gobernaci%C3%B3n-del-Cauca-define-calendario-tributario-2026-y-otorga-descuentos-por-pronto-pago-en-impuestos.aspx",
                 "caldas": "https://www.caldas.gov.co/noticias-gobernacion/183-hacienda/15978-caldas-inicia-recaudo-del-impuesto-vehicular-2026-con-beneficio-por-pronto-pago-descuento-ira-hasta-el-6-de-abril",
                 "risaralda": "https://tributario.risaralda.siifweb.com/",
-                "valle del cauca": "https://www.vehiculosvalle.com.co/impuestosweb/#/public"
+                "valle del cauca": "https://www.vehiculosvalle.com.co/impuestosweb/#/public",
+                "atlantico": "https://www.atlantico.gov.co/index.php/impuestos-departamentales",
+                "bolivar": "https://impuestos.bolivar.gov.co/gobol_web/liquidaciones",
+                "magdalena": "https://www.gobernaciondelmagdalena.gov.co/descuentos-de-hasta-el-100-en-intereses-por-impuestos-vehiculares-tasas-y-multas-de-transito/",
+                "norte de santander": "https://administrador.nortedesantander.gov.co/gaceta-departamental/circular-externa-05-de-enero-de-2026-2/"
             };
             const destino = fuentes[normalizarTexto(titulo)] || url;
             if (destino) {

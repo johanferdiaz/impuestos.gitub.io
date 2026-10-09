@@ -293,7 +293,7 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
     contenido.style.cssText = "font-size:.92rem;line-height:1.5;margin-top:10px;overflow-wrap:anywhere;";
     const lista = document.createElement("dl");
     lista.style.cssText = "margin:0;";
-    const campos = [
+    const fichaBase = [
         ["Jurisdicción", titulo],
         ["Portal de liquidación", tipoEnlace],
         ["Calendario tributario 2026", "Pendiente de verificación oficial individual. No usar fechas históricas como si siguieran vigentes."],
@@ -302,19 +302,69 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         ["Fuente de referencia", url ? "Abrir el enlace principal listado en esta tarjeta." : "No hay enlace disponible en la tarjeta."],
         ["Fecha de revisión editorial", "9 de octubre de 2026. La ficha requiere verificación individual antes de marcar sus datos como confirmados."]
     ];
+    const fichasVerificadas = {
+        "casanare": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal de Impuestos de la Secretaría de Hacienda de Casanare."],
+            ["Calendario tributario 2026", "Fechas publicadas: 15 % de descuento del 1 de enero al 15 de marzo; 10 % del 16 de marzo al 31 de mayo; 5 % del 1 de junio al 31 de julio; sin descuento del 1 de agosto al 30 de noviembre. Desde el 1 de diciembre se anuncian intereses moratorios. Estos plazos ya pasaron al 9 de octubre de 2026, salvo el tramo sin descuento que termina el 30 de noviembre."],
+            ["Medios de pago", "Consultar las opciones disponibles en el portal oficial antes de pagar; el calendario consultado no especifica los medios."],
+            ["Canales de contacto", "rentas@casanare.gov.co · 633 6339, extensión 1341 · Carrera 20 No. 08-02, edificio CAD, Yopal. Atención publicada: lunes a viernes, 8:00 a. m.–12:00 m. y 2:00–6:00 p. m."],
+            ["Fuente de referencia", "Abrir calendario tributario oficial de Casanare."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "bogota d.c.": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Página oficial del impuesto sobre vehículos automotores de la Secretaría Distrital de Hacienda."],
+            ["Calendario tributario 2026", "La fuente oficial indica vencimiento ordinario el 24 de julio de 2026 y descuento por pronto pago hasta el 15 de mayo de 2026. Para quienes se acogieron al pago por cuotas, las fechas fueron 3 de julio y 4 de septiembre de 2026. Todas esas fechas ya pasaron."],
+            ["Medios de pago", "La entidad indica pago en línea y pago presencial en entidades autorizadas para cupones del sistema de cuotas. Verifica las opciones vigentes en la Oficina Virtual."],
+            ["Canales de contacto", "Pendientes de incorporar desde una página oficial de contacto específica."],
+            ["Fuente de referencia", "Abrir página oficial del impuesto vehicular de Bogotá."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "antioquia": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Enlace de consulta de impuesto vehicular listado en esta tarjeta; se recomienda comprobar el acceso antes de ingresar datos."],
+            ["Calendario tributario 2026", "La Resolución departamental del 18 de diciembre de 2025 establece el calendario tributario de 2026. Las fechas de descuento y vencimiento deben consultarse en el acto oficial enlazado; los plazos ordinarios de 2026 no deben tratarse como futuros."],
+            ["Medios de pago", "Pendientes de confirmar en fuente oficial."],
+            ["Canales de contacto", "Pendientes de confirmar en fuente oficial."],
+            ["Fuente de referencia", "Abrir resolución oficial del calendario tributario 2026 de Antioquia."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ],
+        "cordoba": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "Portal de Impuestos de la Gobernación de Córdoba con opciones de declaración y pago de impuesto vehicular."],
+            ["Calendario tributario 2026", "La entidad dispone de una sección de calendario, pero las fechas concretas de la vigencia 2026 quedan pendientes de extracción y verificación individual en esta ficha."],
+            ["Medios de pago", "La página de calendario describe pago en bancos autorizados, portal virtual de la Gobernación y aplicación TAX CÓRDOBA; verifica la disponibilidad actual en el portal oficial."],
+            ["Canales de contacto", "RECAUDO.IMPUESTOS@CORDOBA.GOV.CO · Cra. 6 No. 65-24, local 44, segundo piso, CC Places Mall, Montería."],
+            ["Fuente de referencia", "Abrir portal oficial de impuestos de Córdoba."],
+            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+        ]
+    };
+    const campos = fichasVerificadas[normalizarTexto(titulo)] || fichaBase;
     campos.forEach(([etiqueta, valor]) => {
         const dt = document.createElement("dt");
         dt.textContent = etiqueta;
         dt.style.cssText = "font-weight:700;margin-top:8px;";
         const dd = document.createElement("dd");
         dd.style.cssText = "margin:2px 0 0;";
-        if (etiqueta === "Fuente de referencia" && url) {
-            const a = document.createElement("a");
-            a.href = url;
-            a.target = "_blank";
-            a.rel = "noopener noreferrer";
-            a.textContent = valor;
-            dd.appendChild(a);
+        if (etiqueta === "Fuente de referencia") {
+            const fuentes = {
+                "casanare": "https://impuestos.casanare.gov.co/impuesto-vehiculos/calendario-tributario",
+                "bogota d.c.": "https://www.haciendabogota.gov.co/es/impuestos/impuesto-sobre-vehiculos-automotores",
+                "antioquia": "https://www.antioquia.gov.co/images/PDF2/Hacienda/2026/02/resolucion-2025061416038-de-2025-calendario-tributario-2026.pdf",
+                "cordoba": "https://impuestos.cordoba.gov.co/RentasCord/vehiculos_calendario.jsp"
+            };
+            const destino = fuentes[normalizarTexto(titulo)] || url;
+            if (destino) {
+                const a = document.createElement("a");
+                a.href = destino;
+                a.target = "_blank";
+                a.rel = "noopener noreferrer";
+                a.textContent = valor;
+                dd.appendChild(a);
+            } else {
+                dd.textContent = valor;
+            }
         } else {
             dd.textContent = valor;
         }

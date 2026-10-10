@@ -932,15 +932,9 @@ function seleccionarDepartamento(card, nombre) {
     sugerenciasBusqueda.hidden = true;
     document.querySelectorAll("#departamentos .card").forEach(item => item.classList.remove("destino-busqueda"));
     card.hidden = false;
-    const ficha = card.querySelector(".ficha-departamental");
-    if (ficha) ficha.open = true;
+    // Llevar al usuario únicamente a la tarjeta del departamento, sin desplegar la ficha.
     card.classList.add("destino-busqueda");
-    card.scrollIntoView({behavior: "smooth", block: "center"});
-    const enlaceConsulta = card.querySelector(".acciones a");
-    if (enlaceConsulta) {
-        enlaceConsulta.setAttribute("aria-label", "Abrir enlace de consulta para " + nombre + ": " + enlaceConsulta.textContent.trim());
-        enlaceConsulta.focus({preventScroll: true});
-    }
+    card.scrollIntoView({behavior: "smooth", block: "start"});
 }
 
 function mostrarDepartamentos() {

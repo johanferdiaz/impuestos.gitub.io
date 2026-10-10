@@ -591,8 +591,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         ],
         "quindio": [
             ["Jurisdicción", titulo],
-            ["Portal de liquidación", "Portal de Impuesto Vehicular del Gobierno del Quindío."],
-            ["Calendario tributario 2026", "El 27 de agosto de 2026, el Gobierno del Quindío publicó una noticia titulada «Departamento extiende la fecha límite para el pago del Impuesto Vehicular en el Quindío». Esto indica que hubo una ampliación posterior al plazo inicialmente anunciado del 31 de julio. En la consulta realizada no se pudo confirmar la nueva fecha exacta ni localizar el acto que la formaliza; por eso no se presenta el 31 de julio como vencimiento definitivo. Confirmar la fecha aplicable y el estado de mora en el portal oficial o con Hacienda."],
+            ["Portal de liquidación", "El sitio oficial de la Gobernación enlaza al portal de Impuesto Vehicular del Quindío: https://isva.quindio.gov.co/portal-quindio/."],
+            ["Calendario tributario 2026", "La Gobernación publicó el 26 de agosto de 2026 la noticia «Departamento extiende la fecha límite para el pago del Impuesto Vehicular en el Quindío». La existencia de una prórroga está confirmada, pero la nueva fecha exacta no quedó visible en la información pública recuperada en esta revisión. No se presenta el 31 de julio como vencimiento definitivo. Confirmar fecha, intereses y estado de la obligación en el portal oficial o con Hacienda."],
             ["Medios de pago", "El Gobierno departamental indica que el recaudo puede realizarse presencialmente o por su portal web. Confirma las opciones habilitadas al generar la liquidación."],
             ["Canales de contacto", "Línea de atención a la ciudadanía de la Gobernación: (606) 735 9919. Dirección: Calle 20 No. 13-22, Centro Administrativo Departamental Ancízar López López, Armenia."],
             ["Fuente de referencia", "Abrir portal oficial de Impuesto Vehicular del Quindío."],
@@ -715,6 +715,12 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             1: { url: "https://tributario.risaralda.siifweb.com/", texto: "Iniciar trámite de liquidación ↗" },
             2: { url: "https://tributario.risaralda.siifweb.com/", texto: "Ver opciones oficiales de pago ↗" },
             7: { url: "https://tramites.risaralda.gov.co/tramites/171/impuesto-sobre-vehiculos-automotores/", texto: "Abrir ficha oficial del trámite ↗" }
+        },
+        "quindio": {
+            0: { url: "https://isva.quindio.gov.co/portal-quindio/", texto: "Consultar en portal oficial ↗" },
+            1: { url: "https://isva.quindio.gov.co/portal-quindio/", texto: "Iniciar liquidación en portal ↗" },
+            2: { url: "https://isva.quindio.gov.co/portal-quindio/", texto: "Consultar opciones de pago ↗" },
+            7: { url: "https://isva.quindio.gov.co/portal-quindio/", texto: "Abrir portal oficial ↗" }
         }
     };
     const enlacesDepartamento = opcionesPorDepartamento[normalizarTexto(titulo)] || {};

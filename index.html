@@ -142,7 +142,7 @@
 <div class="acciones"><a class="boton" href="https://www.cesar.gov.co/d/es/atencion-ciudadano/tramites-servicios/46-tramites" target="_blank" rel="noopener noreferrer">Consultar entidad ↗</a></div></article>
 <article class="card proximamente" data-nombre="chocó" data-region="Pacifica">
 <div class="escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20del%20Choc%C3%B3.svg" alt="Escudo de Chocó" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">C</b></div>
-<div class="region">Pacifica</div><h3>Chocó</h3><span class="estado">Información no localizada en fuentes públicas consultadas</span>
+<div class="region">Pacifica</div><h3>Chocó</h3><span class="estado">Portal específico pendiente de confirmar</span>
 <div class="acciones"><a class="boton" href="https://www.choco.gov.co/" target="_blank" rel="noopener noreferrer">Consultar Gobernación ↗</a></div></article>
 <article class="card activo" data-nombre="córdoba" data-region="Caribe">
 <div class="escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20oficial%20de%20C%C3%B3rdoba%20(Colombia).svg" alt="Escudo de Córdoba" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">C</b></div>
@@ -447,11 +447,11 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         ],
         "choco": [
             ["Jurisdicción", titulo],
-            ["Portal de liquidación", "La tarjeta enlaza al sitio institucional de la Gobernación del Chocó; no se confirmó un portal específico de liquidación vehicular en las fuentes consultadas."],
-            ["Calendario tributario 2026", "Información no localizada en las fuentes públicas oficiales consultadas sobre las fechas exactas de vencimiento o descuentos del impuesto vehicular 2026. Pendiente de verificación oficial."],
-            ["Medios de pago", "No confirmados en una fuente oficial específica. Verificar con la Secretaría de Hacienda antes de efectuar pagos."],
-            ["Canales de contacto", "Consultar los canales institucionales de la Gobernación del Chocó; falta confirmar el contacto específico de Rentas."],
-            ["Fuente de referencia", "Abrir sitio institucional de la Gobernación del Chocó."],
+            ["Portal de liquidación", "No se localizó un portal público específico de liquidación del impuesto vehicular en las fuentes oficiales consultadas. Solicitar a la Gobernación el enlace vigente antes de ingresar datos del vehículo."],
+            ["Calendario tributario 2026", "No se encontró publicación oficial verificable con fechas de vencimiento, descuentos o sanciones para la vigencia 2026. Estado: pendiente de confirmación directa con Rentas; no asumir fechas de otros años."],
+            ["Medios de pago", "No confirmados en una fuente oficial específica del impuesto vehicular. No realizar pagos mediante enlaces de terceros; confirmar primero el procedimiento con la Gobernación."],
+            ["Canales de contacto", "Contacto institucional publicado por la Gobernación: 320 382 7001 y atencionalusuario@choco.gov.co. Dirección: Calle 31 No. 1-101, Edificio La Confianza, Quibdó. Horario publicado: lunes a viernes, 8:00 a. m.–12:00 m. y 2:00–6:00 p. m. Estos son canales generales; solicitar transferencia a Rentas."],
+            ["Fuente de referencia", "Consultar la Gobernación del Chocó y su portal institucional de datos abiertos. No se encontró allí una ficha pública específica de impuesto vehicular."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
         "boyaca": [
@@ -711,6 +711,13 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             1: { url: "https://tramites-guainia.gov.co/tramites/", texto: "Buscar trámite de liquidación ↗" },
             7: { url: "https://www.guainia.gov.co/", texto: "Abrir Gobernación del Guainía ↗" },
             8: { url: "https://tramites-guainia.gov.co/tramites/", texto: "Ver canales oficiales de atención ↗" }
+        },
+        "choco": {
+            0: { url: "https://www.choco.gov.co/", texto: "Consultar Gobernación del Chocó ↗" },
+            1: { url: "https://www.choco.gov.co/", texto: "Solicitar enlace oficial de liquidación ↗" },
+            2: { url: "https://www.choco.gov.co/", texto: "Confirmar medios de pago oficiales ↗" },
+            7: { url: "https://opendata.choco.gov.co/", texto: "Abrir portal oficial de datos ↗" },
+            8: { url: "https://opendata.choco.gov.co/", texto: "Ver contacto institucional ↗" }
         },
         "guaviare": {
             0: { url: "https://sivervguaviare.aplicativosenlinea.com/siver-v-guaviare/redirect/", texto: "Consultar estado de cuenta ↗" },

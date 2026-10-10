@@ -20,6 +20,11 @@
 .sugerencias-busqueda [role="option"]:hover,.sugerencias-busqueda [role="option"]:focus{background:#f1f5f9;outline:2px solid #94a3b8;outline-offset:-2px}
 .sugerencias-busqueda .sin-resultados{padding:12px 14px;color:#64748b;font-size:.92rem}
 .card.destino-busqueda{outline:3px solid #64748b;outline-offset:3px;scroll-margin-top:24px}
+.card.destino-busqueda .acciones{margin-top:14px;padding:12px;border:2px solid #0f766e;border-radius:12px;background:#f0fdfa}
+.card.destino-busqueda .acciones::before{content:"SIGUIENTE PASO: abre el enlace oficial de consulta";display:block;margin-bottom:9px;color:#115e59;font-size:.82rem;font-weight:700;letter-spacing:.02em}
+.card.destino-busqueda .acciones a:first-child{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 16px;background:#0f766e!important;color:#fff!important;border:2px solid #0f766e;border-radius:8px;font-weight:700;text-decoration:none;box-shadow:0 2px 5px rgba(15,118,110,.18)}
+.card.destino-busqueda .acciones a:first-child:focus{outline:3px solid #f59e0b;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.card.destino-busqueda{scroll-behavior:auto}}
 </style>
 
 </head>
@@ -936,7 +941,10 @@ function seleccionarDepartamento(card, nombre) {
     card.classList.add("destino-busqueda");
     card.scrollIntoView({behavior: "smooth", block: "center"});
     const enlaceConsulta = card.querySelector(".acciones a");
-    if (enlaceConsulta) enlaceConsulta.focus({preventScroll: true});
+    if (enlaceConsulta) {
+        enlaceConsulta.setAttribute("aria-label", "Abrir enlace de consulta para " + nombre + ": " + enlaceConsulta.textContent.trim());
+        enlaceConsulta.focus({preventScroll: true});
+    }
 }
 
 function mostrarDepartamentos() {

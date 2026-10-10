@@ -932,7 +932,9 @@ function seleccionarDepartamento(card, nombre) {
     sugerenciasBusqueda.hidden = true;
     document.querySelectorAll("#departamentos .card").forEach(item => item.classList.remove("destino-busqueda"));
     card.hidden = false;
-    // Llevar al usuario únicamente a la tarjeta del departamento, sin desplegar la ficha.
+    // Dejar cerrada "Ver ficha de consulta", incluso si se abrió antes.
+    const ficha = card.querySelector(".ficha-departamental");
+    if (ficha) ficha.open = false;
     card.classList.add("destino-busqueda");
     card.scrollIntoView({behavior: "smooth", block: "start"});
 }

@@ -429,11 +429,11 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         ],
         "cesar": [
             ["Jurisdicción", titulo],
-            ["Portal de liquidación", "Portal oficial de la Gobernación del Cesar para liquidar y pagar el impuesto vehicular en línea; también existe atención presencial en la Oficina de Rentas."],
-            ["Calendario tributario 2026", "Resolución 022936 del 29 de diciembre de 2025: descuento del 15 % para pagos entre el 1 de enero y el 30 de abril; descuento del 10 % del 1 de mayo al 30 de junio. La fecha máxima para declarar y pagar fue el 30 de junio de 2026. Los plazos ya vencieron."],
-            ["Medios de pago", "Pago en línea desde cesar.gov.co en la opción Pague aquí impuesto Vehicular, o presencialmente en la Oficina de Rentas de la Gobernación."],
-            ["Canales de contacto", "Gobernación del Cesar: Calle 16 # 12-120, edificio Alfonso López Michelsen, Valledupar · (605) 588 5602 · contactenos@cesar.gov.co. Confirma con la entidad el canal específico de Rentas."],
-            ["Fuente de referencia", "Abrir Resolución 022936 del 29 de diciembre de 2025 y calendario oficial."],
+            ["Portal de liquidación", "La Gobernación publica que la liquidación y el pago pueden realizarse en línea desde cesar.gov.co, en la opción “Pague aquí impuesto Vehicular”, o presencialmente en la Oficina de Rentas. Verifica que el enlace de pago esté dentro del dominio oficial."],
+            ["Calendario tributario 2026", "Resolución 022936 del 29 de diciembre de 2025: descuento del 15 % hasta el último día hábil de abril y del 10 % desde el 1 de mayo hasta el último día hábil de junio. El plazo máximo fue el 30 de junio de 2026; todos los plazos ordinarios ya vencieron."],
+            ["Medios de pago", "La Gobernación informa pago en línea desde su portal institucional y atención presencial en la Oficina de Rentas. Confirma los medios vigentes antes de pagar."],
+            ["Canales de contacto", "Gobernación del Cesar: Calle 16 # 12-120, edificio Alfonso López Michelsen, Valledupar · (605) 588 5602 · contactenos@cesar.gov.co. Solicitar orientación del Grupo Gestión de Rentas."],
+            ["Fuente de referencia", "Comunicado oficial sobre el calendario 2026 y Resolución 022936 del 29 de diciembre de 2025."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
         "narino": [
@@ -465,11 +465,11 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         ],
         "amazonas": [
             ["Jurisdicción", titulo],
-            ["Portal de liquidación", "No se confirmó un portal específico de impuesto vehicular en las fuentes públicas consultadas. Se enlaza el sitio institucional de la Gobernación para orientar la consulta."],
-            ["Calendario tributario 2026", "Información no localizada en fuentes públicas oficiales consultadas sobre fechas de vencimiento o descuentos del impuesto vehicular 2026. Pendiente de verificación oficial."],
-            ["Medios de pago", "No confirmados en una fuente oficial específica del impuesto vehicular. Verificar directamente con la Secretaría de Hacienda."],
-            ["Canales de contacto", "Consultar los canales institucionales de la Gobernación del Amazonas."],
-            ["Fuente de referencia", "Abrir sitio oficial de la Gobernación del Amazonas."],
+            ["Portal de liquidación", "El trámite oficial de declaración y pago del impuesto sobre vehículos automotores aparece registrado para la Gobernación del Amazonas en el SUIT de Función Pública. No se confirmó un enlace directo público de liquidación; solicitarlo a la entidad antes de ingresar datos o pagar."],
+            ["Calendario tributario 2026", "No se localizó un calendario tributario 2026 oficial verificable con fechas de vencimiento o descuentos específicos para Amazonas. Pendiente de confirmación con la Secretaría de Hacienda; no asumir fechas de otros departamentos."],
+            ["Medios de pago", "No confirmados en una fuente oficial específica para Amazonas. Confirmar los canales habilitados directamente con la Gobernación antes de realizar pagos."],
+            ["Canales de contacto", "Gobernación del Amazonas: contactenos@amazonas.gov.co · teléfono (608) 592 6566 · Calle 10 No. 10-77, Leticia. Contacto general institucional; solicitar derivación a la dependencia responsable de Rentas."],
+            ["Fuente de referencia", "Consultar el trámite de impuesto sobre vehículos automotores registrado en el SUIT de Función Pública y el portal institucional de la Gobernación del Amazonas."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
         "arauca": [
@@ -718,6 +718,20 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             2: { url: "https://www.choco.gov.co/", texto: "Confirmar medios de pago oficiales ↗" },
             7: { url: "https://opendata.choco.gov.co/", texto: "Abrir portal oficial de datos ↗" },
             8: { url: "https://opendata.choco.gov.co/", texto: "Ver contacto institucional ↗" }
+        },
+        "cesar": {
+            0: { url: "https://cesar.gov.co/d/es/noticias/boletines/8164-boletin-2026-3", texto: "Consultar impuesto y calendario 2026 ↗" },
+            1: { url: "https://cesar.gov.co/", texto: "Abrir portal oficial para liquidación ↗" },
+            2: { url: "https://cesar.gov.co/", texto: "Buscar opción Pague aquí impuesto vehicular ↗" },
+            7: { url: "https://cesar.gov.co/d/es/normatividad/resoluciones/116-resoluciones/8157-resolucion-rentas-2", texto: "Ver Resolución 022936 de 2025 ↗" },
+            8: { url: "https://cesar.gov.co/", texto: "Ver contacto institucional ↗" }
+        },
+        "amazonas": {
+            0: { url: "https://www.funcionpublica.gov.co/dafpIndexerBT/tramite/index?bloquearFiltroDepartamento=&bloquearFiltroEntidad=&bloquearFiltroMunicipio=&bloquearFiltroSector=&filtroDepartamento=91&filtroEntidad=4400&filtroMunicipio=&filtroSector=00&find=FindNext&max=10&offset=70&query=", texto: "Consultar trámite en SUIT ↗" },
+            1: { url: "https://www.amazonas.gov.co/", texto: "Solicitar enlace de liquidación oficial ↗" },
+            2: { url: "https://www.amazonas.gov.co/", texto: "Confirmar medios de pago oficiales ↗" },
+            7: { url: "https://www.amazonas.gov.co/", texto: "Abrir Gobernación del Amazonas ↗" },
+            8: { url: "https://www.amazonas.gov.co/", texto: "Ver contacto institucional ↗" }
         },
         "guaviare": {
             0: { url: "https://sivervguaviare.aplicativosenlinea.com/siver-v-guaviare/redirect/", texto: "Consultar estado de cuenta ↗" },

@@ -130,8 +130,8 @@
 <div class="acciones"><a class="boton" href="https://www.cesar.gov.co/d/es/atencion-ciudadano/tramites-servicios/46-tramites" target="_blank" rel="noopener noreferrer">Consultar entidad ↗</a></div></article>
 <article class="card proximamente" data-nombre="chocó" data-region="Pacifica">
 <div class="escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20del%20Choc%C3%B3.svg" alt="Escudo de Chocó" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">C</b></div>
-<div class="region">Pacifica</div><h3>Chocó</h3><span class="estado">Portal específico pendiente de confirmar</span>
-<div class="acciones"><a class="boton" href="https://www.choco.gov.co/" target="_blank" rel="noopener noreferrer">Consultar Gobernación ↗</a></div></article>
+<div class="region">Pacifica</div><h3>Chocó</h3><span class="estado">Proyecto de modificación tributaria en trámite; norma definitiva por confirmar</span>
+<div class="acciones"><a class="boton" href="https://www.asambleachoco.gov.co/web/2026/10/07/segundo-debate-del-proyecto-no-004-del-23-de-septiembre-de-2026-por-medio-de-la-cual-se-modifica-y-se-adiciona-la-ordenanza-0292-del-15-de-julio-2026-por-medio-de-la-cual-se-otorgaron-descuentos-s/" target="_blank" rel="noopener noreferrer">Ver proyecto en Asamblea ↗</a></div></article>
 <article class="card activo" data-nombre="córdoba" data-region="Caribe">
 <div class="escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20oficial%20de%20C%C3%B3rdoba%20(Colombia).svg" alt="Escudo de Córdoba" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">C</b></div>
 <div class="region">Caribe</div><h3>Córdoba</h3><span class="estado">● Portal disponible</span>
@@ -144,10 +144,10 @@
 <div class="escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20del%20Guain%C3%ADa.svg" alt="Escudo de Guainia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">G</b></div>
 <div class="region">Amazonia</div><h3>Guainía</h3><span class="estado">Información no localizada en fuentes públicas consultadas</span>
 <div class="acciones"><a class="boton" href="https://guainia.gov.co/" target="_blank" rel="noopener noreferrer">Consultar Gobernación ↗</a></div></article>
-<article class="card proximamente" data-nombre="guaviare" data-region="Amazonia">
+<article class="card activo" data-nombre="guaviare" data-region="Amazonia">
 <div class="escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20del%20Guaviare.svg" alt="Escudo de Guaviare" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">G</b></div>
-<div class="region">Amazonia</div><h3>Guaviare</h3><span class="estado">Información no localizada en fuentes públicas consultadas</span>
-<div class="acciones"><a class="boton" href="https://www.guaviare.gov.co/" target="_blank" rel="noopener noreferrer">Consultar Gobernación ↗</a></div></article>
+<div class="region">Amazonia</div><h3>Guaviare</h3><span class="estado">● Portal de liquidación localizado; calendario 2026 por verificar</span>
+<div class="acciones"><a class="boton" href="https://sivervguaviare.aplicativosenlinea.com/siver-v-guaviare/liquidacionweb/primeraa.php" target="_blank" rel="noopener noreferrer">💰 Liquidar impuesto ↗</a></div></article>
 <article class="card activo" data-nombre="huila" data-region="Andina">
 <div class="escudo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20del%20Huila.svg" alt="Escudo de Huila" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><b style="display:none">H</b></div>
 <div class="region">Andina</div><h3>Huila</h3><span class="estado">● Portal disponible</span>
@@ -226,11 +226,6 @@
 
 <script>
 const escudo = nombre => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(nombre)}`;
-
-const serviciosNacionales = {
-    multas: "https://www.simit.org.co/",
-    runt: "https://www.runt.gov.co/"
-};
 
 const departamentos = [
     { nombre:"Amazonas", region:"Amazonia", logo:escudo("Escudo de Amazonas (Colombia).svg"), url:"https://www.amazonas.gov.co/" },

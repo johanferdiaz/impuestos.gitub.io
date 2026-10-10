@@ -372,11 +372,12 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         ],
         "cauca": [
             ["Jurisdicción", titulo],
-            ["Portal de liquidación", "La Gobernación remite a www.rentascauca.gov.co para liquidación y pago; la dirección debe abrirse desde la publicación oficial."],
-            ["Calendario tributario 2026", "La publicación oficial indicó 15 % de descuento en enero y febrero, 10 % durante marzo y tarifa plena entre abril y el 30 de junio. El plazo ordinario ya venció."],
-            ["Medios de pago", "Pago en línea por PSE. También se publicaron puntos presenciales en Popayán, Santander de Quilichao y El Bordo-Patía."],
-            ["Canales de contacto", "Consultar los puntos y canales vigentes en las publicaciones oficiales de Rentas Cauca."],
-            ["Fuente de referencia", "Abrir publicación oficial de calendario tributario del Cauca."],
+            ["Portal de liquidación", "Desde el 28 de julio de 2026 la Gobernación informó que consulta, liquidación y pago se concentran en el portal institucional cauca.gov.co, sección Trámites y Servicios / Oficina de Impuestos y Rentas. Evitar enlaces independientes no autorizados."],
+            ["Calendario tributario 2026", "La Resolución 13935 de diciembre de 2025 fijó descuentos del 15 % en enero y febrero, 10 % en marzo y tarifa plena hasta el 30 de junio de 2026. El plazo ordinario ya venció."],
+            ["Medios de pago", "La Gobernación publicó pago en línea mediante PSE. Confirma los medios habilitados entrando desde cauca.gov.co / Oficina de Impuestos y Rentas."],
+            ["Descuentos y alivios", "El 14 de septiembre de 2026 se anunció un descuento del 80 % en intereses y sanciones de vigencias 2025 y anteriores; la publicación indica como requisito estar al día con la vigencia 2026. La fecha límite del beneficio no quedó confirmada en la ficha consultada: verificar su vigencia antes de contar con él."],
+            ["Canales de contacto", "Oficina Grupo de Rentas: rentas@cauca.gov.co. Dirección institucional publicada: Carrera 7 Calle 4 esquina, Popayán. Confirmar horario y atención en el portal oficial."],
+            ["Fuente de referencia", "Portal tributario unificado: https://www.cauca.gov.co/Prensa/SaladePrensa/Paginas/Gobernaci%C3%B3n-del-Cauca-unifica-sus-tramites-tributarios-en-el-portal-web-institucional-en-cumplimiento-de-la-Ley-de-Transpar.aspx ; calendario 2026: https://www.cauca.gov.co/NuestraGestion/Normatividad/Resoluci%C3%B3n%2013935%20de%202025.pdf ; alivio de intereses y sanciones: https://www.cauca.gov.co/rentas/SaladePrensa/Paginas/80-de-descuento-en-intereses-y-sanciones-del-impuesto-vehicular-de-la-vigencia-2025-y-anteriores.aspx."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
         "cordoba": [
@@ -698,6 +699,12 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
     menuTitulo.style.cssText = "margin:0 0 8px;font-size:1rem;";
     menu.appendChild(menuTitulo);
     const opcionesPorDepartamento = {
+        "cauca": {
+            0: { url: "https://www.cauca.gov.co/", texto: "Consultar desde portal oficial ↗" },
+            1: { url: "https://www.cauca.gov.co/", texto: "Buscar liquidación oficial ↗" },
+            2: { url: "https://www.cauca.gov.co/", texto: "Buscar pago PSE oficial ↗" },
+            7: { url: "https://www.cauca.gov.co/AtencionalCiudadano/Paginas/Tramites-en-Linea.aspx", texto: "Abrir trámites en línea ↗" }
+        },
         "caqueta": {
             0: { url: "https://www.caqueta.gov.co/", texto: "Consultar desde la web oficial ↗" },
             1: { url: "https://www.caqueta.gov.co/", texto: "Buscar liquidación oficial ↗" },

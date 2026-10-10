@@ -12,6 +12,14 @@
 .directorio-nacional-grid a{display:flex;flex-direction:column;gap:6px;padding:13px;border:1px solid #dbe3ea;border-radius:10px;background:#fff;color:inherit;text-decoration:none}
 .directorio-nacional-grid a:hover{border-color:#64748b}
 .directorio-nacional-grid span{font-size:.9rem;line-height:1.45}
+
+.buscador-autocompletar{position:relative;width:100%;max-width:620px;margin:0 auto;text-align:left}
+.buscador-autocompletar #buscador{width:100%;box-sizing:border-box}
+.sugerencias-busqueda{position:absolute;z-index:1000;top:calc(100% + 4px);left:0;right:0;max-height:280px;overflow-y:auto;background:#fff;border:1px solid #cbd5e1;border-radius:10px;box-shadow:0 8px 24px rgba(15,23,42,.14)}
+.sugerencias-busqueda [role="option"]{display:block;width:100%;padding:11px 14px;border:0;border-bottom:1px solid #eef2f7;background:#fff;text-align:left;color:#0f172a;font:inherit;cursor:pointer}
+.sugerencias-busqueda [role="option"]:hover,.sugerencias-busqueda [role="option"]:focus{background:#f1f5f9;outline:2px solid #94a3b8;outline-offset:-2px}
+.sugerencias-busqueda .sin-resultados{padding:12px 14px;color:#64748b;font-size:.92rem}
+.card.destino-busqueda{outline:3px solid #64748b;outline-offset:3px;scroll-margin-top:24px}
 </style>
 
 </head>
@@ -29,7 +37,10 @@
     <section class="intro">
         <h2>Consulta por departamento</h2>
         <p>Busca tu departamento y accede directamente a su portal oficial.</p>
-        <input type="search" id="buscador" placeholder="🔎 Buscar departamento..." aria-label="Buscar departamento">
+        <div class="buscador-autocompletar">
+            <input type="search" id="buscador" placeholder="🔎 Buscar departamento..." aria-label="Buscar departamento">
+            <div id="sugerencias-busqueda" class="sugerencias-busqueda" role="listbox" aria-label="Sugerencias de departamentos" hidden></div>
+        </div>
         <div class="estadisticas">
             <span><strong id="total">33</strong> territorios</span>
             <span><strong id="disponibles">26</strong> enlaces institucionales o de consulta</span>
@@ -879,6 +890,55 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
     card.appendChild(details);
 });
 
+const sugerenciasBusqueda = document.getElementById("sugerencias-busqueda");
+
+function mostrarSugerencias() {
+    const texto = normalizarTexto(buscador.value);
+    sugerenciasBusqueda.replaceChildren();
+    sugerenciasBusqueda.hidden = true;
+    if (!texto) return;
+
+    const coincidencias = Array.from(document.querySelectorAll("#departamentos .card"))
+        .map(card => ({ card, nombre: card.querySelector("h3")?.textContent.trim() || "" }))
+        .filter(item => normalizarTexto(item.nombre).startsWith(texto))
+        .slice(0, 8);
+
+    if (!coincidencias.length) {
+        const vacio = document.createElement("div");
+        vacio.className = "sin-resultados";
+        vacio.textContent = "No se encontraron gobernaciones o Bogotá D. C. con esas letras.";
+        sugerenciasBusqueda.appendChild(vacio);
+        sugerenciasBusqueda.hidden = false;
+        return;
+    }
+
+    coincidencias.forEach(({card, nombre}) => {
+        const opcion = document.createElement("button");
+        opcion.type = "button";
+        opcion.setAttribute("role", "option");
+        opcion.textContent = nombre;
+        opcion.addEventListener("click", () => seleccionarDepartamento(card, nombre));
+        sugerenciasBusqueda.appendChild(opcion);
+    });
+    sugerenciasBusqueda.hidden = false;
+}
+
+function seleccionarDepartamento(card, nombre) {
+    regionActual = "Todos";
+    document.querySelectorAll(".filtro").forEach(b => b.classList.toggle("activo-filtro", b.dataset.region === "Todos"));
+    buscador.value = nombre;
+    mostrarDepartamentos();
+    sugerenciasBusqueda.hidden = true;
+    document.querySelectorAll("#departamentos .card").forEach(item => item.classList.remove("destino-busqueda"));
+    card.hidden = false;
+    const ficha = card.querySelector(".ficha-departamental");
+    if (ficha) ficha.open = true;
+    card.classList.add("destino-busqueda");
+    card.scrollIntoView({behavior: "smooth", block: "center"});
+    const enlaceConsulta = card.querySelector(".acciones a");
+    if (enlaceConsulta) enlaceConsulta.focus({preventScroll: true});
+}
+
 function mostrarDepartamentos() {
     const texto = normalizarTexto(buscador.value);
     const region = normalizarTexto(regionActual);
@@ -909,7 +969,18 @@ document.querySelectorAll(".filtro").forEach(boton => {
     });
 });
 
-buscador.addEventListener("input", mostrarDepartamentos);
+buscador.addEventListener("input", () => { mostrarDepartamentos(); mostrarSugerencias(); });
+buscador.addEventListener("focus", mostrarSugerencias);
+buscador.addEventListener("keydown", event => {
+    if (event.key === "Escape") sugerenciasBusqueda.hidden = true;
+    if (event.key === "Enter" && !sugerenciasBusqueda.hidden) {
+        const primera = sugerenciasBusqueda.querySelector('[role="option"]');
+        if (primera) { event.preventDefault(); primera.click(); }
+    }
+});
+document.addEventListener("click", event => {
+    if (!event.target.closest(".buscador-autocompletar")) sugerenciasBusqueda.hidden = true;
+});
 document.getElementById("total").textContent = departamentos.length;
 document.getElementById("disponibles").textContent = departamentos.filter(d => d.url).length;
 mostrarDepartamentos();

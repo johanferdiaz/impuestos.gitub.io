@@ -477,7 +477,7 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "La Gobernación de Arauca informó el 24 de junio de 2026 que el plazo para pagar la vigencia 2026 vencía el 1 de julio de 2026. El plazo ordinario ya pasó. No confundir este vencimiento con los alivios para deudas de 2025 y años anteriores: el descuento del 70 % en sanciones e intereses terminó el 30 de septiembre de 2026; consultar la norma vigente para conocer condiciones posteriores."],
             ["Medios de pago", "La Gobernación informa pago en línea desde el portal oficial y pago presencial en Banco Davivienda. También reporta atención para liquidar y pagar en la Casa del Libro Total Arauca, calle 19 No. 22-25, local 2, junto a Bancolombia. Verifica los canales vigentes antes de desplazarte."],
             ["Canales de contacto", "WhatsApp de impuesto vehicular: 313 358 49 41. Dirección de Rentas, atención general: 313 351 4545. Correo institucional de Hacienda: hacienda@arauca.gov.co. La Gobernación publicó la actualización de teléfonos el 18 de agosto de 2026."],
-            ["Fuente de referencia", "Abrir el comunicado oficial del vencimiento del 1 de julio de 2026 y el aviso de actualización de canales telefónicos de la Secretaría de Hacienda."],
+            ["Fuente de referencia", "Calendario y tarifas 2026: https://arauca.gov.co/tarifas-del-impuesto-vehicular-fueron-renovadas-para-2026/ · Vencimiento 1 de julio y canales de pago: https://arauca.gov.co/proposito-de-ano-nuevo-pagar-el-impuesto-vehicular-a-tiempo/ · Aviso de seguridad sobre enlaces oficiales: https://arauca.gov.co/gobernacion-de-arauca-advierte-a-contribuyentes-que-usen-solo-enlaces-de-pago-oficiales/."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
         "caqueta": [
@@ -698,6 +698,12 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
     menuTitulo.style.cssText = "margin:0 0 8px;font-size:1rem;";
     menu.appendChild(menuTitulo);
     const opcionesPorDepartamento = {
+        "arauca": {
+            0: { url: "https://arauca.gov.co/impuesto-de-vehiculo/", texto: "Consultar impuesto vehicular ↗" },
+            1: { url: "https://arauca.gov.co/impuesto-de-vehiculo/", texto: "Iniciar liquidación ↗" },
+            2: { url: "https://arauca.gov.co/impuesto-de-vehiculo/", texto: "Abrir opciones oficiales de pago ↗" },
+            7: { url: "https://arauca.gov.co/secretaria-de-hacienda/", texto: "Abrir Secretaría de Hacienda ↗" }
+        },
         "cordoba": {
             0: { url: "https://impuestos.cordoba.gov.co/VehiculosCor/EstadoCartera.jsp", texto: "Consultar estado de cartera ↗" },
             1: { url: "https://impuestos.cordoba.gov.co/VehiculosCor/DecVeh.jsp", texto: "Iniciar declaración y liquidación ↗" },

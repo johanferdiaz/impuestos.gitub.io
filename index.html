@@ -482,11 +482,11 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         ],
         "caqueta": [
             ["Jurisdicción", titulo],
-            ["Portal de liquidación", "No se confirmó un portal departamental específico de liquidación vehicular en las fuentes públicas consultadas. Se enlaza la página institucional de la Gobernación."],
-            ["Calendario tributario 2026", "Información no localizada en fuentes públicas oficiales consultadas sobre fechas de vencimiento o descuentos del impuesto vehicular 2026. Pendiente de verificación oficial."],
-            ["Medios de pago", "No confirmados en una fuente oficial específica del impuesto vehicular."],
-            ["Canales de contacto", "Consultar la Secretaría de Hacienda o Dirección de Rentas desde el sitio institucional de la Gobernación."],
-            ["Fuente de referencia", "Abrir sitio oficial de la Gobernación del Caquetá."],
+            ["Portal de liquidación", "La Gobernación informó que la liquidación y el pago pueden gestionarse por canales digitales habilitados. No se logró confirmar en esta revisión una URL directa y estable del portal; entrar desde la web institucional para evitar enlaces no oficiales."],
+            ["Calendario tributario 2026", "La Gobernación anunció un descuento del 20 % para la vigencia 2026 hasta el 29 de mayo de 2026. Ese beneficio ya venció. No se confirmó en las fuentes localizadas una fecha general de vencimiento posterior; verificar la obligación individual con Rentas."],
+            ["Medios de pago", "La Gobernación comunicó que estaba habilitado el pago digital por PSE y atención presencial para liquidación y pago en el antiguo Caesca, Zona Rosa de Florencia. Confirmar disponibilidad y ubicación antes de desplazarse."],
+            ["Canales de contacto", "Consultar Secretaría de Hacienda / Dirección Tributaria Departamental a través del sitio oficial de la Gobernación del Caquetá."],
+            ["Fuente de referencia", "Gobernación del Caquetá: https://www.caqueta.gov.co/ ; información oficial del descuento y pago digital: https://www.youtube.com/watch?v=bEWxYRm-5L4 y https://www.youtube.com/watch?v=rdDYvGs_lxs ; ficha del trámite en SUIT: https://tramites1.suit.gov.co/registro-web/suit_descargar_archivo?A=18264."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
         "cundinamarca": [
@@ -698,6 +698,12 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
     menuTitulo.style.cssText = "margin:0 0 8px;font-size:1rem;";
     menu.appendChild(menuTitulo);
     const opcionesPorDepartamento = {
+        "caqueta": {
+            0: { url: "https://www.caqueta.gov.co/", texto: "Consultar desde la web oficial ↗" },
+            1: { url: "https://www.caqueta.gov.co/", texto: "Buscar liquidación oficial ↗" },
+            2: { url: "https://www.caqueta.gov.co/", texto: "Buscar canal PSE oficial ↗" },
+            7: { url: "https://www.caqueta.gov.co/", texto: "Abrir Gobernación del Caquetá ↗" }
+        },
         "arauca": {
             0: { url: "https://arauca.gov.co/impuesto-de-vehiculo/", texto: "Consultar impuesto vehicular ↗" },
             1: { url: "https://arauca.gov.co/impuesto-de-vehiculo/", texto: "Iniciar liquidación ↗" },

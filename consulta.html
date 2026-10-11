@@ -56,6 +56,8 @@ body.pagina-detalle .ficha-departamental>div{font-size:1rem!important;line-heigh
 @media(max-width:600px){.cabecera-detalle-contenido{align-items:flex-start;gap:12px}.logo-detalle{width:66px;height:82px}}
 </style>
 
+
+<style id="ocultar-aviso-antiguo">.seguridad{display:none!important}</style>
 </head>
 <body>
 
@@ -1060,6 +1062,8 @@ mostrarDepartamentos();
 })();
 </script>
 
+
+<script id="eliminacion-aviso-antiguo">document.querySelectorAll(".seguridad").forEach(function(aviso){aviso.remove();});</script>
 
 <aside class="seguridad-final" role="note" aria-label="Recomendaciones de navegación segura">
   <strong>🛡️ Navegar con seguridad</strong>

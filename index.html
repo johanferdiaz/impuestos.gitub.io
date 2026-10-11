@@ -26,6 +26,13 @@
 .ficha-departamental{display:none!important}
 .acciones{display:flex;flex-wrap:wrap;gap:8px}
 .boton-mas-informacion{background:#fff!important;color:#174b7a!important;border:1px solid #174b7a!important}
+
+/* Aviso de navegación segura también al final de cada página */
+.seguridad-final{max-width:1100px;margin:24px auto 18px;padding:16px 18px;box-sizing:border-box;border:1px solid #cbd5e1;border-left:4px solid #174b7a;border-radius:10px;background:#f8fafc;color:#1e293b;line-height:1.6}
+.seguridad-final strong{display:block;margin-bottom:4px}
+.seguridad-final p{margin:0;font-size:.94rem}
+@media(max-width:640px){.seguridad-final{margin:20px 12px 14px;padding:14px}}
+
 </style>
 
 </head>
@@ -1007,6 +1014,12 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
     acciones.appendChild(enlace);
 });
 </script>
+
+
+<aside class="seguridad-final" role="note" aria-label="Recomendaciones de navegación segura">
+  <strong>🛡️ Navegar con seguridad</strong>
+  <p>Verifica que el sitio y el destinatario del pago sean oficiales antes de ingresar datos o pagar. Este directorio es informativo: no recibe pagos, no vende pólizas y nunca solicita claves ni datos bancarios.</p>
+</aside>
 
 </body>
 </html>

@@ -53,7 +53,30 @@ body.pagina-detalle .ficha-departamental>div{font-size:1rem!important;line-heigh
 .cabecera-detalle h1{margin:0;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.15}
 .subtitulo-detalle{margin:8px 0 0;color:#52657d}
 .detalle-no-encontrado{max-width:700px;margin:60px auto;padding:24px}
-@media(max-width:600px){.cabecera-detalle-contenido{align-items:flex-start;gap:12px}.logo-detalle{width:66px;height:82px}}
+
+/* Presentación limpia de la ficha individual */
+body.pagina-detalle .intro,
+body.pagina-detalle .regiones,
+body.pagina-detalle #directorio-nacional,
+body.pagina-detalle main>.nota-metodologia{display:none!important}
+body.pagina-detalle .cabecera-detalle{max-width:960px;margin:0 auto;padding:28px 24px 8px}
+body.pagina-detalle .volver-directorio{display:inline-flex;align-items:center;gap:8px;margin-bottom:24px;font-size:1rem}
+body.pagina-detalle .cabecera-detalle-contenido{display:flex;align-items:center;gap:22px;max-width:820px}
+body.pagina-detalle .logo-detalle{flex:0 0 76px;width:76px;height:88px;padding:8px;box-sizing:border-box;object-fit:contain;background:#fff;border:1px solid #e2e8f0;border-radius:16px}
+body.pagina-detalle .etiqueta-detalle{font-size:.76rem;letter-spacing:.09em;line-height:1.5}
+body.pagina-detalle .cabecera-detalle h1{font-size:clamp(2rem,5vw,2.7rem);letter-spacing:-.035em}
+body.pagina-detalle .subtitulo-detalle{max-width:560px;font-size:1.05rem;line-height:1.6}
+body.pagina-detalle #departamentos .card>.escudo{display:none!important}
+body.pagina-detalle #departamentos .card>.region{margin-top:0}
+body.pagina-detalle #departamentos .card{margin-top:24px!important}
+@media(max-width:600px){
+ body.pagina-detalle .cabecera-detalle{padding:20px 18px 4px}
+ body.pagina-detalle .cabecera-detalle-contenido{align-items:center;gap:14px}
+ body.pagina-detalle .logo-detalle{flex-basis:62px;width:62px;height:72px;padding:6px}
+ body.pagina-detalle .etiqueta-detalle{font-size:.68rem}
+ body.pagina-detalle .cabecera-detalle h1{font-size:2rem}
+ body.pagina-detalle .subtitulo-detalle{font-size:.96rem;line-height:1.45}
+}
 </style>
 
 

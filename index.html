@@ -203,6 +203,37 @@ section.nota-metodologia[aria-labelledby="titulo-fichas"] .texto-fichas-detalle{
 }
 </style>
 
+<style id="bloque-fichas-legible">
+section.nota-metodologia[aria-labelledby="titulo-fichas"] .texto-fichas-intro{
+ display:grid!important;
+ grid-template-columns:minmax(0,1fr)!important;
+ gap:10px!important;
+ width:100%!important;
+ max-width:64ch!important;
+ margin:0 0 18px!important;
+ padding:0!important;
+}
+section.nota-metodologia[aria-labelledby="titulo-fichas"] .texto-fichas-intro p{
+ display:block!important;
+ width:100%!important;
+ max-width:none!important;
+ margin:0!important;
+ padding:0!important;
+ white-space:normal!important;
+ text-align:left!important;
+ line-height:1.75!important;
+ overflow-wrap:break-word!important;
+ word-break:normal!important;
+}
+section.nota-metodologia[aria-labelledby="titulo-fichas"] .texto-fichas-intro strong{
+ color:#174b7a!important;
+}
+@media(max-width:640px){
+ section.nota-metodologia[aria-labelledby="titulo-fichas"] .texto-fichas-intro{gap:12px!important}
+ section.nota-metodologia[aria-labelledby="titulo-fichas"] .texto-fichas-intro p{font-size:.96rem!important;line-height:1.75!important}
+}
+</style>
+
 </head>
 <body>
 
@@ -249,8 +280,7 @@ section.nota-metodologia[aria-labelledby="titulo-fichas"] .texto-fichas-detalle{
 
     <section class="nota-metodologia" aria-labelledby="titulo-fichas">
         <h2 id="titulo-fichas">Información de las fichas y verificación</h2>
-        <p class="texto-fichas-intro">Consulta la información disponible de cada departamento.</p>
-        <p class="texto-fichas-detalle">Si un dato no tiene una fuente oficial confirmada, lo marcamos como pendiente. Así evitamos publicar fechas, descuentos o instrucciones de pago sin verificar.</p>
+        <div class="texto-fichas-intro"><p>Consulta la información disponible de cada departamento.</p><p>Los datos sin una fuente oficial confirmada aparecen como <strong>pendientes</strong>.</p><p>Así evitamos publicar fechas, descuentos o instrucciones de pago sin verificar.</p></div>
         <p class="nota-fecha"><small><strong>Última actualización editorial:</strong> 11 de octubre de 2026. Corresponde a la revisión del directorio; no significa que todos los datos de cada departamento se hayan verificado ese mismo día.</small></p>
     </section>
 

@@ -999,6 +999,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
     const enlace = document.createElement("a");
     enlace.className = "boton boton-mas-informacion";
     enlace.href = "consulta.html?departamento=" + encodeURIComponent(titulo);
+    enlace.target = "_blank";
+    enlace.rel = "noopener noreferrer";
     enlace.textContent = "Ver más información";
     enlace.setAttribute("aria-label", "Ver toda la información de " + titulo);
     acciones.appendChild(enlace);

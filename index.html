@@ -176,6 +176,33 @@ section.nota-metodologia[aria-labelledby="titulo-fichas"] p.nota-fecha small{
 }
 </style>
 
+
+<style id="lectura-fichas-en-bloques">
+section.nota-metodologia[aria-labelledby="titulo-fichas"] .texto-fichas-intro,
+section.nota-metodologia[aria-labelledby="titulo-fichas"] .texto-fichas-detalle{
+  display:block!important;
+  width:100%!important;
+  max-width:62ch!important;
+  margin:0 0 12px!important;
+  padding:0!important;
+  text-align:left!important;
+  white-space:normal!important;
+  overflow-wrap:normal!important;
+  word-break:normal!important;
+  line-height:1.75!important;
+}
+section.nota-metodologia[aria-labelledby="titulo-fichas"] .texto-fichas-detalle{
+  margin-bottom:18px!important;
+}
+@media(max-width:640px){
+ section.nota-metodologia[aria-labelledby="titulo-fichas"] .texto-fichas-intro,
+ section.nota-metodologia[aria-labelledby="titulo-fichas"] .texto-fichas-detalle{
+   font-size:.96rem!important;
+   line-height:1.7!important;
+ }
+}
+</style>
+
 </head>
 <body>
 
@@ -222,7 +249,8 @@ section.nota-metodologia[aria-labelledby="titulo-fichas"] p.nota-fecha small{
 
     <section class="nota-metodologia" aria-labelledby="titulo-fichas">
         <h2 id="titulo-fichas">Información de las fichas y verificación</h2>
-        <p>Consulta la información disponible para cada departamento. Los datos que todavía no cuentan con una fuente oficial confirmada se identifican como pendientes. Así evitamos publicar fechas, descuentos o instrucciones de pago que no hayan sido comprobados.</p>
+        <p class="texto-fichas-intro">Consulta la información disponible de cada departamento.</p>
+        <p class="texto-fichas-detalle">Si un dato no tiene una fuente oficial confirmada, lo marcamos como pendiente. Así evitamos publicar fechas, descuentos o instrucciones de pago sin verificar.</p>
         <p class="nota-fecha"><small><strong>Última actualización editorial:</strong> 11 de octubre de 2026. Corresponde a la revisión del directorio; no significa que todos los datos de cada departamento se hayan verificado ese mismo día.</small></p>
     </section>
 

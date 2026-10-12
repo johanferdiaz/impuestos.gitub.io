@@ -3,96 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Servicios independientes de orientación y gestión de trámites vehiculares en Colombia.">
-<title>Solicita tu trámite | Gestoría JFER</title>
+<meta name="description" content="Gestoría JFER: orientación independiente para trámites vehiculares y de tránsito en Colombia.">
+<meta name="theme-color" content="#061a33">
+<title>Gestoría JFER | Gestión vehicular de tránsito</title>
 <link rel="stylesheet" href="css/estilos.css">
 <style>
-.tramites-page{width:min(1000px,92%);margin:28px auto 48px}
-.tramites-page-hero{padding:clamp(24px,5vw,42px);border:1px solid #dce5ee;border-radius:18px;background:linear-gradient(145deg,#fff,#f1f6fa);color:#26364a}
-.tramites-page-kicker{display:block;margin-bottom:10px;color:#58738e;font-size:.72rem;font-weight:750;letter-spacing:.12em}
-.tramites-page h1{margin:0 0 12px;color:#173f67;font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.2}
-.tramites-page-hero p{max-width:72ch;color:#526176;line-height:1.75}
-.tramites-page-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:20px 0}
-.tramites-page-card{display:flex;align-items:flex-start;gap:13px;padding:18px;border:1px solid #dce5ee;border-radius:13px;background:#fff}
-.tramites-page-number{display:flex;flex:0 0 36px;height:36px;align-items:center;justify-content:center;border-radius:10px;background:#e7eef6;color:#174b7a;font-weight:750;font-size:.82rem}
-.tramites-page-card h2{margin:2px 0 7px;color:#263e57;font-size:1rem}
-.tramites-page-card p{margin:0;color:#59697d;font-size:.92rem;line-height:1.65}
-.tramites-page-contacto{padding:22px;border:1px solid #d5e2ed;border-radius:14px;background:#f2f6fa}
-.tramites-page-contacto h2{margin:0 0 10px;color:#173f67;font-size:1.3rem}
-.tramites-page-contacto p{color:#526176;line-height:1.65}
-.tramites-page-acciones{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.tramites-page-acciones a{width:auto;min-width:190px;text-align:center}
-.tramites-page-nota{margin-top:18px;padding:14px 16px;border-left:4px solid #7894af;border-radius:0 9px 9px 0;background:#f8fafc;color:#526176;font-size:.88rem;line-height:1.65}
-.tramites-volver{display:inline-block;margin-bottom:16px;color:#174b7a;font-weight:700;text-decoration:none}
-.tramites-volver:hover{text-decoration:underline}
-@media(max-width:650px){.tramites-page-grid{grid-template-columns:1fr}.tramites-page-card{padding:15px}.tramites-page-acciones{flex-direction:column}.tramites-page-acciones a{width:100%}}
-
-/* Identidad visual Gestoría JFER: azul noche y dorado */
-body:has(.tramites-page){background:#f4f1e9;color:#e8d8ad}
-body:has(.tramites-page) .hero{background:radial-gradient(ellipse at 50% 0%,#18365b 0%,#07172f 65%,#061126 100%);border-bottom:3px solid #c9a45a;color:#f5df9f}
-body:has(.tramites-page) .hero h1{color:#f5d88a;letter-spacing:.035em;text-shadow:0 2px 18px #0008}
-body:has(.tramites-page) .hero p{color:#e4d7b5}
-body:has(.tramites-page) .badge{border:1px solid #c9a45a;background:#122849;color:#f5d88a}
-body:has(.tramites-page) .tramites-page{color:#17243a}
-body:has(.tramites-page) .tramites-volver{color:#73531a}
-body:has(.tramites-page) .tramites-page-hero{border:1px solid #c7a45f;background:linear-gradient(140deg,#07172f,#10294a 75%,#1a3150);box-shadow:0 12px 32px #07172f18;color:#f4e6c1}
-body:has(.tramites-page) .tramites-page-kicker{color:#e0bd6d}
-body:has(.tramites-page) .tramites-page-hero h1{color:#f5d88a}
-body:has(.tramites-page) .tramites-page-hero p{color:#e6dfcf}
-body:has(.tramites-page) .tramites-page-card{border:1px solid #e0d2b0;background:#fffdf8;box-shadow:0 5px 15px #18243b08}
-body:has(.tramites-page) .tramites-page-number{border:1px solid #c9a45a;background:#102544;color:#f4d98c}
-body:has(.tramites-page) .tramites-page-card h2{color:#172e4d}
-body:has(.tramites-page) .tramites-page-card p{color:#5c5b55}
-body:has(.tramites-page) .tramites-page-contacto{border:1px solid #c9a45a;background:#0b1c35;color:#f4e6c1}
-body:has(.tramites-page) .tramites-page-contacto h2{color:#f5d88a}
-body:has(.tramites-page) .tramites-page-contacto p{color:#e6dfcf}
-body:has(.tramites-page) .tramites-page-contacto strong{color:#f5d88a}
-body:has(.tramites-page) .tramites-page-acciones .boton{border:1px solid #d4b264;background:#c9a45a;color:#10213a;font-weight:800}
-body:has(.tramites-page) .tramites-page-acciones .boton:hover{background:#e0bd6d}
-body:has(.tramites-page) .tramites-page-acciones .secundario{background:transparent;color:#f5d88a}
-body:has(.tramites-page) .tramites-page-nota{border-left-color:#c9a45a;background:#132844;color:#e6dfcf}
-@media(max-width:650px){body:has(.tramites-page) .tramites-page{margin-top:18px}}
-
+:root{--jfer-navy:#061a33;--jfer-blue:#0b2b4c;--jfer-gold:#d7ad52;--jfer-gold-light:#f4d98e;--jfer-ink:#102440;--jfer-muted:#53647a;--jfer-paper:#f6f7f8}
+*{box-sizing:border-box}
+body:has(.jfer-site){margin:0;background:var(--jfer-paper);color:var(--jfer-ink);font-family:Arial,Helvetica,sans-serif}
+.jfer-site{overflow:hidden}
+.jfer-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px max(5vw,20px);background:var(--jfer-navy);border-bottom:1px solid #ffffff20;color:white}
+.jfer-brand{display:flex;align-items:center;gap:13px;min-width:0;text-decoration:none;color:white}
+.jfer-logo{width:76px;height:76px;flex:0 0 76px;filter:drop-shadow(0 3px 7px #0008)}
+.jfer-brand-copy strong{display:block;font-size:clamp(1.15rem,2vw,1.8rem);letter-spacing:.035em}
+.jfer-brand-copy strong span{color:var(--jfer-gold)}
+.jfer-brand-copy small{display:block;margin-top:4px;color:#e6eaf0;font-size:.72rem;letter-spacing:.1em}
+.jfer-navlinks{display:flex;align-items:center;gap:clamp(14px,3vw,36px)}
+.jfer-navlinks a{color:#f5f6f8;text-decoration:none;font-size:.92rem;font-weight:700}
+.jfer-navlinks a:hover{color:var(--jfer-gold-light)}
+.jfer-pill{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 22px;background:linear-gradient(135deg,var(--jfer-gold-light),var(--jfer-gold));color:#10213a!important;text-decoration:none;font-weight:800;box-shadow:0 5px 16px #0002}
+.jfer-hero{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);align-items:center;gap:30px;min-height:355px;padding:48px max(7.2vw,24px);background:linear-gradient(90deg,#06172beF 0%,#08203cde 43%,#07182ab5 100%),radial-gradient(ellipse at 70% 45%,#31516d,#061a33 70%);color:white}
+.jfer-hero:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.25;background:linear-gradient(130deg,transparent 45%,#b4c6d6 45.2%,transparent 45.8%),linear-gradient(25deg,transparent 65%,#b4c6d6 65.2%,transparent 65.8%)}
+.jfer-kicker{display:flex;align-items:center;gap:12px;color:var(--jfer-gold-light);font-size:.78rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.jfer-kicker:before{content:"";width:36px;height:2px;background:var(--jfer-gold)}
+.jfer-hero h1{max-width:620px;margin:16px 0 14px;color:#fff;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.06;letter-spacing:-.035em}
+.jfer-hero h1 span{color:var(--jfer-gold-light)}
+.jfer-hero p{max-width:560px;color:#e3e9f0;font-size:1.03rem;line-height:1.75}
+.jfer-hero .jfer-pill{margin-top:12px;padding:15px 25px}
+.jfer-hero-emblem{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+.jfer-hero-emblem .jfer-logo{width:min(230px,55vw);height:auto;filter:drop-shadow(0 10px 22px #0008)}
+.jfer-slogan{color:var(--jfer-gold-light);font-family:Georgia,serif;font-style:italic;font-size:clamp(1.35rem,2.4vw,2rem)}
+.jfer-values{display:flex;justify-content:center;gap:0;width:100%;max-width:390px}
+.jfer-values span{flex:1;padding:8px 10px;border-right:1px solid #ffffff35;color:#f5f6f8;font-size:.86rem}
+.jfer-values span:last-child{border:0}
+.jfer-values b{display:block;margin-bottom:5px;color:var(--jfer-gold-light);font-size:1.1rem}
+.jfer-services{max-width:1440px;margin:auto;padding:38px max(5vw,20px) 42px}
+.jfer-section-heading{text-align:center;margin:0 auto 25px}
+.jfer-section-heading .jfer-kicker{justify-content:center;color:#8b6928}
+.jfer-section-heading .jfer-kicker:before{background:var(--jfer-gold)}
+.jfer-section-heading h2{margin:10px 0;color:var(--jfer-ink);font-size:clamp(1.65rem,3vw,2.25rem)}
+.jfer-section-heading p{margin:0;color:var(--jfer-muted);line-height:1.6}
+.jfer-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+.jfer-card{display:flex;gap:12px;min-height:122px;padding:17px 14px;border:1px solid #e0e5eb;border-radius:14px;background:#fff;box-shadow:0 4px 12px #142d4508;transition:transform .18s ease,border-color .18s ease}
+.jfer-card:hover{transform:translateY(-3px);border-color:#d6b86f}
+.jfer-card-icon{display:flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:var(--jfer-blue);color:var(--jfer-gold-light);font-size:1.2rem}
+.jfer-card h3{margin:4px 0 7px;color:var(--jfer-ink);font-size:.95rem;line-height:1.3}
+.jfer-card p{margin:0;color:var(--jfer-muted);font-size:.82rem;line-height:1.55}
+.jfer-bottom{display:grid;grid-template-columns:1.1fr .8fr 1fr 1fr;gap:0;padding:30px max(5vw,20px);background:linear-gradient(120deg,#06172e,#092647);color:#f2f5f8;border-bottom:4px solid var(--jfer-gold)}
+.jfer-bottom section{padding:8px 25px;border-right:1px solid #ffffff24}
+.jfer-bottom section:first-child{padding-left:0}
+.jfer-bottom section:last-child{border:0;padding-right:0}
+.jfer-bottom h2{margin:0 0 10px;color:#fff;font-size:1rem}
+.jfer-bottom p{margin:0;color:#dbe3ec;font-size:.88rem;line-height:1.7}
+.jfer-bottom strong{color:var(--jfer-gold-light)}
+.jfer-socials{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
+.jfer-socials a{color:#fff;text-decoration:none;font-weight:700;font-size:.88rem}
+.jfer-socials a:hover{color:var(--jfer-gold-light)}
+.jfer-footer{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;padding:17px 20px;background:#f2eee7;color:#1a2e47;text-align:center;font-size:.88rem}
+.jfer-footer strong{letter-spacing:.03em}
+.jfer-disclaimer{max-width:1100px;margin:18px auto 0;padding:0 20px 22px;color:#647084;font-size:.78rem;line-height:1.65;text-align:center}
+.jfer-mobile-menu{display:none}
+@media(max-width:1050px){.jfer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.jfer-bottom{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:18px}.jfer-bottom section:nth-child(2){border:0}.jfer-bottom section:nth-child(3){padding-left:0}.jfer-bottom section:first-child{padding-left:0}}
+@media(max-width:700px){.jfer-nav{align-items:flex-start;gap:12px;padding:12px 16px}.jfer-logo{width:58px;height:58px;flex-basis:58px}.jfer-brand-copy small{font-size:.58rem;letter-spacing:.04em}.jfer-navlinks{gap:12px;flex-wrap:wrap;justify-content:flex-end}.jfer-navlinks a:not(.jfer-pill){display:none}.jfer-navlinks .jfer-pill{padding:10px 13px;font-size:.8rem}.jfer-hero{grid-template-columns:1fr;padding:36px 22px;gap:30px}.jfer-hero-emblem{display:grid;grid-template-columns:90px 1fr;gap:14px;text-align:left}.jfer-hero-emblem .jfer-logo{width:90px}.jfer-slogan{font-size:1.25rem}.jfer-values{grid-column:1/-1}.jfer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.jfer-card{display:block;padding:14px;min-height:0}.jfer-card-icon{margin-bottom:10px}.jfer-card h3{font-size:.9rem}.jfer-card p{font-size:.8rem}.jfer-bottom{grid-template-columns:1fr;padding:22px}.jfer-bottom section,.jfer-bottom section:first-child,.jfer-bottom section:nth-child(3),.jfer-bottom section:last-child{padding:16px 0;border-right:0;border-bottom:1px solid #ffffff24}.jfer-bottom section:last-child{border-bottom:0}.jfer-section-heading p{font-size:.9rem}}
+@media(max-width:390px){.jfer-grid{grid-template-columns:1fr}.jfer-card{display:flex}.jfer-card-icon{margin-bottom:0}.jfer-brand-copy strong{font-size:1rem}}
 </style>
 </head>
 <body>
-<header class="hero">
- <div class="hero-content">
-  <span class="badge">SERVICIO INDEPENDIENTE</span>
-  <h1>Gestoría JFER</h1>
-  <p>Orientación y apoyo documental para trámites vehiculares en Colombia.</p>
- </div>
+<div class="jfer-site">
+<header class="jfer-nav">
+ <a class="jfer-brand" href="tramites.html" aria-label="Gestoría JFER, inicio">
+  <svg class="jfer-logo" viewBox="0 0 120 120" role="img" aria-label="Emblema de Gestoría JFER">
+   <defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b4"/><stop offset=".38" stop-color="#c08b2e"/><stop offset=".65" stop-color="#ffe59a"/><stop offset="1" stop-color="#9b6b1e"/></linearGradient></defs>
+   <circle cx="60" cy="60" r="56" fill="#07172e" stroke="url(#gold)" stroke-width="3"/><circle cx="60" cy="60" r="47" fill="none" stroke="url(#gold)" stroke-width="1.5"/><circle cx="60" cy="60" r="35" fill="#0b2544" stroke="url(#gold)" stroke-width="2"/>
+   <g fill="url(#gold)" stroke="#d6aa4f" stroke-width=".5"><path d="M34 78 Q17 62 30 42 Q29 58 39 64 L43 74Z"/><path d="M35 55l-9-7 12 2z"/><path d="M39 45l-4-10 10 10z"/><path d="M86 78 Q103 62 90 42 Q91 58 81 64 L77 74Z"/><path d="M85 55l9-7-12 2z"/><path d="M81 45l4-10-10 10z"/></g>
+   <circle cx="60" cy="60" r="23" fill="url(#gold)"/><circle cx="60" cy="60" r="17" fill="#102642" stroke="#f7df96" stroke-width="2"/><circle cx="60" cy="60" r="5" fill="url(#gold)"/><path d="M43 57 Q43 42 60 42 Q77 42 77 57 L72 57 Q70 48 60 48 Q50 48 48 57Z" fill="url(#gold)"/><path d="M56 63h8l5 16h-5l-4-8-4 8h-5z" fill="url(#gold)"/><path d="M42 59h-8v5h14v-4m30-1h8v5H72v-4" fill="url(#gold)"/>
+   <text x="60" y="17" text-anchor="middle" fill="#f4d98e" font-size="8" font-weight="bold" letter-spacing="1">GESTORÍA JFER</text><text x="60" y="108" text-anchor="middle" fill="#f4d98e" font-size="5.8" font-weight="bold">GESTIÓN VEHICULAR</text>
+  </svg>
+  <span class="jfer-brand-copy"><strong>GESTORÍA <span>JFER</span></strong><small>GESTIÓN VEHICULAR DE TRÁNSITO</small></span>
+ </a>
+ <nav class="jfer-navlinks" aria-label="Navegación principal">
+  <a href="#inicio">⌂ Inicio</a><a href="#servicios">Servicios⌄</a><a href="#nosotros">Sobre nosotros</a><a href="#contacto">Contacto</a>
+  <a class="jfer-pill" href="https://wa.me/573145915708?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20tr%C3%A1mite%20vehicular." target="_blank" rel="noopener noreferrer">◉ WhatsApp</a>
+ </nav>
 </header>
-<main class="tramites-page">
- <a class="tramites-volver" href="index.html">← Volver a Impuesto Vehicular en Colombia</a>
- <section class="tramites-page-hero">
-  <span class="tramites-page-kicker">ATENCIÓN VIRTUAL · COBERTURA NACIONAL</span>
-  <h1>Solicita tu trámite</h1>
-  <p>Conoce los servicios de orientación y gestión documental disponibles. Cuéntanos qué necesitas y revisaremos los requisitos, el procedimiento y la disponibilidad para tu caso.</p>
- </section>
- <section class="tramites-page-grid" aria-label="Catálogo de servicios">
-  <article class="tramites-page-card"><span class="tramites-page-number">01</span><div><h2>Traspaso de vehículo</h2><p>Orientación para cambio de propietario y revisión de requisitos ante el organismo de tránsito correspondiente.</p></div></article>
-  <article class="tramites-page-card"><span class="tramites-page-number">02</span><div><h2>Traspaso a persona indeterminada</h2><p>Información sobre condiciones, documentación y procedimiento aplicable según la normativa vigente.</p></div></article>
-  <article class="tramites-page-card"><span class="tramites-page-number">03</span><div><h2>Trámites por sucesión</h2><p>Orientación inicial sobre cambio de titularidad cuando ha fallecido el propietario y documentos que podrían requerirse.</p></div></article>
-  <article class="tramites-page-card"><span class="tramites-page-number">04</span><div><h2>Matrícula inicial</h2><p>Orientación documental para iniciar el registro de un vehículo ante el organismo competente.</p></div></article>
-  <article class="tramites-page-card"><span class="tramites-page-number">05</span><div><h2>Traslado de cuenta</h2><p>Información para gestionar el traslado del registro vehicular entre organismos de tránsito.</p></div></article>
-  <article class="tramites-page-card"><span class="tramites-page-number">06</span><div><h2>Duplicados de documentos</h2><p>Orientación para solicitar duplicados de licencia de tránsito y otros documentos, según el caso.</p></div></article>
-  <article class="tramites-page-card"><span class="tramites-page-number">07</span><div><h2>Levantamiento de prenda</h2><p>Guía sobre requisitos y pasos para tramitar el levantamiento de prenda o limitaciones, cuando proceda.</p></div></article>
-  <article class="tramites-page-card"><span class="tramites-page-number">08</span><div><h2>Impuesto vehicular</h2><p>Orientación para consultar cartera, liquidaciones, calendarios y canales de pago oficiales.</p></div></article>
-  <article class="tramites-page-card"><span class="tramites-page-number">09</span><div><h2>Compraventa de vehículos</h2><p>Orientación documental sobre compraventa y pasos relacionados con el cambio de propietario.</p></div></article>
-  <article class="tramites-page-card"><span class="tramites-page-number">10</span><div><h2>Otros trámites de tránsito</h2><p>Consulta por tu caso para confirmar si podemos orientarte y cuáles son los requisitos aplicables.</p></div></article>
- </section>
- <section class="tramites-page-contacto">
-  <span class="tramites-page-kicker">CONTACTO Y UBICACIÓN</span>
-  <h2>Atención virtual desde Colombia</h2>
-  <p><strong>Responsable:</strong> Gestoría JFER · servicio privado e independiente.<br><strong>Ubicación:</strong> atención virtual con base en Montería, Córdoba; no se anuncia oficina de atención presencial.<br><strong>Redes sociales:</strong> los enlaces se añadirán cuando se confirmen los perfiles oficiales.</p>
-  <div class="tramites-page-acciones">
-   <a class="boton" href="https://wa.me/573145915708?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20tr%C3%A1mite%20vehicular." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp ↗</a>
-   <a class="boton secundario" href="index.html">Volver al directorio</a>
-  </div>
-  <p class="tramites-page-nota">Gestoría JFER es un servicio independiente y no representa oficialmente a las gobernaciones ni a los organismos de tránsito. La aprobación de los trámites corresponde a la autoridad competente. Antes de iniciar, confirma el alcance del servicio, los requisitos y los honorarios. Los pagos oficiales deben realizarse únicamente por canales autorizados.</p>
- </section>
+<main>
+<section class="jfer-hero" id="inicio">
+ <div>
+  <span class="jfer-kicker">Trámites vehiculares</span>
+  <h1>Tu trámite, en manos de <span>una buena orientación.</span></h1>
+  <p>En Gestoría JFER te orientamos con tus trámites de tránsito y vehículos de forma clara y organizada, estés donde estés en Colombia.</p>
+  <a class="jfer-pill" href="#contacto">➤ Solicita tu trámite&nbsp; →</a>
+ </div>
+ <div class="jfer-hero-emblem">
+  <svg class="jfer-logo" viewBox="0 0 120 120" role="img" aria-label="Emblema de Gestoría JFER">
+   <defs><linearGradient id="gold2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b4"/><stop offset=".38" stop-color="#c08b2e"/><stop offset=".65" stop-color="#ffe59a"/><stop offset="1" stop-color="#9b6b1e"/></linearGradient></defs>
+   <circle cx="60" cy="60" r="56" fill="#07172e" stroke="url(#gold2)" stroke-width="3"/><circle cx="60" cy="60" r="47" fill="none" stroke="url(#gold2)" stroke-width="1.5"/><circle cx="60" cy="60" r="35" fill="#0b2544" stroke="url(#gold2)" stroke-width="2"/>
+   <g fill="url(#gold2)" stroke="#d6aa4f" stroke-width=".5"><path d="M34 78 Q17 62 30 42 Q29 58 39 64 L43 74Z"/><path d="M35 55l-9-7 12 2z"/><path d="M39 45l-4-10 10 10z"/><path d="M86 78 Q103 62 90 42 Q91 58 81 64 L77 74Z"/><path d="M85 55l9-7-12 2z"/><path d="M81 45l4-10-10 10z"/></g>
+   <circle cx="60" cy="60" r="23" fill="url(#gold2)"/><circle cx="60" cy="60" r="17" fill="#102642" stroke="#f7df96" stroke-width="2"/><circle cx="60" cy="60" r="5" fill="url(#gold2)"/><path d="M43 57 Q43 42 60 42 Q77 42 77 57 L72 57 Q70 48 60 48 Q50 48 48 57Z" fill="url(#gold2)"/><path d="M56 63h8l5 16h-5l-4-8-4 8h-5z" fill="url(#gold2)"/><path d="M42 59h-8v5h14v-4m30-1h8v5H72v-4" fill="url(#gold2)"/>
+   <text x="60" y="17" text-anchor="middle" fill="#f4d98e" font-size="8" font-weight="bold" letter-spacing="1">GESTORÍA JFER</text><text x="60" y="108" text-anchor="middle" fill="#f4d98e" font-size="5.8" font-weight="bold">GESTIÓN VEHICULAR</text>
+  </svg>
+  <div class="jfer-slogan">Tu aliado en cada trámite</div>
+  <div class="jfer-values"><span><b>◇</b>Claro</span><span><b>◷</b>Organizado</span><span><b>✓</b>Confiable</span></div>
+ </div>
+</section>
+<section class="jfer-services" id="servicios">
+ <div class="jfer-section-heading"><span class="jfer-kicker">Nuestros servicios</span><h2>Trámites vehiculares y de tránsito</h2><p>Orientación y apoyo documental según las necesidades de cada caso.</p></div>
+ <div class="jfer-grid">
+  <article class="jfer-card"><span class="jfer-card-icon">↔</span><div><h3>Traspasos</h3><p>Cambio de propietario y traspaso a persona indeterminada.</p></div></article>
+  <article class="jfer-card"><span class="jfer-card-icon">▤</span><div><h3>Matrículas y traslados</h3><p>Matrícula inicial y traslado de cuenta entre organismos.</p></div></article>
+  <article class="jfer-card"><span class="jfer-card-icon">▣</span><div><h3>Duplicados</h3><p>Orientación para documentos y licencias de tránsito.</p></div></article>
+  <article class="jfer-card"><span class="jfer-card-icon">♙</span><div><h3>Levantamiento de prenda</h3><p>Guía documental para solicitudes que correspondan.</p></div></article>
+  <article class="jfer-card"><span class="jfer-card-icon">▧</span><div><h3>Revocatorias y cancelaciones</h3><p>Orientación inicial sobre el procedimiento aplicable.</p></div></article>
+  <article class="jfer-card"><span class="jfer-card-icon">◉</span><div><h3>Cambio de color</h3><p>Información sobre actualización de características del vehículo.</p></div></article>
+  <article class="jfer-card"><span class="jfer-card-icon">⌕</span><div><h3>Radicación y seguimiento</h3><p>Organización de documentos y consulta de estado cuando esté disponible.</p></div></article>
+  <article class="jfer-card"><span class="jfer-card-icon">$</span><div><h3>Impuestos y obligaciones</h3><p>Consulta de cartera, liquidaciones y canales oficiales de pago.</p></div></article>
+  <article class="jfer-card"><span class="jfer-card-icon">⇄</span><div><h3>Compraventa de vehículos</h3><p>Orientación documental para el proceso de compraventa.</p></div></article>
+  <article class="jfer-card"><span class="jfer-card-icon">＋</span><div><h3>Sucesiones y otros trámites</h3><p>Cuéntanos tu caso para revisar requisitos y opciones.</p></div></article>
+ </div>
+</section>
+<section class="jfer-bottom">
+ <section id="nosotros"><h2>¿Quiénes somos?</h2><p><strong>Gestoría JFER</strong> es un servicio privado e independiente de orientación y apoyo documental para trámites vehiculares y de tránsito. Buscamos ofrecer una atención clara y organizada.</p></section>
+ <section><h2>Atención virtual</h2><p>Atención desde <strong>Montería, Córdoba</strong>, con consultas virtuales para personas de diferentes lugares de Colombia.</p></section>
+ <section id="contacto"><h2>Contáctanos</h2><p>Cuéntanos qué trámite necesitas y te orientaremos sobre los pasos iniciales.</p><p style="margin-top:10px"><strong>WhatsApp:</strong> +57 314 591 5708</p><div style="margin-top:14px"><a class="jfer-pill" href="https://wa.me/573145915708?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20tr%C3%A1mite%20vehicular." target="_blank" rel="noopener noreferrer">Chatear por WhatsApp →</a></div></section>
+ <section><h2>Síguenos en redes</h2><p>Próximamente añadiremos los perfiles oficiales de Gestoría JFER.</p><div class="jfer-socials"><span>Facebook · pendiente</span><span>Instagram · pendiente</span></div><p>Los enlaces se publicarán al confirmar las cuentas correctas.</p></section>
+</section>
+<p class="jfer-disclaimer">Gestoría JFER es un servicio independiente y no representa oficialmente a las gobernaciones ni a los organismos de tránsito. La aprobación de cada trámite corresponde a la autoridad competente. Confirma previamente los requisitos, el alcance del servicio y los honorarios. Los pagos oficiales deben realizarse por los canales autorizados de cada entidad.</p>
 </main>
-<footer>Impuesto Vehicular en Colombia · Directorio informativo y servicio independiente</footer>
+<footer class="jfer-footer"><strong>Gestoría JFER</strong><span>│</span><span>Gestión vehicular de tránsito</span><span>│</span><a href="index.html" style="color:#183a60">Volver a Impuesto Vehicular en Colombia</a></footer>
+</div>
 </body>
 </html>

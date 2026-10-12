@@ -7,6 +7,34 @@
     <title>Impuesto Vehicular en Colombia | Consulta por Departamento</title>
     <link rel="stylesheet" href="css/estilos.css">
 
+<style id="modulo-solicita-tramite">
+.tramites-acceso{max-width:1000px;margin:18px auto 24px;padding:0 0}
+.tramites-resumen{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px;border:1px solid #dce5ee;border-radius:15px;background:#fff;box-shadow:0 5px 18px rgba(20,40,70,.045)}
+.tramites-resumen-texto{min-width:0}
+.tramites-etiqueta{display:block;margin:0 0 7px;color:#58738e;font-size:.7rem;font-weight:750;letter-spacing:.12em}
+.tramites-resumen h2{margin:0 0 7px;color:#173f67;font-size:clamp(1.15rem,2.5vw,1.45rem);line-height:1.3}
+.tramites-resumen p{margin:0;color:#526176;font-size:.94rem;line-height:1.6}
+.tramites-toggle{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:12px 18px;border:1px solid #174b7a;border-radius:9px;background:#174b7a;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.tramites-toggle:hover,.tramites-toggle:focus-visible{background:#10395e;outline:3px solid #c9d9e8;outline-offset:2px}
+.tramites-panel{margin-top:12px;padding:clamp(18px,3vw,28px);border:1px solid #dce5ee;border-radius:15px;background:#fff;color:#26364a}
+.tramites-panel[hidden]{display:none}
+.tramites-panel-cabecera{max-width:760px;margin-bottom:22px}
+.tramites-panel-cabecera h3{margin:0 0 9px;color:#173f67;font-size:clamp(1.25rem,2.5vw,1.65rem);line-height:1.3}
+.tramites-panel-cabecera p{margin:0;color:#526176;line-height:1.7}
+.tramites-panel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tramites-panel-item{display:flex;align-items:flex-start;gap:12px;padding:16px;border:1px solid #e2e8f0;border-radius:11px;background:#f8fafc;min-width:0}
+.tramites-panel-icono{display:flex;flex:0 0 34px;width:34px;height:34px;align-items:center;justify-content:center;border-radius:9px;background:#e7eef6;color:#174b7a;font-size:1rem;font-weight:750}
+.tramites-panel-item h4{margin:1px 0 6px;color:#263e57;font-size:.98rem;line-height:1.4}
+.tramites-panel-item p{margin:0;color:#59697d;font-size:.91rem;line-height:1.6;overflow-wrap:anywhere}
+.tramites-contacto{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:18px;padding:16px 18px;border:1px solid #d7e4ef;border-radius:11px;background:#f2f6fa}
+.tramites-contacto p{margin:0;color:#40546a;font-size:.92rem;line-height:1.6}
+.tramites-contacto strong{color:#173f67}
+.tramites-contacto-nota{display:block;margin-top:5px;color:#68788c;font-size:.82rem}
+.tramites-aviso{margin:16px 0 0;color:#68788c;font-size:.83rem;line-height:1.6}
+@media(max-width:720px){.tramites-acceso{margin:14px 0 20px}.tramites-resumen{align-items:flex-start;flex-direction:column;padding:18px}.tramites-toggle{width:100%}.tramites-panel-grid{grid-template-columns:1fr}.tramites-contacto{align-items:flex-start;flex-direction:column;padding:14px}}
+</style>
+
+
 <style>
 .directorio-nacional-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:14px 0}
 .directorio-nacional-grid a{display:flex;flex-direction:column;gap:6px;padding:13px;border:1px solid #dbe3ea;border-radius:10px;background:#fff;color:inherit;text-decoration:none}
@@ -320,7 +348,50 @@ section.metodologia-pro .metodologia-pie p{margin:0!important;padding:0!importan
             <span><strong id="total">33</strong> territorios</span>
             <span><strong id="disponibles">26</strong> enlaces institucionales o de consulta</span>
         </div>
-    </section> 
+    </section>
+
+    <section class="tramites-acceso" aria-labelledby="titulo-acceso-tramites">
+      <div class="tramites-resumen">
+        <div class="tramites-resumen-texto">
+          <span class="tramites-etiqueta">SERVICIO DE ORIENTACIÓN</span>
+          <h2 id="titulo-acceso-tramites">¿Necesitas realizar un trámite?</h2>
+          <p>Conoce los servicios de orientación y gestión disponibles a nivel nacional.</p>
+        </div>
+        <button class="tramites-toggle" id="boton-solicita-tramite" type="button" aria-expanded="false" aria-controls="panel-solicita-tramite">
+          Solicita tu trámite <span aria-hidden="true">＋</span>
+        </button>
+      </div>
+      <div class="tramites-panel" id="panel-solicita-tramite" hidden>
+        <div class="tramites-panel-cabecera">
+          <span class="tramites-etiqueta">ATENCIÓN INDEPENDIENTE Y VIRTUAL</span>
+          <h3>Orientación clara para tus trámites</h3>
+          <p>Un espacio para resolver dudas sobre requisitos, pasos y canales de atención. Cada solicitud se revisa según el tipo de trámite y la entidad competente.</p>
+        </div>
+        <div class="tramites-panel-grid">
+          <article class="tramites-panel-item">
+            <span class="tramites-panel-icono" aria-hidden="true">01</span>
+            <div><h4>Trámites vehiculares</h4><p>Orientación sobre impuesto vehicular, traspasos, matrículas y consultas relacionadas, según disponibilidad del servicio.</p></div>
+          </article>
+          <article class="tramites-panel-item">
+            <span class="tramites-panel-icono" aria-hidden="true">02</span>
+            <div><h4>Requisitos y pasos</h4><p>Información inicial sobre documentos, procesos y dónde continuar la gestión ante la autoridad correspondiente.</p></div>
+          </article>
+          <article class="tramites-panel-item">
+            <span class="tramites-panel-icono" aria-hidden="true">03</span>
+            <div><h4>Atención a nivel nacional</h4><p>Atención virtual para solicitudes de diferentes departamentos y municipios de Colombia.</p></div>
+          </article>
+          <article class="tramites-panel-item">
+            <span class="tramites-panel-icono" aria-hidden="true">04</span>
+            <div><h4>Responsable del servicio</h4><p>Servicio independiente de orientación y gestión. Los datos de identificación y presentación del responsable se incorporarán en este espacio.</p></div>
+          </article>
+        </div>
+        <div class="tramites-contacto">
+          <p><strong>Contacto y ubicación</strong><br>Atención virtual en Colombia; no se anuncia una oficina física.<span class="tramites-contacto-nota">El canal directo de WhatsApp y el horario se publicarán aquí al completar los datos de contacto.</span></p>
+        </div>
+        <p class="tramites-aviso">Este servicio es independiente y no representa oficialmente a las gobernaciones ni a otras entidades públicas. Las decisiones, pagos y trámites oficiales se realizan por los canales autorizados de cada entidad. Los honorarios y el alcance de cualquier gestión deben acordarse previamente.</p>
+      </div>
+    </section>
+
 <section class="directorio-nacional-pro" id="directorio-nacional" aria-labelledby="titulo-directorio-nacional">
         <div class="nacional-cabecera">
             <span class="nacional-etiqueta">SERVICIOS DE CONSULTA</span>
@@ -1314,5 +1385,19 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
   <p>Verifica que el sitio y el destinatario del pago sean oficiales antes de ingresar datos o pagar. Este directorio es informativo: no recibe pagos, no vende pólizas y nunca solicita claves ni datos bancarios.</p>
 </aside>
 
+<script id="interaccion-solicita-tramite">
+(function(){
+  const boton=document.getElementById("boton-solicita-tramite");
+  const panel=document.getElementById("panel-solicita-tramite");
+  if(!boton||!panel)return;
+  boton.addEventListener("click",function(){
+    const abrir=boton.getAttribute("aria-expanded")!=="true";
+    boton.setAttribute("aria-expanded",String(abrir));
+    panel.hidden=!abrir;
+    boton.innerHTML=abrir?'Cerrar información <span aria-hidden="true">−</span>':'Solicita tu trámite <span aria-hidden="true">＋</span>';
+    if(abrir) panel.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"nearest"});
+  });
+})();
+</script>
 </body>
 </html>

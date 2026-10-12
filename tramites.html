@@ -10,7 +10,7 @@
 <style>
 :root{--jfer-navy:#061a33;--jfer-blue:#0b2b4c;--jfer-gold:#d7ad52;--jfer-gold-light:#f4d98e;--jfer-ink:#102440;--jfer-muted:#53647a;--jfer-paper:#f6f7f8}
 *{box-sizing:border-box}
-body:has(.jfer-site){margin:0;background:var(--jfer-paper);color:var(--jfer-ink);font-family:Arial,Helvetica,sans-serif}
+html{width:100%;overflow-x:hidden}body{margin:0!important;padding:0!important;width:100%;overflow-x:hidden;background:var(--jfer-paper);color:var(--jfer-ink);font-family:Arial,Helvetica,sans-serif}body:has(.jfer-site)>*{max-width:100%}.jfer-site,.jfer-site main{width:100%;max-width:100%;margin:0!important;padding-left:0!important;padding-right:0!important}
 .jfer-site{overflow:hidden}
 .jfer-nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:12px clamp(16px,4vw,56px);background:var(--jfer-navy);border-bottom:1px solid #ffffff20;color:white;width:100%;min-width:0}
 .jfer-brand{display:flex;align-items:center;gap:13px;min-width:0;flex:1 1 300px;text-decoration:none;color:white}
@@ -22,7 +22,7 @@ body:has(.jfer-site){margin:0;background:var(--jfer-paper);color:var(--jfer-ink)
 .jfer-navlinks a{color:#f5f6f8;text-decoration:none;font-size:.92rem;font-weight:700}
 .jfer-navlinks a:hover{color:var(--jfer-gold-light)}
 .jfer-pill{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 22px;background:linear-gradient(135deg,var(--jfer-gold-light),var(--jfer-gold));color:#10213a!important;text-decoration:none;font-weight:800;box-shadow:0 5px 16px #0002}
-.jfer-hero{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(220px,.85fr);align-items:center;gap:clamp(20px,3vw,40px);min-height:355px;padding:48px clamp(20px,6vw,88px);width:100%;min-width:0;background:linear-gradient(90deg,#06172beF 0%,#08203cde 43%,#07182ab5 100%),radial-gradient(ellipse at 70% 45%,#31516d,#061a33 70%);color:white}
+.jfer-hero{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:clamp(20px,3vw,40px);min-height:355px;padding:48px clamp(20px,6vw,88px);width:100%;min-width:0;background:linear-gradient(90deg,#06172beF 0%,#08203cde 43%,#07182ab5 100%),radial-gradient(ellipse at 70% 45%,#31516d,#061a33 70%);color:white}
 .jfer-hero:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.25;background:linear-gradient(130deg,transparent 45%,#b4c6d6 45.2%,transparent 45.8%),linear-gradient(25deg,transparent 65%,#b4c6d6 65.2%,transparent 65.8%)}
 .jfer-kicker{display:flex;align-items:center;gap:12px;color:var(--jfer-gold-light);font-size:.78rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
 .jfer-kicker:before{content:"";width:36px;height:2px;background:var(--jfer-gold)}
@@ -31,7 +31,7 @@ body:has(.jfer-site){margin:0;background:var(--jfer-paper);color:var(--jfer-ink)
 .jfer-hero p{max-width:560px;color:#e3e9f0;font-size:1.03rem;line-height:1.75}
 .jfer-hero .jfer-pill{margin-top:12px;padding:15px 25px}
 .jfer-hero-emblem{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
-.jfer-hero-emblem .jfer-logo{width:min(230px,55vw);height:auto;filter:drop-shadow(0 10px 22px #0008)}
+.jfer-hero-emblem .jfer-logo{display:block;width:min(230px,55vw);height:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 10px 22px #0008)}
 .jfer-slogan{color:var(--jfer-gold-light);font-family:Georgia,serif;font-style:italic;font-size:clamp(1.35rem,2.4vw,2rem)}
 .jfer-values{display:flex;justify-content:center;gap:0;width:100%;max-width:390px}
 .jfer-values span{flex:1;padding:8px 10px;border-right:1px solid #ffffff35;color:#f5f6f8;font-size:.86rem}

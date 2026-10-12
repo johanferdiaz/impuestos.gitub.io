@@ -27,6 +27,26 @@
 .acciones{display:flex;flex-wrap:wrap;gap:8px}
 .boton-mas-informacion{background:#fff!important;color:#174b7a!important;border:1px solid #174b7a!important}
 
+/* Diseño profesional: accesos nacionales */
+.directorio-nacional-pro{box-sizing:border-box;max-width:1000px;width:calc(100% - 32px);margin:28px auto;padding:clamp(20px,3vw,30px);border:1px solid #dce5ee;border-radius:18px;background:linear-gradient(145deg,#f8fafc 0%,#fff 58%);color:#243247}
+.nacional-cabecera{max-width:720px;margin:0 0 22px}
+.nacional-etiqueta{display:inline-block;margin:0 0 9px;color:#55718d;font-size:.72rem;font-weight:750;letter-spacing:.12em}
+.nacional-cabecera h2{margin:0 0 10px;color:#173f67;font-size:clamp(1.3rem,2.5vw,1.7rem);line-height:1.25;letter-spacing:-.025em}
+.nacional-cabecera p{margin:0;color:#526176;font-size:1rem;line-height:1.7}
+.directorio-nacional-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0}
+.directorio-nacional-grid>a{display:flex;min-width:0;flex-direction:column;align-items:flex-start;gap:9px;padding:18px;border:1px solid #dbe4ee;border-radius:13px;background:#fff;color:#526176;text-decoration:none;transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+.directorio-nacional-grid>a:hover,.directorio-nacional-grid>a:focus-visible{border-color:#8da8c3;box-shadow:0 7px 20px rgba(23,63,103,.08);transform:translateY(-2px);outline:none}
+.directorio-nacional-grid>a>strong{color:#173f67;font-size:1.12rem;line-height:1.3}
+.directorio-nacional-grid>a>strong span{color:#6485a6;font-size:.9rem}
+.directorio-nacional-grid>a>span:not(.nacional-icono):not(.nacional-enlace){font-size:.91rem;line-height:1.6}
+.directorio-nacional-grid .nacional-icono{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9px;background:#edf3f8;color:#174b7a;font-size:.78rem;font-weight:750;letter-spacing:.04em}
+.directorio-nacional-grid .nacional-enlace{display:flex;align-items:center;gap:6px;margin-top:auto;padding-top:8px;color:#174b7a;font-size:.87rem;font-weight:700}
+.nacional-seguridad{display:flex;align-items:flex-start;gap:12px;margin-top:18px;padding:14px 16px;border:1px solid #e2e8f0;border-left:4px solid #6d8cab;border-radius:10px;background:#f1f5f9}
+.nacional-seguridad-icono{display:flex;flex:0 0 24px;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#dce8f3;color:#174b7a;font-weight:800}
+.nacional-seguridad p{display:flex;flex-direction:column;gap:4px;margin:0;color:#526176;font-size:.9rem;line-height:1.6}
+.nacional-seguridad strong{color:#243b53}
+@media(max-width:720px){.directorio-nacional-grid{grid-template-columns:1fr;gap:10px}.directorio-nacional-grid>a{padding:16px}.directorio-nacional-pro{margin:20px auto;padding:18px 16px;border-radius:14px}.nacional-cabecera p{font-size:.95rem}}
+
 /* Aviso de portal independiente en el centro del directorio */
 .nota-independencia{display:flex;align-items:center;justify-content:center;gap:10px;max-width:1000px;margin:18px auto 22px;padding:12px 18px;box-sizing:border-box;border:1px solid #dbe4ee;border-radius:10px;background:#f8fafc;color:#526176;text-align:center;font-size:.92rem;line-height:1.55}
 .nota-independencia>span{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#e7eef6;color:#174b7a;font-weight:700}
@@ -301,15 +321,36 @@ section.metodologia-pro .metodologia-pie p{margin:0!important;padding:0!importan
             <span><strong id="disponibles">26</strong> enlaces institucionales o de consulta</span>
         </div>
     </section> 
-<section class="nota-metodologia" id="directorio-nacional" aria-labelledby="titulo-directorio-nacional">
-        <h2 id="titulo-directorio-nacional">Consultas nacionales para tu vehículo</h2>
-        <p>Accede a herramientas oficiales para consultar el registro de tu vehículo, revisar multas y comparendos, o informarte sobre el SOAT.</p>
-        <div class="directorio-nacional-grid">
-            <a href="https://www.runt.gov.co/" rel="noopener noreferrer"><strong>RUNT <span aria-hidden="true">↗</span></strong><span>Consulta datos de vehículos y conductores.</span></a>
-            <a href="https://www.fcm.org.co/simit/" rel="noopener noreferrer"><strong>SIMIT <span aria-hidden="true">↗</span></strong><span>Consulta multas y comparendos de tránsito.</span></a>
-            <a href="https://www.superfinanciera.gov.co/" rel="noopener noreferrer"><strong>SOAT <span aria-hidden="true">↗</span></strong><span>Consulta aseguradoras autorizadas para expedir el SOAT.</span></a>
+<section class="directorio-nacional-pro" id="directorio-nacional" aria-labelledby="titulo-directorio-nacional">
+        <div class="nacional-cabecera">
+            <span class="nacional-etiqueta">SERVICIOS DE CONSULTA</span>
+            <h2 id="titulo-directorio-nacional">Consultas nacionales para tu vehículo</h2>
+            <p>Accede a plataformas institucionales para consultar información vehicular, verificar comparendos y encontrar información sobre el Seguro Obligatorio de Accidentes de Tránsito (SOAT).</p>
         </div>
-        <p><small><strong>⚠️ Atención:</strong> verifica que el sitio sea oficial antes de compartir datos o pagar. Este directorio no recibe pagos ni vende pólizas.</small></p>
+        <div class="directorio-nacional-grid">
+            <a href="https://www.runt.gov.co/" rel="noopener noreferrer" aria-label="Ir al sitio oficial del RUNT">
+                <span class="nacional-icono" aria-hidden="true">01</span>
+                <strong>RUNT <span aria-hidden="true">↗</span></strong>
+                <span>Consulta información del registro único nacional de tránsito y datos asociados a vehículos y conductores.</span>
+                <span class="nacional-enlace">Ir al portal oficial <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="https://www.fcm.org.co/simit/" rel="noopener noreferrer" aria-label="Ir al sitio oficial del SIMIT">
+                <span class="nacional-icono" aria-hidden="true">02</span>
+                <strong>SIMIT <span aria-hidden="true">↗</span></strong>
+                <span>Consulta multas y comparendos de tránsito registrados en el sistema.</span>
+                <span class="nacional-enlace">Ir al portal oficial <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="https://www.superfinanciera.gov.co/" rel="noopener noreferrer" aria-label="Consultar información del SOAT en la Superintendencia Financiera">
+                <span class="nacional-icono" aria-hidden="true">03</span>
+                <strong>SOAT <span aria-hidden="true">↗</span></strong>
+                <span>Consulta información de aseguradoras autorizadas y orientación relacionada con el SOAT.</span>
+                <span class="nacional-enlace">Consultar información <span aria-hidden="true">→</span></span>
+            </a>
+        </div>
+        <div class="nacional-seguridad" role="note">
+            <span class="nacional-seguridad-icono" aria-hidden="true">!</span>
+            <p><strong>Antes de realizar una consulta o un pago</strong><span>Verifica que estés en el sitio oficial de la entidad. Este directorio es informativo: no procesa pagos ni vende pólizas.</span></p>
+        </div>
     </section>
 
 

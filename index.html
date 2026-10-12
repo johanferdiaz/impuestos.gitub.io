@@ -27,6 +27,13 @@
 .acciones{display:flex;flex-wrap:wrap;gap:8px}
 .boton-mas-informacion{background:#fff!important;color:#174b7a!important;border:1px solid #174b7a!important}
 
+/* Aviso de portal independiente en el centro del directorio */
+.nota-independencia{display:flex;align-items:center;justify-content:center;gap:10px;max-width:1000px;margin:18px auto 22px;padding:12px 18px;box-sizing:border-box;border:1px solid #dbe4ee;border-radius:10px;background:#f8fafc;color:#526176;text-align:center;font-size:.92rem;line-height:1.55}
+.nota-independencia>span{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#e7eef6;color:#174b7a;font-weight:700}
+.nota-independencia p{margin:0}
+.nota-independencia strong{color:#174b7a}
+@media(max-width:640px){.nota-independencia{margin:14px 12px 18px;padding:12px;font-size:.88rem;align-items:flex-start;text-align:left}}
+
 /* Aviso de navegación segura también al final de cada página */
 .seguridad-final{max-width:1100px;margin:24px auto 18px;padding:16px 18px;box-sizing:border-box;border:1px solid #cbd5e1;border-left:4px solid #174b7a;border-radius:10px;background:#f8fafc;color:#1e293b;line-height:1.6}
 .seguridad-final strong{display:block;margin-bottom:4px}
@@ -311,6 +318,8 @@ section.metodologia-pro .metodologia-pie p{margin:0!important;padding:0!importan
     
     
 
+    <div class="nota-independencia" role="note"><span aria-hidden="true">ℹ</span><p><strong>Portal informativo independiente</strong> · Los enlaces llevan a sitios oficiales o plataformas autorizadas por cada entidad.</p></div>
+
     <section class="regiones">
         <button class="filtro activo-filtro" data-region="Todos">Todos</button>
         <button class="filtro" data-region="Caribe">Caribe</button>
@@ -461,7 +470,7 @@ section.metodologia-pro .metodologia-pie p{margin:0!important;padding:0!importan
 </main>
 
 <footer>
-    <p>Portal informativo independiente • Los enlaces llevan a sitios oficiales o plataformas autorizadas por cada entidad.</p>
+    
 </footer>
 
 <script>

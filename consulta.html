@@ -1399,7 +1399,7 @@ mostrarDepartamentos();
   const img = elegida.querySelector(".escudo img");
   const hero = document.createElement("section");
   hero.className = "cabecera-detalle";
-  hero.innerHTML = '<a href="index.html" class="volver-directorio">← Volver al directorio</a><div class="cabecera-detalle-contenido"></div>';
+  hero.innerHTML = '<a href="index.html" class="volver-directorio"> Volver al directorio</a><div class="cabecera-detalle-contenido"></div>';
   const contenido = hero.querySelector(".cabecera-detalle-contenido");
   if (img) { const logo = img.cloneNode(true); logo.className = "logo-detalle"; logo.removeAttribute("onerror"); contenido.appendChild(logo); }
   const textos = document.createElement("div");

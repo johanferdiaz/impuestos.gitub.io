@@ -8,14 +8,19 @@
     <link rel="stylesheet" href="css/estilos.css">
 
 <style id="modulo-solicita-tramite">
-.tramites-acceso{max-width:1000px;margin:18px auto 24px;padding:0 0}
-.tramites-resumen{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px;border:1px solid #dce5ee;border-radius:15px;background:#fff;box-shadow:0 5px 18px rgba(20,40,70,.045)}
-.tramites-resumen-texto{min-width:0}
-.tramites-etiqueta{display:block;margin:0 0 7px;color:#58738e;font-size:.7rem;font-weight:750;letter-spacing:.12em}
-.tramites-resumen h2{margin:0 0 7px;color:#173f67;font-size:clamp(1.15rem,2.5vw,1.45rem);line-height:1.3}
-.tramites-resumen p{margin:0;color:#526176;font-size:.94rem;line-height:1.6}
-.tramites-toggle{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:12px 18px;border:1px solid #174b7a;border-radius:9px;background:#174b7a;color:#fff;font:inherit;font-weight:700;cursor:pointer}
-.tramites-toggle:hover,.tramites-toggle:focus-visible{background:#10395e;outline:3px solid #c9d9e8;outline-offset:2px}
+.tramites-acceso{max-width:1000px;margin:22px auto 28px;padding:0 18px}
+.tramites-resumen{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;overflow:hidden;padding:clamp(22px,3vw,32px);border:1px solid #d7ad52;border-radius:16px;background:linear-gradient(115deg,#061a33 0%,#0b2b4c 72%,#12395c 100%);box-shadow:0 12px 28px rgba(6,26,51,.16)}
+.tramites-resumen:after{content:"";position:absolute;right:-56px;top:-78px;width:220px;height:220px;border:1px solid rgba(244,217,142,.2);border-radius:50%;pointer-events:none}
+.tramites-resumen-texto{position:relative;z-index:1;min-width:0}
+.tramites-etiqueta{display:inline-flex;align-items:center;gap:9px;margin:0 0 10px;color:#f4d98e;font-size:.72rem;font-weight:800;letter-spacing:.14em}
+.tramites-etiqueta:before{content:"";display:inline-block;width:27px;height:2px;background:#d7ad52}
+.tramites-resumen h2{margin:0 0 9px;color:#fff;font-size:clamp(1.3rem,2.7vw,1.8rem);line-height:1.25;letter-spacing:-.02em}
+.tramites-resumen p{margin:0;color:#e0e8f0;font-size:.97rem;line-height:1.65}
+.tramites-gratis{display:inline-flex;align-items:center;gap:8px;margin-top:15px;padding:7px 12px;border:1px solid rgba(244,217,142,.6);border-radius:999px;background:rgba(215,173,82,.12);color:#ffe5a0;font-size:.84rem;font-weight:800;letter-spacing:.02em}
+.tramites-gratis-icono{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#d7ad52;color:#061a33;font-size:.8rem;font-weight:900}
+.tramites-toggle{position:relative;z-index:1;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:49px;padding:13px 21px;border:1px solid #f4d98e;border-radius:9px;background:linear-gradient(135deg,#f4d98e,#d7ad52);color:#061a33;text-decoration:none;font:inherit;font-weight:800;box-shadow:0 5px 15px rgba(0,0,0,.18);transition:transform .18s ease,box-shadow .18s ease}
+.tramites-toggle:hover,.tramites-toggle:focus-visible{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.24);outline:3px solid rgba(244,217,142,.35);outline-offset:3px}
+.tramites-toggle span{font-size:1.08rem}
 .tramites-panel{margin-top:12px;padding:clamp(18px,3vw,28px);border:1px solid #dce5ee;border-radius:15px;background:#fff;color:#26364a}
 .tramites-panel[hidden]{display:none}
 .tramites-panel-cabecera{max-width:760px;margin-bottom:22px}
@@ -23,15 +28,14 @@
 .tramites-panel-cabecera p{margin:0;color:#526176;line-height:1.7}
 .tramites-panel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .tramites-panel-item{display:flex;align-items:flex-start;gap:12px;padding:16px;border:1px solid #e2e8f0;border-radius:11px;background:#f8fafc;min-width:0}
-.tramites-panel-icono{display:flex;flex:0 0 34px;width:34px;height:34px;align-items:center;justify-content:center;border-radius:9px;background:#e7eef6;color:#174b7a;font-size:1rem;font-weight:750}
-.tramites-panel-item h4{margin:1px 0 6px;color:#263e57;font-size:.98rem;line-height:1.4}
-.tramites-panel-item p{margin:0;color:#59697d;font-size:.91rem;line-height:1.6;overflow-wrap:anywhere}
-.tramites-contacto{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:18px;padding:16px 18px;border:1px solid #d7e4ef;border-radius:11px;background:#f2f6fa}
-.tramites-contacto p{margin:0;color:#40546a;font-size:.92rem;line-height:1.6}
-.tramites-contacto strong{color:#173f67}
-.tramites-contacto-nota{display:block;margin-top:5px;color:#68788c;font-size:.82rem}
+.tramites-panel-icono{display:flex;flex:0 0 34px;width:34px;height:34px;align-items:center;justify-content:center;border-radius:9px;background:#e9eff5;color:#174b7a;font-weight:800}
+.tramites-panel-item h4{margin:0 0 5px;color:#173f67;font-size:.98rem}
+.tramites-panel-item p{margin:0;color:#526176;font-size:.9rem;line-height:1.55}
+.tramites-contacto{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:18px;padding:16px;border-radius:11px;background:#f1f5f9}
+.tramites-contacto p{margin:0;color:#33465b;line-height:1.6}
+.tramites-contacto a{color:#174b7a;font-weight:800;text-decoration:none}
 .tramites-aviso{margin:16px 0 0;color:#68788c;font-size:.83rem;line-height:1.6}
-@media(max-width:720px){.tramites-acceso{margin:14px 0 20px}.tramites-resumen{align-items:flex-start;flex-direction:column;padding:18px}.tramites-toggle{width:100%}.tramites-panel-grid{grid-template-columns:1fr}.tramites-contacto{align-items:flex-start;flex-direction:column;padding:14px}}
+@media(max-width:720px){.tramites-acceso{margin:16px 0 22px;padding:0 12px}.tramites-resumen{align-items:flex-start;flex-direction:column;gap:18px;padding:21px}.tramites-toggle{width:100%}.tramites-panel-grid{grid-template-columns:1fr}.tramites-contacto{align-items:flex-start;flex-direction:column;padding:14px}}
 </style>
 
 
@@ -356,8 +360,9 @@ section.metodologia-pro .metodologia-pie p{margin:0!important;padding:0!importan
           <span class="tramites-etiqueta">SERVICIO DE ORIENTACIÓN</span>
           <h2 id="titulo-acceso-tramites">¿Necesitas realizar un trámite?</h2>
           <p>Conoce los servicios de orientación y gestión disponibles a nivel nacional.</p>
+          <span class="tramites-gratis"><span class="tramites-gratis-icono" aria-hidden="true">✓</span> Asesoría inicial gratuita</span>
         </div>
-        <a class="tramites-toggle" href="tramites.html" style="text-decoration:none">Solicita tu trámite <span aria-hidden="true">↗</span></a>
+        <a class="tramites-toggle" href="tramites.html">Solicita tu trámite <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 

@@ -1418,6 +1418,29 @@ mostrarDepartamentos();
   document.body.prepend(hero);
   const ficha = elegida.querySelector(".ficha-departamental");
   if (ficha) { ficha.open = true; ficha.style.display = "block"; }
+
+  if (solicitado === "bogota d.c." || solicitado === "bogota" || solicitado === "bogota dc") {
+    const contenidoBogota = document.createElement("section");
+    contenidoBogota.className = "contenido-tributario-detalle";
+    contenidoBogota.style.cssText = "margin:26px 0;padding:22px 0;border-top:1px solid #e5eaf1;line-height:1.75";
+    contenidoBogota.innerHTML = `
+      <h2>Descuentos y deudas de años anteriores</h2>
+      <p><strong>Alivio tributario anunciado para 2026:</strong> el Acuerdo 724 de 2026 contempla una reducción del 60 % en intereses y sanciones acumuladas para determinadas deudas distritales. Para acogerse, se debe pagar el 100 % del capital y el 40 % de los intereses y sanciones aplicables, en un solo pago, hasta el 21 de diciembre de 2026, sujeto a las condiciones del Acuerdo.</p>
+      <p><strong>Importante:</strong> según la información oficial consultada, al 15 de octubre de 2026 el mecanismo todavía no estaba habilitado para liquidar y pagar con el alivio. Confirma la fecha de activación antes de contar con el descuento. El beneficio no reduce el capital del impuesto y tiene exclusiones.</p>
+      <p><a href="https://bogota.gov.co/mi-ciudad/hacienda/conoce-alivios-tributarios-en-impuestos-y-multas-de-transito-en-bogota" target="_blank" rel="noopener noreferrer">Leer condiciones oficiales del alivio tributario 2026</a></p>
+      <h3>¿Cómo pagar impuestos vehiculares de vigencias anteriores?</h3>
+      <p>Entra al portal de la Secretaría Distrital de Hacienda, abre <strong>Pagos Bogotá</strong> y selecciona <strong>“Predial y vehículos años anteriores”</strong> para consultar y descargar el recibo. Puedes pagar en línea o utilizar las entidades autorizadas que indique la plataforma.</p>
+      <p><a href="https://www.haciendabogota.gov.co/es/impuestos/impuesto-sobre-vehiculos-automotores" target="_blank" rel="noopener noreferrer">Consultar y pagar impuesto vehicular en el portal oficial</a></p>
+      <h3>Otros descuentos del impuesto vehicular</h3>
+      <ul>
+        <li>El descuento por pronto pago de la vigencia 2026 tenía como fecha límite el 15 de mayo de 2026; ese plazo ya venció.</li>
+        <li>La Secretaría informa beneficios para ciertos vehículos eléctricos e híbridos nuevos matriculados en Bogotá, con condiciones y periodos específicos.</li>
+        <li>Los descuentos por mora no son automáticos: revisa requisitos, exclusiones y disponibilidad en los canales oficiales antes de pagar.</li>
+      </ul>
+      <p><small>Información revisada el 15 de octubre de 2026. Las condiciones y la habilitación de pagos pueden cambiar; verifica la actualización directamente con Hacienda Bogotá.</small></p>
+    `;
+    elegida.appendChild(contenidoBogota);
+  }
   const botonMas = elegida.querySelector(".boton-mas-informacion");
   if (botonMas) botonMas.remove();
   const acciones = elegida.querySelector(".acciones");

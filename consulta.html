@@ -1441,6 +1441,27 @@ mostrarDepartamentos();
     `;
     elegida.appendChild(contenidoBogota);
   }
+  if (solicitado === "antioquia") {
+    const contenidoAntioquia = document.createElement("section");
+    contenidoAntioquia.className = "contenido-tributario-detalle";
+    contenidoAntioquia.style.cssText = "margin:26px 0;padding:22px 0;border-top:1px solid #e5eaf1;line-height:1.75";
+    contenidoAntioquia.innerHTML = `
+      <h2>Descuentos y beneficios tributarios</h2>
+      <p>Consulta los beneficios y sus condiciones, incluso cuando ya hayan vencido. Antes de pagar, confirma siempre la liquidación y las reglas actuales directamente con la Gobernación de Antioquia.</p>
+      <h3>Descuento por pronto pago — vigencia 2026</h3>
+      <p><strong>Estado: vencido.</strong> El plazo terminó el 30 de abril de 2026. Durante ese periodo se ofreció un descuento del 10 % para vehículos automotores y motocicletas de más de 125 c. c., del 15 % para vehículos híbridos y del 20 % para vehículos 100 % eléctricos o cero emisiones.</p>
+      <h3>Deudas de años anteriores</h3>
+      <p><strong>Estado: beneficio vencido.</strong> El alivio temporal del 70 % en intereses y sanciones causados hasta el 31 de diciembre de 2025 estuvo disponible hasta el 31 de julio de 2026 y exigía pagar la totalidad del capital adeudado. No lo des por vigente sin que la Gobernación anuncie una nueva medida.</p>
+      <h3>Pago fuera de plazo y consulta de deuda</h3>
+      <p>El plazo para pagar la vigencia 2026 sin sanción ni intereses terminó el 31 de julio. Desde el 1 de agosto se aplican sanciones e intereses conforme a las reglas tributarias vigentes. Consulta la liquidación actualizada en el portal oficial antes de pagar.</p>
+      <p><a href="https://www.vehiculosantioquia.com.co/impuestosweb/" target="_blank" rel="noopener noreferrer">Consultar y liquidar el impuesto vehicular — portal oficial</a></p>
+      <p><a href="https://www.antioquia.gov.co/index.php/noticias-secretaria-de-hacienda/gobernacion-de-antioquia-impulsa-beneficio-tributario-para-deudores-morosos-del-impuesto-vehicular" target="_blank" rel="noopener noreferrer">Leer condiciones oficiales del alivio para deudas anteriores</a></p>
+      <p><a href="https://www.antioquia.gov.co/index.php/noticias-secretaria-de-hacienda/paga-el-impuesto-vehicular-de-forma-segura-en-www-vehiculosantioquia-com-co" target="_blank" rel="noopener noreferrer">Canales oficiales y recomendaciones de pago seguro</a></p>
+      <p><strong>Atención oficial:</strong> 604 444 46 66, 01800 419000 y 604 409 90 00.</p>
+      <p><small>Información revisada el 15 de octubre de 2026. Los beneficios indicados ya vencieron; confirma con la entidad si existe una nueva prórroga o alivio antes de tomar decisiones.</small></p>
+    `;
+    elegida.appendChild(contenidoAntioquia);
+  }
   const botonMas = elegida.querySelector(".boton-mas-informacion");
   if (botonMas) botonMas.remove();
   const acciones = elegida.querySelector(".acciones");

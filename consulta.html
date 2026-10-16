@@ -1397,7 +1397,7 @@ mostrarDepartamentos();
 <script>
 (function(){
   const params = new URLSearchParams(window.location.search);
-  const solicitado = (params.get("departamento") || "").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
+  const solicitado = (params.get("departamento") || "").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim().replace(/\s*\.\s*/g,".");
   if (!solicitado) return;
   document.body.classList.add("pagina-detalle");
   document.querySelector("header")?.setAttribute("hidden","");
@@ -1405,7 +1405,7 @@ mostrarDepartamentos();
   document.querySelector("footer")?.setAttribute("hidden","");
   const tarjetas = Array.from(document.querySelectorAll("#departamentos .card"));
   let elegida = tarjetas.find(card => {
-    const nombre = (card.querySelector("h3")?.textContent || "").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
+    const nombre = (card.querySelector("h3")?.textContent || "").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim().replace(/\s*\.\s*/g,".");
     return nombre === solicitado;
   });
   if (!elegida) {

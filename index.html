@@ -340,10 +340,14 @@ section.metodologia-pro .metodologia-pie p{margin:0!important;padding:0!importan
 </script>
 
 <style id="encabezado-imagen-responsive">
-.hero.hero-imagen{padding:0;background:linear-gradient(135deg,#071a33,#126e82 60%,#159a9c);line-height:0;overflow:hidden}
-.hero-imagen .hero-picture{display:block;width:100%;margin:0}
-.hero-imagen .hero-picture img{display:block;width:100%;height:auto;max-height:375px;object-fit:contain;object-position:center}
-@media(max-width:600px){.hero.hero-imagen{padding:0}.hero-imagen .hero-picture img{width:100%;height:auto;max-height:none}}
+.hero.hero-imagen{padding:0!important;margin:0;width:100%;background:#126e82;line-height:0;overflow:hidden}
+.hero-imagen .hero-picture{display:block;width:100%;aspect-ratio:1881/375;margin:0;overflow:hidden;background:#126e82}
+.hero-imagen .hero-picture img{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center}
+@media(max-width:600px){
+.hero.hero-imagen{padding:0!important}
+.hero-imagen .hero-picture{aspect-ratio:336/608}
+.hero-imagen .hero-picture img{width:100%;height:100%;object-fit:cover;object-position:center}
+}
 </style>
 </head>
 <body>

@@ -171,12 +171,12 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         ],
         "bolivar": [
             ["Jurisdicción", titulo],
-            ["Portal de liquidación", "Portal de la Gobernación de Bolívar para consultar el impuesto por placa y revisar vigencias pendientes."],
+            ["Portal de liquidación", "Portal oficial de la Gobernación de Bolívar para liquidar el impuesto vehicular por placa: https://impuestos.bolivar.gov.co/ . El sistema permite revisar las vigencias por pagar, generar la liquidación y pagar por PSE o descargar el recibo."],
             ["Calendario tributario 2026", "Las fechas de vencimiento y descuentos ordinarios de la vigencia 2026 quedan pendientes de confirmación en un calendario oficial específico."],
             ["Medios de pago", "El portal oficial permite generar la liquidación y pagar por PSE o descargar el recibo para pago."],
             ["Canales de contacto", "Teléfono (605) 6517444, extensión 8000 · contactenos@bolivar.gov.co. Dirección publicada: Km 3, sector Turbaco, Hacienda Bajo Miranda."],
-            ["Fuente de referencia", "Abrir portal oficial de liquidación del impuesto vehicular de Bolívar."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Portal oficial de liquidación de Bolívar: https://impuestos.bolivar.gov.co/ ; consulta de pagos por placa: https://ingresos.bolivar.gov.co/ . El portal oficial también publica notificaciones de impuesto vehicular de la vigencia 2026."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "magdalena": [
             ["Jurisdicción", titulo],
@@ -231,8 +231,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "No se encontró publicación oficial verificable con fechas de vencimiento, descuentos o sanciones para la vigencia 2026. Estado: pendiente de confirmación directa con Rentas; no asumir fechas de otros años."],
             ["Medios de pago", "No confirmados en una fuente oficial específica del impuesto vehicular. No realizar pagos mediante enlaces de terceros; confirmar primero el procedimiento con la Gobernación."],
             ["Canales de contacto", "Contacto institucional publicado por la Gobernación: 320 382 7001 y atencionalusuario@choco.gov.co. Dirección: Calle 31 No. 1-101, Edificio La Confianza, Quibdó. Horario publicado: lunes a viernes, 8:00 a. m.–12:00 m. y 2:00–6:00 p. m. Estos son canales generales; solicitar transferencia a Rentas."],
-            ["Fuente de referencia", "Consultar la Gobernación del Chocó y su portal institucional de datos abiertos. No se encontró allí una ficha pública específica de impuesto vehicular."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Portal oficial de la Gobernación del Chocó: https://www.choco.gov.co/ . El sitio institucional presenta la opción general “Pago impuestos”, pero en esta revisión no se pudo confirmar un enlace directo y específico para liquidar impuesto vehicular; mantener el enlace directo y el calendario como pendientes hasta confirmación de Rentas."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "boyaca": [
             ["Jurisdicción", titulo],
@@ -249,8 +249,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "No se localizó un calendario tributario 2026 oficial verificable con fechas de vencimiento o descuentos específicos para Amazonas. Pendiente de confirmación con la Secretaría de Hacienda; no asumir fechas de otros departamentos."],
             ["Medios de pago", "No confirmados en una fuente oficial específica para Amazonas. Confirmar los canales habilitados directamente con la Gobernación antes de realizar pagos."],
             ["Canales de contacto", "Gobernación del Amazonas: contactenos@amazonas.gov.co · teléfono (608) 592 6566 · Calle 10 No. 10-77, Leticia. Contacto general institucional; solicitar derivación a la dependencia responsable de Rentas."],
-            ["Fuente de referencia", "Consultar el trámite de impuesto sobre vehículos automotores registrado en el SUIT de Función Pública y el portal institucional de la Gobernación del Amazonas."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Portal institucional de la Gobernación del Amazonas: https://www.amazonas.gov.co/ ; trámite de declaración y pago reportado en SUIT. No se confirmó en esta revisión una URL directa pública para liquidación ni calendario específico de 2026; ambos datos permanecen pendientes."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "arauca": [
             ["Jurisdicción", titulo],
@@ -272,12 +272,12 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         ],
         "cundinamarca": [
             ["Jurisdicción", titulo],
-            ["Portal de liquidación", "La Gobernación habilita la consulta y descarga de la factura 2026 desde su sección de impuesto sobre vehículos."],
+            ["Portal de liquidación", "Página oficial de la Secretaría de Hacienda de Cundinamarca con acceso a factura 2026, histórico de pagos y liquidación: https://www.cundinamarca.gov.co/dependencias/sechacienda/impuestos/vehiculos . Portal de liquidación: https://impuvehiculo.cundinamarca.gov.co/sivervcundinamarca/liquidacionweb/primeraa.php ."]
             ["Calendario tributario 2026", "Descuento del 10 % hasta el 31 de mayo de 2026 y del 5 % hasta el 31 de julio de 2026. El pago oportuno sin intereses venció el 31 de julio; ambas fechas ya pasaron."],
-            ["Medios de pago", "La Gobernación informa pago digital por PSE, GoPass y tarjeta de crédito, además de entidades bancarias autorizadas."],
-            ["Canales de contacto", "WhatsApp de atención publicado: 300 839 0002. Atención presencial: Calle 26 No. 51-53, Bogotá, primer piso de la torre Salud."],
-            ["Fuente de referencia", "Abrir preguntas frecuentes oficiales de impuesto sobre vehículos de Cundinamarca."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Medios de pago", "La Secretaría de Hacienda informa pago en línea por PSE o tarjeta de crédito; publicaciones oficiales de 2026 también mencionan GoPass y entidades bancarias autorizadas. Confirma las opciones vigentes en la factura y en el portal oficial."],
+            ["Canales de contacto", "Contact center: 300 839 0005. Líneas directas: 601 749 1439, 601 749 1440, 601 749 1423 y 601 749 1455. Atención presencial: Calle 26 No. 51-53, Bogotá."],
+            ["Fuente de referencia", "Sección oficial de impuesto sobre vehículos: https://www.cundinamarca.gov.co/dependencias/sechacienda/impuestos/vehiculos ; publicación oficial del calendario y descuentos 2026: https://www.cundinamarca.gov.co/noticias/hasta-10--de-descuento-cundinamarca-abre-calendario-2026-del-impuesto-vehicular-con-beneficios-por-pronto-pago ; alerta oficial antifraude: https://www.cundinamarca.gov.co/noticias/secretaria-de-hacienda-de-cundinamarca-alerta-por-paginas-falsas-que-suplantan-el-pago-del-impuesto-vehicular%201 ."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "guainia": [
             ["Jurisdicción", titulo],

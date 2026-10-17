@@ -49,6 +49,8 @@ function normalizarTexto(texto) {
 }
 
 // Añade una ficha homogénea a cada jurisdicción sin presentar campos pendientes como confirmados.
+// Si una ficha individual falla, no debe bloquear el buscador del directorio.
+try {
 document.querySelectorAll("#departamentos .card").forEach(card => {
     if (card.querySelector(".ficha-departamental")) return;
     const titulo = card.querySelector("h3")?.textContent?.trim() || "Jurisdicción";
@@ -664,6 +666,9 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
     details.appendChild(contenido);
     card.appendChild(details);
 });
+} catch (error) {
+    console.error("No se pudo construir una ficha departamental; se mantiene activo el buscador.", error);
+}
 
 const sugerenciasBusqueda = document.getElementById("sugerencias-busqueda");
 

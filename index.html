@@ -338,15 +338,27 @@ section.metodologia-pro .metodologia-pie p{margin:0!important;padding:0!importan
   gtag('js', new Date());
   gtag('config', 'G-MXK51Y9C6W');
 </script>
+
+<style id="encabezado-imagen-responsive">
+.hero.hero-imagen{padding:0;background:none;line-height:0;overflow:hidden}
+.hero-imagen .hero-picture{display:block;width:100%;margin:0}
+.hero-imagen .hero-picture img{display:block;width:100%;height:auto;max-width:none;object-fit:contain}
+@media(max-width:600px){.hero.hero-imagen{padding:0}.hero-imagen .hero-picture img{width:100%;height:auto}}
+</style>
 </head>
 <body>
 
-<header class="hero">
-    <div class="hero-content">
-        <span class="badge">🇨🇴 PORTAL NACIONAL</span>
-        <h1>Impuesto Vehicular en Colombia</h1>
-        <p>Encuentra en un solo lugar los portales oficiales de las gobernaciones y Bogota D.C. para consultar tu impuesto vehicular.</p>
-    </div>
+<header class="hero hero-imagen">
+    <picture class="hero-picture">
+        <source media="(max-width: 600px)" srcset="./img/portal_vehicular_cel.png">
+        <img
+            src="./img/Portal%20Nacional_%20Impuesto%20pc.png"
+            alt="Portal Nacional: Impuesto Vehicular en Colombia. Encuentra los portales oficiales de las gobernaciones y Bogotá D. C."
+            width="1881"
+            height="375"
+            fetchpriority="high"
+        >
+    </picture>
 </header>
 
 <main>

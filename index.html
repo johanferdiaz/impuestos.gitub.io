@@ -340,13 +340,13 @@ section.metodologia-pro .metodologia-pie p{margin:0!important;padding:0!importan
 </script>
 
 <style id="encabezado-imagen-responsive">
-.hero.hero-imagen{padding:0!important;margin:0;width:100%;background:#126e82;line-height:0;overflow:hidden}
-.hero-imagen .hero-picture{display:block;width:100%;aspect-ratio:1881/375;margin:0;overflow:hidden;background:#126e82}
-.hero-imagen .hero-picture img{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center}
+/* El banner sustituye el encabezado anterior sin márgenes ni franjas sobrantes. */
+html,body{margin-top:0}
+.hero.hero-imagen{display:block!important;box-sizing:border-box;width:100%!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:#126e82!important;color:#fff;line-height:0!important;overflow:hidden!important}
+.hero-imagen .hero-picture{display:block!important;box-sizing:border-box;width:100%!important;max-width:none!important;height:auto!important;aspect-ratio:1881/375;margin:0!important;padding:0!important;overflow:hidden;background:#126e82}
+.hero-imagen .hero-picture img{display:block!important;box-sizing:border-box;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;margin:0!important;padding:0!important;border:0!important;object-fit:fill!important;object-position:center!important}
 @media(max-width:600px){
-.hero.hero-imagen{padding:0!important}
-.hero-imagen .hero-picture{aspect-ratio:336/608}
-.hero-imagen .hero-picture img{width:100%;height:100%;object-fit:cover;object-position:center}
+ .hero-imagen .hero-picture{aspect-ratio:336/608}
 }
 </style>
 </head>

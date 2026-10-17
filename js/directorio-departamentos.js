@@ -7,8 +7,8 @@ const departamentos = [
     { nombre:"Atlantico", region:"Caribe", logo:escudo("Escudo del Atlantico.svg"), url:"https://portalimpuestos.atlantico.gov.co/Portal-ATLRentas/vehiculos_declaracion.jsp" },
     { nombre:"Bolivar", region:"Caribe", logo:escudo("Escudo de Bolivar (Colombia).svg"), url:"https://impuestos.bolivar.gov.co/gobol_web/liquidaciones" },
     { nombre:"Boyaca", region:"Andina", logo:escudo("Escudo de Boyaca.svg"), url:"https://www.boyaca.gov.co/" },
-    { nombre:"Caldas", region:"Andina", logo:escudo("Coat of Arms of the Department of Caldas.svg"), url:"https://rentas.caldas.gov.co/" },
-    { nombre:"Caqueta", region:"Amazonia", logo:escudo("Escudo del Caqueta.svg"), url:"https://www.caqueta.gov.co/" },
+    { nombre:"Caldas", region:"Andina", logo:escudo("Coat of Arms of the Department of Caldas.svg"), url:"https://vehiculos.caldas.gov.co/web" },
+    { nombre:"Caqueta", region:"Amazonia", logo:escudo("Escudo del Caqueta.svg"), url:"https://iuva.syc.com.co/caqueta" },
     { nombre:"Casanare", region:"Orinoquia", logo:escudo("Escudo oficial de Casanare.svg"), url:"https://impuestos.casanare.gov.co/impuesto-vehiculos" },
     { nombre:"Cauca", region:"Pacifica", logo:escudo("Escudo del Cauca.svg"), url:"https://www.cauca.gov.co/" },
     { nombre:"Cesar", region:"Caribe", logo:escudo("Coat of arms of Cesar (Colombia).svg"), url:"https://www.cesar.gov.co/d/es/atencion-ciudadano/tramites-servicios/46-tramites" },
@@ -23,12 +23,12 @@ const departamentos = [
     { nombre:"Meta", region:"Orinoquia", logo:escudo("Escudo del Meta.svg"), url:"https://meta.gov.co/" },
     { nombre:"Narino", region:"Pacifica", logo:escudo("Escudo de Narino.svg"), url:"https://impuestovehicular.narino.gov.co/portal-narino/#/" },
     { nombre:"Norte de Santander", region:"Andina", logo:escudo("Escudo de Norte de Santander.svg"), url:"https://vehiculos.nortedesantander.gov.co/" },
-    { nombre:"Putumayo", region:"Amazonia", logo:escudo("Escudo del Putumayo.svg"), url:"https://appsold.putumayo.gov.co/aplicaciones/tramites_gober/" },
+    { nombre:"Putumayo", region:"Amazonia", logo:escudo("Escudo del Putumayo.svg"), url:"https://edeskprisma.syc.com.co/PUTUMAYO" },
     { nombre:"Quindio", region:"Andina", logo:escudo("Escudo del Quindio.svg"), url:"https://isva.quindio.gov.co/portal-quindio/" },
     { nombre:"Risaralda", region:"Andina", logo:escudo("Escudo de Risaralda.svg"), url:"https://tributario.risaralda.siifweb.com/" },
     { nombre:"San Andrés y Providencia", region:"Caribe", logo:escudo("Escudo de San Andrés y Providencia.svg"), url:"https://ventanilla.sanandres.gov.co/tramites/154/impuesto-sobre-vehiculo-automotor/" },
     { nombre:"Santander", region:"Andina", logo:escudo("Escudo de Santander 2004 (Colombia).svg"), url:"https://edeskprisma.syc.com.co/SANTANDER" },
-    { nombre:"Sucre", region:"Caribe", logo:escudo("Escudo de Sucre.svg"), url:"https://impuestos.sucre.gobiernoit.com/Portal-VehiculoSucre/" },
+    { nombre:"Sucre", region:"Caribe", logo:escudo("Escudo de Sucre.svg"), url:"https://impuestos.sucre.gobiernoit.com/Portal-VehiculoSucre/LIQ_001.jsp?id=LIQ" },
     { nombre:"Tolima", region:"Andina", logo:escudo("Escudo del Tolima.svg"), url:"https://aplicativosenlinea.net/sivervtolima/redirect/" },
     { nombre:"Valle del Cauca", region:"Pacifica", logo:escudo("Escudo del Valle del Cauca.svg"), url:"https://www.vehiculosvalle.com.co/impuestosweb/#/public" },
     { nombre:"Vaupes", region:"Amazonia", logo:escudo("Escudo del Vaupes.svg"), url:"https://vaupes.gov.co/" },
@@ -84,21 +84,22 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         "casanare": [
             ["Jurisdicción", titulo],
             ["Portal de liquidación", "Portal de Impuestos de la Secretaría de Hacienda de Casanare."],
-            ["Calendario tributario 2026", "Fechas publicadas: 15 % de descuento del 1 de enero al 15 de marzo; 10 % del 16 de marzo al 31 de mayo; 5 % del 1 de junio al 31 de julio; sin descuento del 1 de agosto al 30 de noviembre. Desde el 1 de diciembre se anuncian intereses moratorios. Estos plazos ya pasaron al 9 de octubre de 2026, salvo el tramo sin descuento que termina el 30 de noviembre."],
+            ["Calendario tributario 2026", "Fechas publicadas: 15 % de descuento del 1 de enero al 15 de marzo; 10 % del 16 de marzo al 31 de mayo; 5 % del 1 de junio al 31 de julio; sin descuento del 1 de agosto al 30 de noviembre. Desde el 1 de diciembre se anuncian intereses moratorios. Todos los plazos de descuento ya pasaron; el tramo sin descuento continúa hasta el 30 de noviembre de 2026. El portal anuncia intereses moratorios a partir del 1 de diciembre."],
             ["Medios de pago", "Consultar las opciones disponibles en el portal oficial antes de pagar; el calendario consultado no especifica los medios."],
             ["Canales de contacto", "rentas@casanare.gov.co · 633 6339, extensión 1341 · Carrera 20 No. 08-02, edificio CAD, Yopal. Atención publicada: lunes a viernes, 8:00 a. m.–12:00 m. y 2:00–6:00 p. m."],
-            ["Fuente de referencia", "Abrir calendario tributario oficial de Casanare."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Calendario tributario oficial de Casanare, con descuentos y vencimientos de 2026: https://impuestos.casanare.gov.co/impuesto-vehiculos/calendario-tributario ; portal oficial de liquidación: https://impuestos.casanare.gov.co/impuesto-vehiculos ."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "bogota d.c.": [
             ["Jurisdicción", titulo],
             ["Portal de liquidación", "Página oficial de la Secretaría Distrital de Hacienda para consultar, declarar y pagar el impuesto sobre vehículos automotores: https://www.haciendabogota.gov.co/es/impuestos/impuesto-sobre-vehiculos-automotores"],
             ["Actualización oficial 2026", "La Secretaría Distrital de Hacienda mantiene el portal oficial para pagos y consulta de vehículos 2026. La nota oficial publicada el 3 de septiembre de 2026 recordó que la segunda cuota del sistema SPAC vencía el 4 de septiembre. Esa fecha ya pasó; quien tenga obligaciones pendientes debe consultar su estado actualizado directamente en la Oficina Virtual."],
             ["Calendario tributario 2026", "El vencimiento ordinario fue el 24 de julio de 2026 y el descuento por pronto pago terminó el 15 de mayo de 2026. Para quienes se acogieron al pago por cuotas, las fechas fueron 3 de julio y 4 de septiembre de 2026. Todas esas fechas ya pasaron; verifica intereses o sanciones que puedan aplicar a obligaciones pendientes."],
-            ["Descuentos y deudas de años anteriores", "Alivio tributario anunciado para 2026: reducción del 60 % en intereses y sanciones de obligaciones distritales elegibles, con plazo hasta el 21 de diciembre de 2026. Se exige pagar el 100 % del capital y el 40 % de los intereses y sanciones en un solo pago; el capital no se reduce. La Secretaría de Hacienda informó que el sistema de descuento se habilitaría desde el 21 de septiembre de 2026. Verifica en la liquidación oficial que tu obligación vehicular y vigencia cumplan los requisitos. Para deudas anteriores, en el portal oficial abre Pagos Bogotá y busca “Predial y vehículos años anteriores”. Fuente: https://bogota.gov.co/mi-ciudad/hacienda/conoce-alivios-tributarios-en-impuestos-y-multas-de-transito-en-bogota"],
+            ["Descuentos y deudas de años anteriores", "Actualización al 17 de octubre de 2026: el Concejo de Bogotá aprobó el Acuerdo 724 de 2026 el 28 de septiembre. La publicación oficial consultada indica que el acuerdo pasó a sanción del alcalde; no se debe presentar el alivio del 60 % como disponible para impuesto vehicular hasta confirmar la sanción, publicación y condiciones vigentes. La propuesta contempla pagar el 100 % del capital y el 40 % de intereses y sanciones, con plazo anunciado hasta el 21 de diciembre de 2026. Antes de pagar, verifica si la medida ya entró en vigor y si tu obligación cumple los requisitos en la Oficina Virtual. Fuentes: https://bogota.gov.co/mi-ciudad/hacienda/aprobado-acuerdo-por-una-ciudad-inteligente-en-concejo-de-bogota ; https://www.haciendabogota.gov.co/es/impuestos/impuesto-sobre-vehiculos-automotores"],
             ["Medios de pago", "La Secretaría indica pago en línea mediante Pagos Bogotá y opciones para años anteriores. Para pagos por cuotas, consulta el cupón en la Oficina Virtual. Escribe directamente haciendabogota.gov.co en el navegador; la entidad advierte que no envía enlaces de pago por WhatsApp, SMS o redes sociales."],
             ["Canales de contacto", "Secretaría Distrital de Hacienda: PBX +57 (601) 338 5000 y línea 195. Consulta los canales y horarios vigentes en la página institucional."],
-            ["Fuente de referencia", "Portal oficial de impuesto vehicular: https://www.haciendabogota.gov.co/es/impuestos/impuesto-sobre-vehiculos-automotores ; novedad oficial del 3 de septiembre de 2026: https://bogota.gov.co/mi-ciudad/hacienda/impuesto-de-vehiculos-en-bogota-segunda-cuota-vence-4-septiembre-2026"],
+            ["Tarifas de impuesto vehicular 2026", "La Secretaría Distrital de Hacienda publica para 2026 las tarifas de 0,7 % para servicio público, hasta 1,2 % para eléctricos y 1,7 %, 2,7 % o 3,7 % para vehículos particulares según el rango de avalúo. Verifica tipo de vehículo, avalúo y condiciones en la fuente oficial antes de liquidar."],
+            ["Fuente de referencia", "Portal oficial de impuesto vehicular y tarifas 2026: https://www.haciendabogota.gov.co/es/impuestos/impuesto-sobre-vehiculos-automotores ; calendario oficial 2026: https://bogota.gov.co/mi-ciudad/hacienda/pago-de-impuestos-en-bogota-conoce-el-calendario-el-tributario-2026 ; estado del Acuerdo 724 de 2026: https://bogota.gov.co/mi-ciudad/hacienda/aprobado-acuerdo-por-una-ciudad-inteligente-en-concejo-de-bogota"],
             ["Fecha de verificación de esta ficha", "15 de octubre de 2026."]
         ],
         "antioquia": [
@@ -108,7 +109,7 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Medios de pago", "Portal oficial de pago y puntos presenciales anunciados por la Gobernación: Central de Declaración del Impuesto Vehicular en La Alpujarra; oficinas de tránsito de Medellín, Itagüí, Envigado y Sabaneta; centros comerciales habilitados; y entidades financieras y redes autorizadas como Bancolombia, Banco de Occidente, Banco Popular, BBVA, Davivienda, Efecty, 4-72, Punto Red, Súper Giros y Grupo Éxito. Confirma los puntos vigentes en el portal oficial."],
             ["Canales de contacto", "Líneas oficiales publicadas por la Gobernación: (604) 444 46 66, 018000 419000 y (604) 409 90 00."],
             ["Fuente de referencia", "Resolución oficial del calendario tributario 2026 y noticias oficiales sobre descuentos, pago y prevención de fraude."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "santander": [
             ["Jurisdicción", titulo],
@@ -116,8 +117,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "La Gobernación publicó plazo del 1 de enero al 30 de junio de 2026 para declarar y pagar sin sanciones ni intereses. Ese plazo ya venció."],
             ["Medios de pago", "Portal en línea; bancos Bancolombia, Banco Popular, Banco de Occidente, Davivienda, BBVA, AV Villas y Banco Agrario; corresponsales Éxito y Efecty; Casa del Libro Total en Bucaramanga, Barrancabermeja y San Gil."],
             ["Canales de contacto", "Para dudas, consultar los canales de atención de la Gobernación en su sitio oficial; no se incorpora un teléfono no verificado."],
-            ["Fuente de referencia", "Abrir comunicado oficial de Santander sobre el impuesto vehicular 2026."],
-            ["Fecha de verificación de esta ficha", "16 de octubre de 2026."]
+            ["Fuente de referencia", "Comunicado oficial de Santander sobre el impuesto vehicular 2026: https://santander.gov.co/publicaciones/11394/es-tiempo-de-ponerse-al-dia-con-el-pago-del-impuesto-vehicular-2026/ . Portal oficial de liquidación: https://edeskprisma.syc.com.co/SANTANDER ."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "huila": [
             ["Jurisdicción", titulo],
@@ -125,8 +126,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "La Gobernación publicó 10 % de descuento hasta el 31 de mayo; pago sin descuento, sanción ni intereses hasta el 31 de julio. Desde el 1 de agosto de 2026 se aplican sanciones e intereses. Los plazos ordinarios ya vencieron."],
             ["Medios de pago", "La publicación oficial indica PSE, Banco de Occidente, Bancolombia, Davivienda y corresponsales autorizados Efecty, SuperGIROS, Puntored y Su Chance. Atención presencial: Casa del Libro Total, C. C. San Juan Plaza, primer piso, Neiva. Confirmar en el portal que el canal siga habilitado antes de pagar."],
             ["Canales de contacto", "Gobernación del Huila: conmutador (608) 867 1300 y línea gratuita 01 8000 968 716. Sede principal: Carrera 4 con Calle 8, Neiva. Solicitar transferencia a la oficina de Impuesto Vehicular/Hacienda."],
-            ["Fuente de referencia", "Publicación oficial de descuentos 2026 y sección Impuestos Hacienda del Huila."],
-            ["Fecha de verificación de esta ficha", "10 de octubre de 2026."]
+            ["Fuente de referencia", "Publicación oficial de descuentos 2026, del 14 de enero: https://www.huila.gov.co/publicaciones/16542/conozca-los-descuentos-del-impuesto-vehicular-para-este-2026/ ; sección oficial Impuestos Hacienda: https://www.huila.gov.co/impuestos/."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "cauca": [
             ["Jurisdicción", titulo],
@@ -135,8 +136,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Medios de pago", "La Gobernación publicó pago en línea mediante PSE. Confirma los medios habilitados entrando desde cauca.gov.co / Oficina de Impuestos y Rentas."],
             ["Descuentos y alivios", "Para obligaciones en mora de 2025 y años anteriores, la Gobernación publicó un alivio escalonado: 80 % de descuento en intereses y sanciones hasta el 30 de septiembre de 2026 (tramo vencido al revisar el 10 de octubre), 60 % hasta noviembre y 50 % en diciembre. Requisitos publicados: estar al día con la vigencia 2026 y pagar el capital completo. La publicación no precisa el día exacto de cierre del tramo del 60 %; confirma en la liquidación oficial o con Rentas si el beneficio sigue habilitado y la fecha aplicable. Adicionalmente, la Ordenanza 043 de 2026 sancionó un descuento del 60 % en el impuesto para vehículos eléctricos, híbridos o de cero emisiones matriculados en Cauca o trasladados al departamento, durante el año de matrícula/traslado y los cinco años fiscales siguientes; exige solicitud y documentos, y no genera devolución por pagos previos a la aprobación."],
             ["Canales de contacto", "Oficina Grupo de Rentas: rentas@cauca.gov.co. Dirección institucional publicada: Calle 3 No. 4-70, Casa Caldas, Popayán. Confirmar horario y atención en el portal oficial."],
-            ["Fuente de referencia", "Portal tributario y trámites: https://www.cauca.gov.co/ ; calendario tributario 2026 (Resolución 13935 de 2025): https://www.cauca.gov.co/NuestraGestion/Normatividad/Resoluci%C3%B3n%2013935%20de%202025.pdf ; alivio por mora, publicación oficial del 4 de septiembre: https://cauca.gov.co/Prensa/SaladePrensa/Paginas/Gobernaci%C3%B3n-del-Cauca-lidera-alivio-fiscal-Asamblea-aprueba-descuentos-de-hasta-el-80-en-intereses-y-sanciones-sobre-impues.aspx ; descuento para eléctricos e híbridos, publicación oficial del 27 de septiembre: https://www.cauca.gov.co/Prensa/SaladePrensa/Paginas/Cauca-incentiva-la-movilidad-sostenible-con-descuento-del-60--en-impuesto-vehicular-para-automotores-el%C3%A9ctricos-e-h%C3%ADbridos.aspx."],
-            ["Fecha de verificación de esta ficha", "10 de octubre de 2026."]
+            ["Fuente de referencia", "Portal tributario y trámites: https://www.cauca.gov.co/ ; calendario tributario 2026 (Resolución 13935 de 2025): https://www.cauca.gov.co/NuestraGestion/Normatividad/Resoluci%C3%B3n%2013935%20de%202025.pdf ; alivio por mora, publicación oficial del 4 de septiembre: https://cauca.gov.co/Prensa/SaladePrensa/Paginas/Gobernaci%C3%B3n-del-Cauca-lidera-alivio-fiscal-Asamblea-aprueba-descuentos-de-hasta-el-80-en-intereses-y-sanciones-sobre-impues.aspx ; actualización oficial del 8 de septiembre sobre el 60 % en octubre y noviembre: https://www.cauca.gov.co/rentas/SaladePrensa/Paginas/Entre-m%C3%A1s-r%C3%A1pido-te-pongas-al-d%C3%ADa%2C-m%C3%A1s-ahorras.aspx ; descuento para eléctricos e híbridos, publicación oficial del 27 de septiembre: https://www.cauca.gov.co/Prensa/SaladePrensa/Paginas/Cauca-incentiva-la-movilidad-sostenible-con-descuento-del-60--en-impuesto-vehicular-para-automotores-el%C3%A9ctricos-e-h%C3%ADbridos.aspx."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "cordoba": [
             ["Jurisdicción", titulo],
@@ -146,36 +147,45 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Medios de pago", "Comunicado oficial del 5 de septiembre de 2026 informó que se restablecieron los servicios digitales para radicación y pago en línea. La entidad también informó pagos presenciales en Banco de Occidente, Banco Davivienda, puntos Record en Córdoba, SuperGiros a nivel nacional y almacenes Éxito. Verifica los medios disponibles al generar la liquidación."],
             ["Canales de contacto", "RECAUDO.IMPUESTOS@CORDOBA.GOV.CO · Cra. 6 No. 65-24, local 44, segundo piso, CC Places Mall, Montería. Atención presencial publicada: lunes a viernes, 8:00 a. m. a 5:00 p. m.; confirma cualquier cambio con la entidad."],
             ["Estado del portal", "La Gobernación informó el 5 de septiembre de 2026 que restableció los servicios digitales luego de acciones de seguridad informática."],
-            ["Fuente de referencia", "Calendario y descuentos publicados: https://www.cordoba.gov.co/publicaciones/7329/hasta-el-31-de-marzo-vence-el-plazo-para-obtener-descuentos-en-pronto-pago-en-el-impuesto-vehicular-y-en-intereses-y-sanciones-de-vigencias-del-2024-hacia-atras/ ; restablecimiento del portal y medios de pago (7 de septiembre de 2026): https://www.cordoba.gov.co/publicaciones/7833/gobernacion-de-cordoba-habilita-los-servicios-del-portal-web-de-impuestos-luego-de-garantizar-la-seguridad-informatica-de-contribuyentes/ ; portal oficial: https://impuestos.cordoba.gov.co/RentasCord/index.jsp"],
-            ["Fecha de verificación de esta ficha", "16 de octubre de 2026."]
+            ["Fuente de referencia", "Calendario y descuentos publicados: https://www.cordoba.gov.co/publicaciones/7329/hasta-el-31-de-marzo-vence-el-plazo-para-obtener-descuentos-en-pronto-pago-en-el-impuesto-vehicular-y-en-intereses-y-sanciones-de-vigencias-del-2024-hacia-atras/ ; restablecimiento oficial de los servicios digitales y medios de pago (publicado el 7 de septiembre de 2026): https://www.cordoba.gov.co/publicaciones/7833/gobernacion-de-cordoba-habilita-los-servicios-del-portal-web-de-impuestos-luego-de-garantizar-la-seguridad-informatica-de-contribuyentes/ ; portal oficial de impuestos: https://impuestos.cordoba.gov.co/RentasCord/index.jsp"],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "atlantico": [
             ["Jurisdicción", titulo],
             ["Portal de liquidación", "Portal oficial de Impuestos Departamentales del Atlántico, con acceso a liquidación del impuesto sobre vehículos automotores."],
             ["Calendario tributario 2026", "El Decreto 000020 del 22 de enero de 2026 fijó el 10 de julio de 2026 como fecha límite ordinaria; ese plazo ya venció. Actualización oficial del 14 de octubre: hay un descuento del 70 % en intereses y sanciones de obligaciones tributarias de las vigencias 2025 y anteriores hasta el 31 de octubre de 2026. Verifica los requisitos, las obligaciones incluidas y el valor de capital en la liquidación oficial antes de pagar. Fuente: https://www.atlantico.gov.co/"],
-            ["Descuentos y deudas de años anteriores", "La Gobernación del Atlántico anunció el 14 de octubre de 2026 un descuento del 70 % en intereses y sanciones para obligaciones tributarias de las vigencias 2025 y anteriores hasta el 31 de octubre de 2026. Confirma si el beneficio incluye tu impuesto vehicular y los requisitos específicos en el portal oficial antes de pagar. Fuente: https://www.atlantico.gov.co/"],
+            ["Descuentos y deudas de años anteriores", "Actualización oficial del 14 de octubre de 2026: la Gobernación anunció un descuento del 70 % en intereses y sanciones de obligaciones tributarias correspondientes a las vigencias 2025 y anteriores, hasta el 31 de octubre de 2026, bajo la Ordenanza 000682 de 2026. La noticia no detalla en su resumen las condiciones específicas por tipo de obligación; confirma en la liquidación oficial si aplica a tu impuesto vehicular, los requisitos y el saldo a pagar. Fuente: https://atlantico.gov.co/index.php/noticias/prensa-hacienda/28723-atlanticense-aprovecha-el-70-de-descuento-en-intereses-y-sanciones-de-los-impuestos-que-recauda-la-gobernacion"],
             ["Medios de pago", "El portal departamental ofrece acceso a liquidación de impuesto vehicular. Confirma los medios habilitados en el flujo oficial antes de pagar."],
             ["Canales de contacto", "Consultar Secretaría de Hacienda Departamental desde el sitio oficial de la Gobernación."],
-            ["Fuente de referencia", "Abrir página oficial de Impuestos Departamentales del Atlántico."],
-            ["Fecha de verificación de esta ficha", "16 de octubre de 2026."]
+            ["Fuente de referencia", "Página oficial de Impuestos Departamentales del Atlántico, actualizada el 23 de septiembre de 2026: https://www.atlantico.gov.co/index.php/impuestos-departamentales ; noticia oficial del alivio publicado el 14 de octubre de 2026: https://atlantico.gov.co/index.php/noticias/prensa-hacienda/28723-atlanticense-aprovecha-el-70-de-descuento-en-intereses-y-sanciones-de-los-impuestos-que-recauda-la-gobernacion"],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
+        ],
+        "boyaca": [
+            ["Jurisdicción", titulo],
+            ["Portal de liquidación", "La Gobernación de Boyacá indica que la liquidación se genera desde su sitio institucional, en la ruta Impuesto Vehículos > Liquidación Web del Impuesto de Vehículos Automotores. Para pagar, el portal ofrece PSE o botón Bancolombia. Verifica que sigues en el dominio oficial boyaca.gov.co antes de iniciar."],
+            ["Calendario tributario 2026", "La Resolución 00000876 del 26 de diciembre de 2025 fijó inicialmente vencimientos por último dígito de placa hasta el 31 de enero, 28 de febrero y 31 de marzo. La Resolución 00000034 del 28 de enero de 2026 amplió el plazo para placas terminadas en 1, 2 y 3 hasta el 28 de febrero; los demás plazos se mantuvieron. Todos los vencimientos de 2026 ya pasaron; consulta la liquidación vigente para conocer sanciones e intereses aplicables."],
+            ["Medios de pago", "La guía oficial de trámite indica pago en línea por PSE o botón Bancolombia; también permite solicitar orientación en oficinas, correo o WhatsApp institucional. Confirma las opciones en el portal antes de pagar."],
+            ["Canales de contacto", "WhatsApp institucional publicado: 318 311 9821. PBX: (608) 742 0150, extensiones 2126 y 2147. La Gobernación publica atención presencial en sus oficinas; confirma horarios y correos vigentes en el sitio institucional."],
+            ["Fuente de referencia", "Guía oficial del trámite, publicada el 30 de septiembre de 2026: https://www.boyaca.gov.co/tramite-solicitud-impuestos-de-vehiculos-boleta-fiscal/ ; calendario oficial 2026: https://www.boyaca.gov.co/boyaca-fija-los-plazos-para-la-declaracion-y-pago-del-impuesto-sobre-vehiculos-automotores-vigencia-2026/ ; modificación del calendario, Resolución 00000034 de 2026: https://www.boyaca.gov.co/secretariahacienda/wp-content/uploads/sites/77/2026/03/Resolucion-No.-00000034-de-2026.pdf ."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "bolivar": [
             ["Jurisdicción", titulo],
-            ["Portal de liquidación", "Portal de la Gobernación de Bolívar para consultar el impuesto por placa y revisar vigencias pendientes."],
+            ["Portal de liquidación", "Portal oficial de la Gobernación de Bolívar para liquidar el impuesto vehicular por placa: https://impuestos.bolivar.gov.co/ . El sistema permite revisar las vigencias por pagar, generar la liquidación y pagar por PSE o descargar el recibo."],
             ["Calendario tributario 2026", "Las fechas de vencimiento y descuentos ordinarios de la vigencia 2026 quedan pendientes de confirmación en un calendario oficial específico."],
             ["Medios de pago", "El portal oficial permite generar la liquidación y pagar por PSE o descargar el recibo para pago."],
             ["Canales de contacto", "Teléfono (605) 6517444, extensión 8000 · contactenos@bolivar.gov.co. Dirección publicada: Km 3, sector Turbaco, Hacienda Bajo Miranda."],
-            ["Fuente de referencia", "Abrir portal oficial de liquidación del impuesto vehicular de Bolívar."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Portal oficial de liquidación de Bolívar: https://impuestos.bolivar.gov.co/ ; consulta de pagos por placa: https://ingresos.bolivar.gov.co/ . El portal oficial también publica notificaciones de impuesto vehicular de la vigencia 2026."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "magdalena": [
             ["Jurisdicción", titulo],
             ["Portal de liquidación", "Portal oficial de Impuestos del Magdalena para consulta y pago en línea por placa."],
-            ["Calendario tributario 2026", "La Gobernación anunció un beneficio temporal para deudas de impuesto vehicular, tasas y multas de tránsito de vigencias 2025 y anteriores: descuento en intereses del 75 % hasta el 31 de agosto, 50 % hasta el 31 de octubre y 25 % hasta el 30 de diciembre de 2026. Al 9 de octubre de 2026, el tramo anunciado es del 50 % hasta el 31 de octubre. Verifica los requisitos y el decreto antes de pagar."],
+            ["Calendario tributario 2026", "Actualización oficial del 16 de octubre de 2026: contribuyentes morosos del impuesto vehicular, tasas y multas de tránsito de las vigencias 2025 y anteriores pueden acceder al 50 % de descuento en intereses y sanciones hasta el 31 de octubre; luego se anuncia un 25 % hasta el 30 de diciembre de 2026. La medida se estableció mediante el Decreto 267 del 13 de abril de 2026. Confirma el valor y las condiciones en la liquidación oficial."],
             ["Medios de pago", "El portal ofrece pago en línea por PSE y consulta por placa; también permite consultar facturas y certificados de paz y salvo."],
             ["Canales de contacto", "La Gobernación publicó atención para el beneficio en la Oficina de Gestión Tributaria, calle 22 # 15-21. Confirma horarios directamente con la entidad."],
-            ["Fuente de referencia", "Abrir comunicado oficial sobre descuentos en intereses y publicación de septiembre de 2026 que confirma el beneficio del 50 % hasta el 31 de octubre."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Comunicado oficial del 16 de octubre de 2026 sobre el 50 % de descuento hasta el 31 de octubre: https://www.gobernaciondelmagdalena.gov.co/aprovecha-descuentos-del-50-en-impuestos-de-vigencias-anteriores-y-disfruta-una-experiencia-especial-en-la-nueva-casa-de-rentas/ ; portal oficial de impuestos: https://impuestos.gobernaciondelmagdalena.gov.co/."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "nariño": [
             ["Jurisdicción", titulo],
@@ -184,17 +194,17 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Descuentos y alivios", "La Ordenanza 16 del 11 de septiembre de 2026 fue sancionada y concede hasta el 80 % de reducción en sanciones e intereses moratorios para obligaciones en mora hasta el 31 de diciembre de 2025. Fecha límite publicada: 15 de diciembre de 2026, cancelando la totalidad de la obligación y conservando íntegro el capital del impuesto. Se contemplan acuerdos de pago; existen exclusiones para ciertos procesos de cobro coactivo con títulos de depósito judicial que cubran toda la obligación. Confirma en el portal que el beneficio esté aplicado a tu liquidación antes de pagar."],
             ["Medios de pago", "La Gobernación publica el portal oficial para liquidación y pago en línea. Confirma los medios habilitados dentro del portal antes de realizar una transacción."],
             ["Canales de contacto", "Subsecretaría de Rentas / Impuesto Vehicular. La Gobernación publica atención presencial en Pasto, Samaniego, La Unión, Ipiales, Tumaco y Túquerres. Dirección institucional: Calle 19 No. 23-78, Pasto; conmutador general (602) 733 2133; contactenos@narino.gov.co. Solicitar confirmación del canal específico de impuesto vehicular."],
-            ["Fuente de referencia", "Portal de impuesto vehicular: https://impuestovehicular.narino.gov.co/portal-narino/#/ ; alivio tributario oficial: https://narino.gov.co/dependencias/hacienda-dependencias/alivio-tributario-para-contribuyentes-morosos-del-impuesto-vehicular/ ; calendario y descuento de pronto pago: https://narino.gov.co/noticias/narino-impulsa-el-ahorro-ciudadano-con-incentivo-del-20-en-el-impuesto-vehicular/ ; incentivo por traslado de cuenta: https://narino.gov.co/noticias/narino-incentiva-el-traslado-de-cuenta-de-vehiculos-con-descuentos-de-hasta-el-70-en-el-impuesto-2026/"],
-            ["Fecha de verificación de esta ficha", "10 de octubre de 2026."]
+            ["Fuente de referencia", "Portal oficial de impuesto vehicular: https://impuestovehicular.narino.gov.co/portal-narino/#/ ; alivio tributario oficial, publicado el 18 de septiembre de 2026: https://narino.gov.co/dependencias/hacienda-dependencias/alivio-tributario-para-contribuyentes-morosos-del-impuesto-vehicular/ ; calendario y descuento de pronto pago: https://narino.gov.co/noticias/narino-impulsa-el-ahorro-ciudadano-con-incentivo-del-20-en-el-impuesto-vehicular/ ; incentivo por traslado de cuenta: https://narino.gov.co/noticias/narino-incentiva-el-traslado-de-cuenta-de-vehiculos-con-descuentos-de-hasta-el-70-en-el-impuesto-2026/"],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "norte de santander": [
             ["Jurisdicción", titulo],
-            ["Portal de liquidación", "Portal de consulta del impuesto vehicular de Norte de Santander listado en esta tarjeta."],
+            ["Portal de liquidación", "Portal oficial de liquidación, estado de cuenta y consulta de pagos: https://vehiculos.nortedesantander.gov.co/. La Gobernación advierte que este es el único sitio autorizado para liquidar y pagar el impuesto vehicular; evita portales externos."],
             ["Calendario tributario 2026", "La Circular Externa del 5 de enero de 2026 fija el vencimiento general para declarar y pagar la vigencia 2026 hasta el 30 de junio. También establece descuentos por pronto pago: 20 % hasta el 27 de febrero, 15 % hasta el 30 de abril y 10 % hasta el 29 de mayo. Todos esos plazos ya vencieron al 9 de octubre de 2026."],
             ["Medios de pago", "Confirmar los medios habilitados directamente en el portal oficial al generar la liquidación."],
             ["Canales de contacto", "Pendientes de confirmar en una fuente oficial específica del impuesto vehicular."],
-            ["Fuente de referencia", "Abrir la circular oficial del calendario tributario 2026."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Circular oficial del calendario tributario 2026: https://administrador.nortedesantander.gov.co/gaceta-departamental/circular-externa-05-de-enero-de-2026-2/ ; portal oficial de liquidación y advertencia antifraude: https://vehiculos.nortedesantander.gov.co/."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "cesar": [
             ["Jurisdicción", titulo],
@@ -202,8 +212,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "Resolución 022936 del 29 de diciembre de 2025: descuento del 15 % hasta el último día hábil de abril y del 10 % desde el 1 de mayo hasta el último día hábil de junio. El plazo máximo fue el 30 de junio de 2026; todos los plazos ordinarios ya vencieron."],
             ["Medios de pago", "La Gobernación informa pago en línea desde su portal institucional y atención presencial en la Oficina de Rentas. Confirma los medios vigentes antes de pagar."],
             ["Canales de contacto", "Gobernación del Cesar: Calle 16 # 12-120, edificio Alfonso López Michelsen, Valledupar · (605) 588 5602 · contactenos@cesar.gov.co. Solicitar orientación del Grupo Gestión de Rentas."],
-            ["Fuente de referencia", "Comunicado oficial sobre el calendario 2026 y Resolución 022936 del 29 de diciembre de 2025."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Comunicado oficial del calendario 2026: https://www.cesar.gov.co/d/es/noticias/boletines/8164-boletin-2026-3 ; Resolución 022936 del 29 de diciembre de 2025: https://cesar.gov.co/d/filesmain/actos/resolucion_022936_del_29_dic_2025.pdf ."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "narino": [
             ["Jurisdicción", titulo],
@@ -221,8 +231,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "No se encontró publicación oficial verificable con fechas de vencimiento, descuentos o sanciones para la vigencia 2026. Estado: pendiente de confirmación directa con Rentas; no asumir fechas de otros años."],
             ["Medios de pago", "No confirmados en una fuente oficial específica del impuesto vehicular. No realizar pagos mediante enlaces de terceros; confirmar primero el procedimiento con la Gobernación."],
             ["Canales de contacto", "Contacto institucional publicado por la Gobernación: 320 382 7001 y atencionalusuario@choco.gov.co. Dirección: Calle 31 No. 1-101, Edificio La Confianza, Quibdó. Horario publicado: lunes a viernes, 8:00 a. m.–12:00 m. y 2:00–6:00 p. m. Estos son canales generales; solicitar transferencia a Rentas."],
-            ["Fuente de referencia", "Consultar la Gobernación del Chocó y su portal institucional de datos abiertos. No se encontró allí una ficha pública específica de impuesto vehicular."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Portal oficial de la Gobernación del Chocó: https://www.choco.gov.co/ . El sitio institucional presenta la opción general “Pago impuestos”, pero en esta revisión no se pudo confirmar un enlace directo y específico para liquidar impuesto vehicular; mantener el enlace directo y el calendario como pendientes hasta confirmación de Rentas."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "boyaca": [
             ["Jurisdicción", titulo],
@@ -239,8 +249,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "No se localizó un calendario tributario 2026 oficial verificable con fechas de vencimiento o descuentos específicos para Amazonas. Pendiente de confirmación con la Secretaría de Hacienda; no asumir fechas de otros departamentos."],
             ["Medios de pago", "No confirmados en una fuente oficial específica para Amazonas. Confirmar los canales habilitados directamente con la Gobernación antes de realizar pagos."],
             ["Canales de contacto", "Gobernación del Amazonas: contactenos@amazonas.gov.co · teléfono (608) 592 6566 · Calle 10 No. 10-77, Leticia. Contacto general institucional; solicitar derivación a la dependencia responsable de Rentas."],
-            ["Fuente de referencia", "Consultar el trámite de impuesto sobre vehículos automotores registrado en el SUIT de Función Pública y el portal institucional de la Gobernación del Amazonas."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Portal institucional de la Gobernación del Amazonas: https://www.amazonas.gov.co/ ; trámite de declaración y pago reportado en SUIT. No se confirmó en esta revisión una URL directa pública para liquidación ni calendario específico de 2026; ambos datos permanecen pendientes."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "arauca": [
             ["Jurisdicción", titulo],
@@ -256,18 +266,18 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Portal de liquidación", "Portal localizado para la liquidación del impuesto vehicular de Caquetá: https://iuva.syc.com.co/caqueta. El trámite de declaración y pago figura también en SUIT. Comprueba la información del vehículo y el estado actual de la obligación antes de pagar."],
             ["Calendario tributario 2026", "La Gobernación anunció un descuento del 20 % para la vigencia 2026 hasta el 29 de mayo de 2026. Ese beneficio ya venció. No se confirmó en las fuentes localizadas una fecha general de vencimiento posterior; verificar la obligación individual con Rentas."],
             ["Medios de pago", "La Gobernación comunicó que estaba habilitado el pago digital por PSE y atención presencial para liquidación y pago en el antiguo Caesca, Zona Rosa de Florencia. Confirmar disponibilidad y ubicación antes de desplazarse."],
-            ["Canales de contacto", "Consultar Secretaría de Hacienda / Dirección Tributaria Departamental a través del sitio oficial de la Gobernación del Caquetá."],
-            ["Fuente de referencia", "Gobernación del Caquetá: https://www.caqueta.gov.co/ ; información oficial del descuento y pago digital: https://www.youtube.com/watch?v=bEWxYRm-5L4 y https://www.youtube.com/watch?v=rdDYvGs_lxs ; ficha del trámite en SUIT: https://tramites1.suit.gov.co/registro-web/suit_descargar_archivo?A=18264."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Canales de contacto", "Contacto institucional general publicado por la Gobernación: conmutador (608) 436 6860, línea gratuita 018000 931008 y correo contactenos@caqueta.gov.co. Solicita que te comuniquen con Hacienda/Rentas; estos datos son generales y no se presentan como línea exclusiva de impuesto vehicular."],
+            ["Fuente de referencia", "Portal de liquidación: https://iuva.syc.com.co/caqueta ; Gobernación del Caquetá: https://www.caqueta.gov.co/ ; información oficial del descuento y pago digital: https://www.youtube.com/watch?v=bEWxYRm-5L4 y https://www.youtube.com/watch?v=rdDYvGs_lxs ; ficha del trámite en SUIT: https://tramites1.suit.gov.co/registro-web/suit_descargar_archivo?A=18264."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "cundinamarca": [
             ["Jurisdicción", titulo],
-            ["Portal de liquidación", "La Gobernación habilita la consulta y descarga de la factura 2026 desde su sección de impuesto sobre vehículos."],
+            ["Portal de liquidación", "Página oficial de la Secretaría de Hacienda de Cundinamarca con acceso a factura 2026, histórico de pagos y liquidación: https://www.cundinamarca.gov.co/dependencias/sechacienda/impuestos/vehiculos . Portal de liquidación: https://impuvehiculo.cundinamarca.gov.co/sivervcundinamarca/liquidacionweb/primeraa.php ."]
             ["Calendario tributario 2026", "Descuento del 10 % hasta el 31 de mayo de 2026 y del 5 % hasta el 31 de julio de 2026. El pago oportuno sin intereses venció el 31 de julio; ambas fechas ya pasaron."],
-            ["Medios de pago", "La Gobernación informa pago digital por PSE, GoPass y tarjeta de crédito, además de entidades bancarias autorizadas."],
-            ["Canales de contacto", "WhatsApp de atención publicado: 300 839 0002. Atención presencial: Calle 26 No. 51-53, Bogotá, primer piso de la torre Salud."],
-            ["Fuente de referencia", "Abrir preguntas frecuentes oficiales de impuesto sobre vehículos de Cundinamarca."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Medios de pago", "La Secretaría de Hacienda informa pago en línea por PSE o tarjeta de crédito; publicaciones oficiales de 2026 también mencionan GoPass y entidades bancarias autorizadas. Confirma las opciones vigentes en la factura y en el portal oficial."],
+            ["Canales de contacto", "Contact center: 300 839 0005. Líneas directas: 601 749 1439, 601 749 1440, 601 749 1423 y 601 749 1455. Atención presencial: Calle 26 No. 51-53, Bogotá."],
+            ["Fuente de referencia", "Sección oficial de impuesto sobre vehículos: https://www.cundinamarca.gov.co/dependencias/sechacienda/impuestos/vehiculos ; publicación oficial del calendario y descuentos 2026: https://www.cundinamarca.gov.co/noticias/hasta-10--de-descuento-cundinamarca-abre-calendario-2026-del-impuesto-vehicular-con-beneficios-por-pronto-pago ; alerta oficial antifraude: https://www.cundinamarca.gov.co/noticias/secretaria-de-hacienda-de-cundinamarca-alerta-por-paginas-falsas-que-suplantan-el-pago-del-impuesto-vehicular%201 ."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "guainia": [
             ["Jurisdicción", titulo],
@@ -275,8 +285,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "No se localizó una publicación oficial pública con fechas de vencimiento o descuentos de impuesto vehicular para 2026. Pendiente de confirmación con Hacienda departamental."],
             ["Medios de pago", "No confirmados para impuesto vehicular en una fuente oficial pública específica. No realizar pagos desde enlaces de terceros sin validación de la Gobernación."],
             ["Canales de contacto", "Portal de trámites de la Gobernación: https://tramites-guainia.gov.co/tramites/ ; correo institucional contactenos@guainia.gov.co ; teléfono móvil publicado en el portal de trámites: 314 459 7001. Confirmar que el canal remita a la dependencia competente en rentas."],
-            ["Fuente de referencia", "Portal oficial de trámites: https://tramites-guainia.gov.co/tramites/ ; información institucional y canales de atención visibles en el mismo portal. La búsqueda pública no permitió confirmar un trámite específico de impuesto vehicular."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Portal institucional de la Gobernación del Guainía: https://www.guainia.gov.co/ ; portal de trámites consultado: https://tramites-guainia.gov.co/tramites/ . No se confirmó un trámite público específico de impuesto vehicular ni un enlace de liquidación para 2026."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "guaviare": [
             ["Jurisdicción", titulo],
@@ -284,9 +294,9 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "No se localizó un calendario oficial 2026 actualizado en esta revisión. Una norma tributaria anterior menciona vencimiento al último día hábil de julio y descuento por pronto pago hasta marzo, pero no debe asumirse como calendario 2026 sin confirmar con Rentas."],
             ["Medios de pago", "La información publicada en septiembre de 2026 señala pago por PSE o impresión de recibo para puntos físicos habilitados. Confirmar los puntos activos directamente en el portal."],
             ["Descuentos y alivios", "Una publicación del 1 de septiembre de 2026 informa beneficios para obligaciones en mora de 2019 a 2025 hasta el 30 de julio de 2027: reducción de sanción a una UVT y condonación del 100 % de intereses al cumplir las condiciones descritas. Confirmar requisitos y saldo con la Secretaría de Hacienda antes de pagar."],
-            ["Canales de contacto", "La publicación informativa de septiembre de 2026 menciona WhatsApp 318 716 0708 y la oficina de Rentas Departamentales en la Gobernación. Confirmar el número y horarios en el canal institucional antes de enviar datos personales."],
-            ["Fuente de referencia", "Portal de liquidación: https://sivervguaviare.aplicativosenlinea.com/siver-v-guaviare/redirect/ ; noticia sobre alivios 2026: https://marandua.com.co/contribuyentes-morosos-del-impuesto-vehicular-en-el-guaviare-podran-acceder-a-descuentos-hasta-julio-de-2027/ ; norma tributaria anterior en SUIT: https://tramites1.suit.gov.co/registro-web/suit_descargar_archivo?A=102336."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Canales de contacto", "Rentas Departamentales, Gobernación del Guaviare: carrera 24 No. 7-81, San José del Guaviare · rentas@guaviare.gov.co · teléfono publicado por la Gobernación: 312 372 6032. Verificar vigencia del contacto antes de enviar datos personales."],
+            ["Fuente de referencia", "Portal oficial de la Gobernación del Guaviare, que publica la sección Impuesto Vehicular: https://www.guaviare.gov.co/ ; portal de liquidación enlazado en la ficha: https://sivervguaviare.aplicativosenlinea.com/siver-v-guaviare/redirect/ . La información específica de alivios debe confirmarse con Rentas antes de tratarla como beneficio vigente."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "meta": [
             ["Jurisdicción", titulo],
@@ -303,7 +313,7 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "La Gobernación anunció un incentivo del 5 % para pagar antes del 30 de junio de 2026. El beneficio ya venció al 9 de octubre de 2026. No se confirmó en las fuentes revisadas un calendario completo con fecha final general, sanciones u otros descuentos."],
             ["Medios de pago", "El micrositio oficial indica que el portal permite pagar el impuesto vehicular con botón PSE. Verifica la liquidación y el valor dentro del portal oficial antes de confirmar la transacción."],
             ["Canales de contacto", "Palacio Departamental: Calle 8 No. 7-40, barrio Centro, Mocoa · (608) 420 1515 · contactenos@putumayo.gov.co. Solicitar orientación a Rentas Departamental."],
-            ["Fuente de referencia", "Micrositio oficial Rentas Departamental y comunicado oficial sobre el incentivo del 5 % hasta el 30 de junio de 2026."],
+            ["Fuente de referencia", "Micrositio oficial de Rentas Departamental: https://www.putumayo.gov.co/microsite-treasury/rents ; portal de liquidación enlazado por la Gobernación: https://edeskprisma.syc.com.co/PUTUMAYO ; comunicado oficial sobre el incentivo del 5 % hasta el 30 de junio de 2026: https://www.putumayo.gov.co/publications/116?type=2 ."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
         "san andres y providencia": [
@@ -312,8 +322,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "Información no localizada en las fuentes públicas oficiales consultadas sobre una fecha límite departamental específica para la vigencia 2026. Pendiente de verificación oficial."],
             ["Medios de pago", "La ficha del trámite menciona pago en Banco de Occidente y reclamación del formulario en los puntos de atención. Confirma el procedimiento vigente con la Secretaría de Hacienda."],
             ["Canales de contacto", "Secretaría de Hacienda, Avenida Newball, edificio Coral Palace, segundo piso, San Andrés · (608) 513 0801, extensión 179 · servicioalciudadano@sanandres.gov.co."],
-            ["Fuente de referencia", "Abrir ficha oficial del trámite de impuesto sobre vehículo automotor."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Ficha oficial del trámite de impuesto sobre vehículo automotor: https://ventanilla.sanandres.gov.co/tramites/154/impuesto-sobre-vehiculo-automotor/ . La ficha indica trámite presencial y pago en Banco de Occidente; el calendario 2026 no quedó publicado en esa ficha."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "vaupes": [
             ["Jurisdicción", titulo],
@@ -321,8 +331,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "No se encontró un calendario tributario oficial verificable con vencimientos o descuentos específicos del impuesto vehicular 2026. Pendiente de confirmación directa; no asumir fechas de otros departamentos."],
             ["Medios de pago", "No confirmados en una fuente oficial específica del impuesto vehicular. Verificar el procedimiento y el beneficiario de pago con la Gobernación antes de transferir dinero."],
             ["Canales de contacto", "Gobernación del Vaupés: Calle 15 #14-18, barrio Centro, Mitú · contactenos@vaupes.gov.co · teléfono móvil institucional publicado: 321 934 7752. Canales generales; solicitar que la consulta sea remitida a Hacienda/Rentas."],
-            ["Fuente de referencia", "Portal oficial de la Gobernación del Vaupés y consulta de trámites de la entidad en el SUIT de Función Pública."],
-            ["Fecha de verificación de esta ficha", "10 de octubre de 2026."]
+            ["Fuente de referencia", "Portal oficial de la Gobernación del Vaupés: https://www.vaupes.gov.co/ . No se ha confirmado desde el sitio institucional un enlace directo público de liquidación ni un calendario 2026 específico; solicitarlo a Hacienda/Rentas."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "vichada": [
             ["Jurisdicción", titulo],
@@ -330,8 +340,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "No se localizó una publicación oficial verificable con fechas de vencimiento o descuentos departamentales para 2026. Pendiente de confirmación con Hacienda/Rentas. No confundir este impuesto departamental con el impuesto municipal de circulación y tránsito de servicio público."],
             ["Medios de pago", "No confirmados en una fuente oficial específica del impuesto vehicular departamental. Verificar el enlace, el valor y el destinatario con la Gobernación antes de pagar."],
             ["Canales de contacto", "Usar el portal institucional de la Gobernación del Vichada y solicitar contacto con la dependencia de Hacienda/Rentas; el teléfono y correo específicos de esta oficina no quedaron confirmados en las fuentes consultadas."],
-            ["Fuente de referencia", "Consulta de trámites de la Gobernación del Vichada en el SUIT de Función Pública y portal institucional de la Gobernación."],
-            ["Fecha de verificación de esta ficha", "10 de octubre de 2026."]
+            ["Fuente de referencia", "Portal oficial de la Gobernación del Vichada: https://www.vichada.gov.co/ . La consulta del SUIT muestra el trámite de impuesto sobre vehículos automotores, pero no se confirmó un enlace directo público de liquidación ni un calendario 2026 específico."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "la guajira": [
             ["Jurisdicción", titulo],
@@ -339,8 +349,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "La Resolución No. 05 de 2025, que adopta el calendario tributario 2026, fija el plazo para declarar y/o pagar el impuesto vehicular el 30 de mayo de cada año. La fecha ya pasó al 9 de octubre de 2026."],
             ["Medios de pago", "Confirmar los medios habilitados en el portal de liquidación antes de realizar el pago."],
             ["Canales de contacto", "Gobernación de La Guajira: Calle 1 No. 6-05, Centro Administrativo Departamental, Riohacha · línea de servicio 018000931074 · contactenos@laguajira.gov.co."],
-            ["Fuente de referencia", "Abrir Resolución No. 05 de 2025, calendario tributario oficial."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Portal de liquidación enlazado desde la Gobernación: https://edeskprisma.syc.com.co/guajira ; sitio oficial de la Gobernación de La Guajira, que publica el acceso Impuesto al Vehículo: https://www.laguajira.gov.co/ . La resolución de calendario se identifica como Resolución No. 05 de 2025; se mantiene pendiente añadir un enlace directo verificable al documento."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "sucre": [
             ["Jurisdicción", titulo],
@@ -359,7 +369,7 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Medios de pago", "La guía oficial indica pago en línea por PSE o botón Bancolombia; pago presencial en Banco de Occidente, Bancolombia, Davivienda, AV Villas e Itaú; y atención en el Centro de Atención al Contribuyente. Verificar opciones disponibles en el portal antes de pagar."],
             ["Canales de contacto", "Centro de Atención al Contribuyente, Dirección Financiera de Rentas e Ingresos: carrera 4.ª No. 9-67, barrio La Pola, Ibagué. Consultar correo vigente en la página oficial de preguntas frecuentes."],
             ["Fuente de referencia", "Portal de liquidación: https://aplicativosenlinea.net/sivervtolima/redirect/ ; guía oficial de medios de pago: https://tolima.gov.co/hacienda/rentas-e-ingresos/impuestos/impuesto-de-vehiculos/formas-de-pago ; calendario tributario: https://tolima.gov.co/hacienda/rentas-e-ingresos/impuestos/calendario-tributario ; noticia oficial del 30 de julio de 2026 sobre aprobación en segundo debate: https://tolima.gov.co/noticias/10108-asamblea-departamental-aprobo-por-unanimidad-beneficios-tributarios-sobre-intereses-y-sanciones-del-impuesto-vehicular . La última publicación oficial localizada, del 30 de julio de 2026, dice que la ordenanza seguía pendiente de sanción y promulgación y que el cronograma operativo se anunciaría una vez entrara en vigencia. Al 16 de octubre no se encontró confirmación oficial posterior de activación; no presentar el descuento como disponible hasta que Rentas lo confirme."],
-            ["Fecha de verificación de esta ficha", "10 de octubre de 2026."]
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "quindio": [
             ["Jurisdicción", titulo],
@@ -376,7 +386,7 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "La Gobernación publicó descuento del 10 % hasta el 6 de abril de 2026 para contribuyentes al día. El pago sin intereses ni sanciones venció el 6 de julio; desde el 7 de julio se generan sanciones e intereses. Estos plazos ya vencieron."],
             ["Medios de pago", "La Gobernación reportó más de 1.200 puntos habilitados en mayo de 2026: PSE y código QR desde la declaración; Davivienda y Banco AV Villas con declaración impresa; puntos Susuerte en efectivo; y datáfono con tarjeta débito o crédito en el edificio de la Licorera, primer piso, Manizales. Confirmar disponibilidad vigente en el portal oficial."],
             ["Canales de contacto", "WhatsApp de Hacienda publicado por la Gobernación: 315 337 67 81. Confirmar horarios y disponibilidad directamente con la entidad."],
-            ["Fuente de referencia", "Comunicado oficial de Caldas sobre canales de pago y noticia oficial con fecha límite de 6 de julio de 2026."],
+            ["Fuente de referencia", "Portal oficial de liquidación vehicular: https://vehiculos.caldas.gov.co/web ; comunicado oficial de Caldas sobre canales de pago y fecha límite del 6 de julio de 2026: https://www.caldas.gov.co/noticias-gobernacion/183-hacienda/16373-contribuyentes-en-caldas-tienen-plazo-hasta-el-6-de-julio-para-evitar-sanciones-en-el-impuesto-vehicular ."],
             ["Fecha de verificación de esta ficha", "10 de octubre de 2026."]
         ],
         "risaralda": [
@@ -386,13 +396,13 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Medios de pago", "La ficha oficial confirma que el trámite tiene costo y que debe cancelarse la liquidación generada. El portal tributario es el punto de partida; los medios concretos disponibles deben confirmarse al liquidar o con la Secretaría de Hacienda."],
             ["Canales de contacto", "Secretaría de Hacienda: Calle 19 No. 13-17, Pereira. Teléfono local (606) 3398300; línea de transparencia 018000-916078; correo contactenos@risaralda.gov.co. La ficha oficial del trámite publica atención presencial de lunes a viernes; confirma allí fechas, liquidación y opciones de pago."],
             ["Estado de trámite en línea", "La ficha oficial de trámites describe el procedimiento como en línea y señala que la respuesta se obtiene de forma inmediata. Esto no confirma por sí solo que todas las funciones del portal tributario estén disponibles en todo momento."],
-            ["Fuente de referencia", "Abrir el Portal Tributario de Risaralda y la ficha oficial del trámite de impuesto sobre vehículos automotores."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Portal Tributario de Risaralda: https://tributario.risaralda.siifweb.com/ ; ficha oficial del trámite: https://tramites.risaralda.gov.co/tramites/?subtema=75 . El portal muestra la sección Impuesto Vehicular para la vigencia 2026; la fecha límite específica no quedó confirmada."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "valle del cauca": [
             ["Jurisdicción", titulo],
             ["Portal de liquidación", "Portal público de impuesto vehicular del Valle del Cauca: https://www.vehiculosvalle.com.co/impuestosweb/#/public. Portal institucional de declaraciones tributarias: https://declaraciones.valledelcauca.gov.co/; este último solicita credenciales y no debe confundirse con la consulta pública vehicular."],
-            ["Calendario tributario 2026", "La Gobernación publicó el calendario 2026 con vencimientos por último dígito de placa: placas 000–333 hasta el 30 de abril; 334–666 hasta el 29 de mayo; 667–999 y motocicletas de más de 125 c. c. hasta el 30 de junio. Todos los plazos ordinarios ya vencieron al 12 de octubre de 2026. Consulta la liquidación actualizada y confirma el valor, las sanciones y los intereses aplicables en el portal oficial antes de pagar. Fuente del calendario: https://www.valledelcauca.gov.co/publicaciones/88141/asi-sera-el-calendario-tributario-del-impuesto-vehicular-2026-en-el-valle-del-cauca/."],
+            ["Calendario tributario 2026", "La Gobernación publicó el calendario 2026 con vencimientos por último dígito de placa: placas 000–333 hasta el 30 de abril; 334–666 hasta el 29 de mayo; 667–999 y motocicletas de más de 125 c. c. hasta el 30 de junio. Todos los plazos ordinarios ya vencieron al 17 de octubre de 2026. Consulta la liquidación actualizada y confirma el valor, las sanciones y los intereses aplicables en el portal oficial antes de pagar. Fuente del calendario: https://www.valledelcauca.gov.co/publicaciones/88141/asi-sera-el-calendario-tributario-del-impuesto-vehicular-2026-en-el-valle-del-cauca/."],
             ["Medios de pago", "La Gobernación habilitó la liquidación por placa en el portal oficial, con opción de pago en línea o descarga de la declaración para continuar el proceso. Confirma las opciones disponibles al generar la liquidación."],
             ["Canales de contacto", "Canales generales oficiales de la Gobernación del Valle del Cauca: PBX (602) 620 00 00; línea gratuita nacional 01-8000-972033; correo contactenos@valledelcauca.gov.co. Dirección principal: carrera 6 entre calles 9 y 10, Edificio Palacio de San Francisco, Cali. Estos son canales institucionales generales; confirmar con Rentas los detalles específicos del impuesto vehicular."],
             ["Fuente de referencia", "Calendario tributario oficial 2026: https://www.valledelcauca.gov.co/publicaciones/88141/asi-sera-el-calendario-tributario-del-impuesto-vehicular-2026-en-el-valle-del-cauca/ ; portal público de liquidación: https://www.vehiculosvalle.com.co/impuestosweb/#/public."],

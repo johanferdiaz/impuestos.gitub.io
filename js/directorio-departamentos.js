@@ -7,8 +7,8 @@ const departamentos = [
     { nombre:"Atlantico", region:"Caribe", logo:escudo("Escudo del Atlantico.svg"), url:"https://portalimpuestos.atlantico.gov.co/Portal-ATLRentas/vehiculos_declaracion.jsp" },
     { nombre:"Bolivar", region:"Caribe", logo:escudo("Escudo de Bolivar (Colombia).svg"), url:"https://impuestos.bolivar.gov.co/gobol_web/liquidaciones" },
     { nombre:"Boyaca", region:"Andina", logo:escudo("Escudo de Boyaca.svg"), url:"https://www.boyaca.gov.co/" },
-    { nombre:"Caldas", region:"Andina", logo:escudo("Coat of Arms of the Department of Caldas.svg"), url:"https://rentas.caldas.gov.co/" },
-    { nombre:"Caqueta", region:"Amazonia", logo:escudo("Escudo del Caqueta.svg"), url:"https://www.caqueta.gov.co/" },
+    { nombre:"Caldas", region:"Andina", logo:escudo("Coat of Arms of the Department of Caldas.svg"), url:"https://vehiculos.caldas.gov.co/web" },
+    { nombre:"Caqueta", region:"Amazonia", logo:escudo("Escudo del Caqueta.svg"), url:"https://iuva.syc.com.co/caqueta" },
     { nombre:"Casanare", region:"Orinoquia", logo:escudo("Escudo oficial de Casanare.svg"), url:"https://impuestos.casanare.gov.co/impuesto-vehiculos" },
     { nombre:"Cauca", region:"Pacifica", logo:escudo("Escudo del Cauca.svg"), url:"https://www.cauca.gov.co/" },
     { nombre:"Cesar", region:"Caribe", logo:escudo("Coat of arms of Cesar (Colombia).svg"), url:"https://www.cesar.gov.co/d/es/atencion-ciudadano/tramites-servicios/46-tramites" },
@@ -23,7 +23,7 @@ const departamentos = [
     { nombre:"Meta", region:"Orinoquia", logo:escudo("Escudo del Meta.svg"), url:"https://meta.gov.co/" },
     { nombre:"Narino", region:"Pacifica", logo:escudo("Escudo de Narino.svg"), url:"https://impuestovehicular.narino.gov.co/portal-narino/#/" },
     { nombre:"Norte de Santander", region:"Andina", logo:escudo("Escudo de Norte de Santander.svg"), url:"https://vehiculos.nortedesantander.gov.co/" },
-    { nombre:"Putumayo", region:"Amazonia", logo:escudo("Escudo del Putumayo.svg"), url:"https://appsold.putumayo.gov.co/aplicaciones/tramites_gober/" },
+    { nombre:"Putumayo", region:"Amazonia", logo:escudo("Escudo del Putumayo.svg"), url:"https://edeskprisma.syc.com.co/PUTUMAYO" },
     { nombre:"Quindio", region:"Andina", logo:escudo("Escudo del Quindio.svg"), url:"https://isva.quindio.gov.co/portal-quindio/" },
     { nombre:"Risaralda", region:"Andina", logo:escudo("Escudo de Risaralda.svg"), url:"https://tributario.risaralda.siifweb.com/" },
     { nombre:"San Andrés y Providencia", region:"Caribe", logo:escudo("Escudo de San Andrés y Providencia.svg"), url:"https://ventanilla.sanandres.gov.co/tramites/154/impuesto-sobre-vehiculo-automotor/" },
@@ -267,7 +267,7 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "La Gobernación anunció un descuento del 20 % para la vigencia 2026 hasta el 29 de mayo de 2026. Ese beneficio ya venció. No se confirmó en las fuentes localizadas una fecha general de vencimiento posterior; verificar la obligación individual con Rentas."],
             ["Medios de pago", "La Gobernación comunicó que estaba habilitado el pago digital por PSE y atención presencial para liquidación y pago en el antiguo Caesca, Zona Rosa de Florencia. Confirmar disponibilidad y ubicación antes de desplazarse."],
             ["Canales de contacto", "Consultar Secretaría de Hacienda / Dirección Tributaria Departamental a través del sitio oficial de la Gobernación del Caquetá."],
-            ["Fuente de referencia", "Gobernación del Caquetá: https://www.caqueta.gov.co/ ; información oficial del descuento y pago digital: https://www.youtube.com/watch?v=bEWxYRm-5L4 y https://www.youtube.com/watch?v=rdDYvGs_lxs ; ficha del trámite en SUIT: https://tramites1.suit.gov.co/registro-web/suit_descargar_archivo?A=18264."],
+            ["Fuente de referencia", "Portal de liquidación: https://iuva.syc.com.co/caqueta ; Gobernación del Caquetá: https://www.caqueta.gov.co/ ; información oficial del descuento y pago digital: https://www.youtube.com/watch?v=bEWxYRm-5L4 y https://www.youtube.com/watch?v=rdDYvGs_lxs ; ficha del trámite en SUIT: https://tramites1.suit.gov.co/registro-web/suit_descargar_archivo?A=18264."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
         "cundinamarca": [
@@ -313,7 +313,7 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "La Gobernación anunció un incentivo del 5 % para pagar antes del 30 de junio de 2026. El beneficio ya venció al 9 de octubre de 2026. No se confirmó en las fuentes revisadas un calendario completo con fecha final general, sanciones u otros descuentos."],
             ["Medios de pago", "El micrositio oficial indica que el portal permite pagar el impuesto vehicular con botón PSE. Verifica la liquidación y el valor dentro del portal oficial antes de confirmar la transacción."],
             ["Canales de contacto", "Palacio Departamental: Calle 8 No. 7-40, barrio Centro, Mocoa · (608) 420 1515 · contactenos@putumayo.gov.co. Solicitar orientación a Rentas Departamental."],
-            ["Fuente de referencia", "Micrositio oficial Rentas Departamental y comunicado oficial sobre el incentivo del 5 % hasta el 30 de junio de 2026."],
+            ["Fuente de referencia", "Micrositio oficial de Rentas Departamental: https://www.putumayo.gov.co/microsite-treasury/rents ; portal de liquidación enlazado por la Gobernación: https://edeskprisma.syc.com.co/PUTUMAYO ; comunicado oficial sobre el incentivo del 5 % hasta el 30 de junio de 2026: https://www.putumayo.gov.co/publications/116?type=2 ."],
             ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
         ],
         "san andres y providencia": [
@@ -386,7 +386,7 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "La Gobernación publicó descuento del 10 % hasta el 6 de abril de 2026 para contribuyentes al día. El pago sin intereses ni sanciones venció el 6 de julio; desde el 7 de julio se generan sanciones e intereses. Estos plazos ya vencieron."],
             ["Medios de pago", "La Gobernación reportó más de 1.200 puntos habilitados en mayo de 2026: PSE y código QR desde la declaración; Davivienda y Banco AV Villas con declaración impresa; puntos Susuerte en efectivo; y datáfono con tarjeta débito o crédito en el edificio de la Licorera, primer piso, Manizales. Confirmar disponibilidad vigente en el portal oficial."],
             ["Canales de contacto", "WhatsApp de Hacienda publicado por la Gobernación: 315 337 67 81. Confirmar horarios y disponibilidad directamente con la entidad."],
-            ["Fuente de referencia", "Comunicado oficial de Caldas sobre canales de pago y noticia oficial con fecha límite de 6 de julio de 2026."],
+            ["Fuente de referencia", "Portal oficial de liquidación vehicular: https://vehiculos.caldas.gov.co/web ; comunicado oficial de Caldas sobre canales de pago y fecha límite del 6 de julio de 2026: https://www.caldas.gov.co/noticias-gobernacion/183-hacienda/16373-contribuyentes-en-caldas-tienen-plazo-hasta-el-6-de-julio-para-evitar-sanciones-en-el-impuesto-vehicular ."],
             ["Fecha de verificación de esta ficha", "10 de octubre de 2026."]
         ],
         "risaralda": [

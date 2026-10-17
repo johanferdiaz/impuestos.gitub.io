@@ -331,8 +331,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "No se encontró un calendario tributario oficial verificable con vencimientos o descuentos específicos del impuesto vehicular 2026. Pendiente de confirmación directa; no asumir fechas de otros departamentos."],
             ["Medios de pago", "No confirmados en una fuente oficial específica del impuesto vehicular. Verificar el procedimiento y el beneficiario de pago con la Gobernación antes de transferir dinero."],
             ["Canales de contacto", "Gobernación del Vaupés: Calle 15 #14-18, barrio Centro, Mitú · contactenos@vaupes.gov.co · teléfono móvil institucional publicado: 321 934 7752. Canales generales; solicitar que la consulta sea remitida a Hacienda/Rentas."],
-            ["Fuente de referencia", "Portal oficial de la Gobernación del Vaupés y consulta de trámites de la entidad en el SUIT de Función Pública."],
-            ["Fecha de verificación de esta ficha", "10 de octubre de 2026."]
+            ["Fuente de referencia", "Portal oficial de la Gobernación del Vaupés: https://www.vaupes.gov.co/ . No se ha confirmado desde el sitio institucional un enlace directo público de liquidación ni un calendario 2026 específico; solicitarlo a Hacienda/Rentas."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "vichada": [
             ["Jurisdicción", titulo],
@@ -340,8 +340,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "No se localizó una publicación oficial verificable con fechas de vencimiento o descuentos departamentales para 2026. Pendiente de confirmación con Hacienda/Rentas. No confundir este impuesto departamental con el impuesto municipal de circulación y tránsito de servicio público."],
             ["Medios de pago", "No confirmados en una fuente oficial específica del impuesto vehicular departamental. Verificar el enlace, el valor y el destinatario con la Gobernación antes de pagar."],
             ["Canales de contacto", "Usar el portal institucional de la Gobernación del Vichada y solicitar contacto con la dependencia de Hacienda/Rentas; el teléfono y correo específicos de esta oficina no quedaron confirmados en las fuentes consultadas."],
-            ["Fuente de referencia", "Consulta de trámites de la Gobernación del Vichada en el SUIT de Función Pública y portal institucional de la Gobernación."],
-            ["Fecha de verificación de esta ficha", "10 de octubre de 2026."]
+            ["Fuente de referencia", "Portal oficial de la Gobernación del Vichada: https://www.vichada.gov.co/ . La consulta del SUIT muestra el trámite de impuesto sobre vehículos automotores, pero no se confirmó un enlace directo público de liquidación ni un calendario 2026 específico."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "la guajira": [
             ["Jurisdicción", titulo],
@@ -369,7 +369,7 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Medios de pago", "La guía oficial indica pago en línea por PSE o botón Bancolombia; pago presencial en Banco de Occidente, Bancolombia, Davivienda, AV Villas e Itaú; y atención en el Centro de Atención al Contribuyente. Verificar opciones disponibles en el portal antes de pagar."],
             ["Canales de contacto", "Centro de Atención al Contribuyente, Dirección Financiera de Rentas e Ingresos: carrera 4.ª No. 9-67, barrio La Pola, Ibagué. Consultar correo vigente en la página oficial de preguntas frecuentes."],
             ["Fuente de referencia", "Portal de liquidación: https://aplicativosenlinea.net/sivervtolima/redirect/ ; guía oficial de medios de pago: https://tolima.gov.co/hacienda/rentas-e-ingresos/impuestos/impuesto-de-vehiculos/formas-de-pago ; calendario tributario: https://tolima.gov.co/hacienda/rentas-e-ingresos/impuestos/calendario-tributario ; noticia oficial del 30 de julio de 2026 sobre aprobación en segundo debate: https://tolima.gov.co/noticias/10108-asamblea-departamental-aprobo-por-unanimidad-beneficios-tributarios-sobre-intereses-y-sanciones-del-impuesto-vehicular . La última publicación oficial localizada, del 30 de julio de 2026, dice que la ordenanza seguía pendiente de sanción y promulgación y que el cronograma operativo se anunciaría una vez entrara en vigencia. Al 16 de octubre no se encontró confirmación oficial posterior de activación; no presentar el descuento como disponible hasta que Rentas lo confirme."],
-            ["Fecha de verificación de esta ficha", "10 de octubre de 2026."]
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "quindio": [
             ["Jurisdicción", titulo],

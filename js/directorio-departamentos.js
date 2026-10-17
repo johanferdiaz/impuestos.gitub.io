@@ -322,8 +322,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "Información no localizada en las fuentes públicas oficiales consultadas sobre una fecha límite departamental específica para la vigencia 2026. Pendiente de verificación oficial."],
             ["Medios de pago", "La ficha del trámite menciona pago en Banco de Occidente y reclamación del formulario en los puntos de atención. Confirma el procedimiento vigente con la Secretaría de Hacienda."],
             ["Canales de contacto", "Secretaría de Hacienda, Avenida Newball, edificio Coral Palace, segundo piso, San Andrés · (608) 513 0801, extensión 179 · servicioalciudadano@sanandres.gov.co."],
-            ["Fuente de referencia", "Abrir ficha oficial del trámite de impuesto sobre vehículo automotor."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Ficha oficial del trámite de impuesto sobre vehículo automotor: https://ventanilla.sanandres.gov.co/tramites/154/impuesto-sobre-vehiculo-automotor/ . La ficha indica trámite presencial y pago en Banco de Occidente; el calendario 2026 no quedó publicado en esa ficha."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "vaupes": [
             ["Jurisdicción", titulo],
@@ -349,8 +349,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "La Resolución No. 05 de 2025, que adopta el calendario tributario 2026, fija el plazo para declarar y/o pagar el impuesto vehicular el 30 de mayo de cada año. La fecha ya pasó al 9 de octubre de 2026."],
             ["Medios de pago", "Confirmar los medios habilitados en el portal de liquidación antes de realizar el pago."],
             ["Canales de contacto", "Gobernación de La Guajira: Calle 1 No. 6-05, Centro Administrativo Departamental, Riohacha · línea de servicio 018000931074 · contactenos@laguajira.gov.co."],
-            ["Fuente de referencia", "Abrir Resolución No. 05 de 2025, calendario tributario oficial."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Portal de liquidación enlazado desde la Gobernación: https://edeskprisma.syc.com.co/guajira ; sitio oficial de la Gobernación de La Guajira, que publica el acceso Impuesto al Vehículo: https://www.laguajira.gov.co/ . La resolución de calendario se identifica como Resolución No. 05 de 2025; se mantiene pendiente añadir un enlace directo verificable al documento."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "sucre": [
             ["Jurisdicción", titulo],
@@ -396,8 +396,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Medios de pago", "La ficha oficial confirma que el trámite tiene costo y que debe cancelarse la liquidación generada. El portal tributario es el punto de partida; los medios concretos disponibles deben confirmarse al liquidar o con la Secretaría de Hacienda."],
             ["Canales de contacto", "Secretaría de Hacienda: Calle 19 No. 13-17, Pereira. Teléfono local (606) 3398300; línea de transparencia 018000-916078; correo contactenos@risaralda.gov.co. La ficha oficial del trámite publica atención presencial de lunes a viernes; confirma allí fechas, liquidación y opciones de pago."],
             ["Estado de trámite en línea", "La ficha oficial de trámites describe el procedimiento como en línea y señala que la respuesta se obtiene de forma inmediata. Esto no confirma por sí solo que todas las funciones del portal tributario estén disponibles en todo momento."],
-            ["Fuente de referencia", "Abrir el Portal Tributario de Risaralda y la ficha oficial del trámite de impuesto sobre vehículos automotores."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Portal Tributario de Risaralda: https://tributario.risaralda.siifweb.com/ ; ficha oficial del trámite: https://tramites.risaralda.gov.co/tramites/?subtema=75 . El portal muestra la sección Impuesto Vehicular para la vigencia 2026; la fecha límite específica no quedó confirmada."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "valle del cauca": [
             ["Jurisdicción", titulo],

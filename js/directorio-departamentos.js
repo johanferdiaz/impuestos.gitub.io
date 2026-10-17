@@ -266,9 +266,9 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Portal de liquidación", "Portal localizado para la liquidación del impuesto vehicular de Caquetá: https://iuva.syc.com.co/caqueta. El trámite de declaración y pago figura también en SUIT. Comprueba la información del vehículo y el estado actual de la obligación antes de pagar."],
             ["Calendario tributario 2026", "La Gobernación anunció un descuento del 20 % para la vigencia 2026 hasta el 29 de mayo de 2026. Ese beneficio ya venció. No se confirmó en las fuentes localizadas una fecha general de vencimiento posterior; verificar la obligación individual con Rentas."],
             ["Medios de pago", "La Gobernación comunicó que estaba habilitado el pago digital por PSE y atención presencial para liquidación y pago en el antiguo Caesca, Zona Rosa de Florencia. Confirmar disponibilidad y ubicación antes de desplazarse."],
-            ["Canales de contacto", "Consultar Secretaría de Hacienda / Dirección Tributaria Departamental a través del sitio oficial de la Gobernación del Caquetá."],
+            ["Canales de contacto", "Contacto institucional general publicado por la Gobernación: conmutador (608) 436 6860, línea gratuita 018000 931008 y correo contactenos@caqueta.gov.co. Solicita que te comuniquen con Hacienda/Rentas; estos datos son generales y no se presentan como línea exclusiva de impuesto vehicular."],
             ["Fuente de referencia", "Portal de liquidación: https://iuva.syc.com.co/caqueta ; Gobernación del Caquetá: https://www.caqueta.gov.co/ ; información oficial del descuento y pago digital: https://www.youtube.com/watch?v=bEWxYRm-5L4 y https://www.youtube.com/watch?v=rdDYvGs_lxs ; ficha del trámite en SUIT: https://tramites1.suit.gov.co/registro-web/suit_descargar_archivo?A=18264."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "cundinamarca": [
             ["Jurisdicción", titulo],

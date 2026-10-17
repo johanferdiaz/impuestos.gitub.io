@@ -28,7 +28,7 @@ const departamentos = [
     { nombre:"Risaralda", region:"Andina", logo:escudo("Escudo de Risaralda.svg"), url:"https://tributario.risaralda.siifweb.com/" },
     { nombre:"San Andrés y Providencia", region:"Caribe", logo:escudo("Escudo de San Andrés y Providencia.svg"), url:"https://ventanilla.sanandres.gov.co/tramites/154/impuesto-sobre-vehiculo-automotor/" },
     { nombre:"Santander", region:"Andina", logo:escudo("Escudo de Santander 2004 (Colombia).svg"), url:"https://edeskprisma.syc.com.co/SANTANDER" },
-    { nombre:"Sucre", region:"Caribe", logo:escudo("Escudo de Sucre.svg"), url:"https://impuestos.sucre.gobiernoit.com/Portal-VehiculoSucre/" },
+    { nombre:"Sucre", region:"Caribe", logo:escudo("Escudo de Sucre.svg"), url:"https://impuestos.sucre.gobiernoit.com/Portal-VehiculoSucre/LIQ_001.jsp?id=LIQ" },
     { nombre:"Tolima", region:"Andina", logo:escudo("Escudo del Tolima.svg"), url:"https://aplicativosenlinea.net/sivervtolima/redirect/" },
     { nombre:"Valle del Cauca", region:"Pacifica", logo:escudo("Escudo del Valle del Cauca.svg"), url:"https://www.vehiculosvalle.com.co/impuestosweb/#/public" },
     { nombre:"Vaupes", region:"Amazonia", logo:escudo("Escudo del Vaupes.svg"), url:"https://vaupes.gov.co/" },

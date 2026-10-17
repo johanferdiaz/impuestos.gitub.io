@@ -285,8 +285,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "No se localizó una publicación oficial pública con fechas de vencimiento o descuentos de impuesto vehicular para 2026. Pendiente de confirmación con Hacienda departamental."],
             ["Medios de pago", "No confirmados para impuesto vehicular en una fuente oficial pública específica. No realizar pagos desde enlaces de terceros sin validación de la Gobernación."],
             ["Canales de contacto", "Portal de trámites de la Gobernación: https://tramites-guainia.gov.co/tramites/ ; correo institucional contactenos@guainia.gov.co ; teléfono móvil publicado en el portal de trámites: 314 459 7001. Confirmar que el canal remita a la dependencia competente en rentas."],
-            ["Fuente de referencia", "Portal oficial de trámites: https://tramites-guainia.gov.co/tramites/ ; información institucional y canales de atención visibles en el mismo portal. La búsqueda pública no permitió confirmar un trámite específico de impuesto vehicular."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Portal institucional de la Gobernación del Guainía: https://www.guainia.gov.co/ ; portal de trámites consultado: https://tramites-guainia.gov.co/tramites/ . No se confirmó un trámite público específico de impuesto vehicular ni un enlace de liquidación para 2026."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "guaviare": [
             ["Jurisdicción", titulo],
@@ -294,9 +294,9 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "No se localizó un calendario oficial 2026 actualizado en esta revisión. Una norma tributaria anterior menciona vencimiento al último día hábil de julio y descuento por pronto pago hasta marzo, pero no debe asumirse como calendario 2026 sin confirmar con Rentas."],
             ["Medios de pago", "La información publicada en septiembre de 2026 señala pago por PSE o impresión de recibo para puntos físicos habilitados. Confirmar los puntos activos directamente en el portal."],
             ["Descuentos y alivios", "Una publicación del 1 de septiembre de 2026 informa beneficios para obligaciones en mora de 2019 a 2025 hasta el 30 de julio de 2027: reducción de sanción a una UVT y condonación del 100 % de intereses al cumplir las condiciones descritas. Confirmar requisitos y saldo con la Secretaría de Hacienda antes de pagar."],
-            ["Canales de contacto", "La publicación informativa de septiembre de 2026 menciona WhatsApp 318 716 0708 y la oficina de Rentas Departamentales en la Gobernación. Confirmar el número y horarios en el canal institucional antes de enviar datos personales."],
-            ["Fuente de referencia", "Portal de liquidación: https://sivervguaviare.aplicativosenlinea.com/siver-v-guaviare/redirect/ ; noticia sobre alivios 2026: https://marandua.com.co/contribuyentes-morosos-del-impuesto-vehicular-en-el-guaviare-podran-acceder-a-descuentos-hasta-julio-de-2027/ ; norma tributaria anterior en SUIT: https://tramites1.suit.gov.co/registro-web/suit_descargar_archivo?A=102336."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Canales de contacto", "Rentas Departamentales, Gobernación del Guaviare: carrera 24 No. 7-81, San José del Guaviare · rentas@guaviare.gov.co · teléfono publicado por la Gobernación: 312 372 6032. Verificar vigencia del contacto antes de enviar datos personales."],
+            ["Fuente de referencia", "Portal oficial de la Gobernación del Guaviare, que publica la sección Impuesto Vehicular: https://www.guaviare.gov.co/ ; portal de liquidación enlazado en la ficha: https://sivervguaviare.aplicativosenlinea.com/siver-v-guaviare/redirect/ . La información específica de alivios debe confirmarse con Rentas antes de tratarla como beneficio vigente."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "meta": [
             ["Jurisdicción", titulo],

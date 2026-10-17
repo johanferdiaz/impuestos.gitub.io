@@ -84,11 +84,11 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         "casanare": [
             ["Jurisdicción", titulo],
             ["Portal de liquidación", "Portal de Impuestos de la Secretaría de Hacienda de Casanare."],
-            ["Calendario tributario 2026", "Fechas publicadas: 15 % de descuento del 1 de enero al 15 de marzo; 10 % del 16 de marzo al 31 de mayo; 5 % del 1 de junio al 31 de julio; sin descuento del 1 de agosto al 30 de noviembre. Desde el 1 de diciembre se anuncian intereses moratorios. Estos plazos ya pasaron al 9 de octubre de 2026, salvo el tramo sin descuento que termina el 30 de noviembre."],
+            ["Calendario tributario 2026", "Fechas publicadas: 15 % de descuento del 1 de enero al 15 de marzo; 10 % del 16 de marzo al 31 de mayo; 5 % del 1 de junio al 31 de julio; sin descuento del 1 de agosto al 30 de noviembre. Desde el 1 de diciembre se anuncian intereses moratorios. Todos los plazos de descuento ya pasaron; el tramo sin descuento continúa hasta el 30 de noviembre de 2026. El portal anuncia intereses moratorios a partir del 1 de diciembre."],
             ["Medios de pago", "Consultar las opciones disponibles en el portal oficial antes de pagar; el calendario consultado no especifica los medios."],
             ["Canales de contacto", "rentas@casanare.gov.co · 633 6339, extensión 1341 · Carrera 20 No. 08-02, edificio CAD, Yopal. Atención publicada: lunes a viernes, 8:00 a. m.–12:00 m. y 2:00–6:00 p. m."],
-            ["Fuente de referencia", "Abrir calendario tributario oficial de Casanare."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Calendario tributario oficial de Casanare, con descuentos y vencimientos de 2026: https://impuestos.casanare.gov.co/impuesto-vehiculos/calendario-tributario ; portal oficial de liquidación: https://impuestos.casanare.gov.co/impuesto-vehiculos ."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "bogota d.c.": [
             ["Jurisdicción", titulo],
@@ -181,11 +181,11 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
         "magdalena": [
             ["Jurisdicción", titulo],
             ["Portal de liquidación", "Portal oficial de Impuestos del Magdalena para consulta y pago en línea por placa."],
-            ["Calendario tributario 2026", "La Gobernación anunció un beneficio temporal para deudas de impuesto vehicular, tasas y multas de tránsito de vigencias 2025 y anteriores: descuento en intereses del 75 % hasta el 31 de agosto, 50 % hasta el 31 de octubre y 25 % hasta el 30 de diciembre de 2026. Al 9 de octubre de 2026, el tramo anunciado es del 50 % hasta el 31 de octubre. Verifica los requisitos y el decreto antes de pagar."],
+            ["Calendario tributario 2026", "Actualización oficial del 16 de octubre de 2026: contribuyentes morosos del impuesto vehicular, tasas y multas de tránsito de las vigencias 2025 y anteriores pueden acceder al 50 % de descuento en intereses y sanciones hasta el 31 de octubre; luego se anuncia un 25 % hasta el 30 de diciembre de 2026. La medida se estableció mediante el Decreto 267 del 13 de abril de 2026. Confirma el valor y las condiciones en la liquidación oficial."],
             ["Medios de pago", "El portal ofrece pago en línea por PSE y consulta por placa; también permite consultar facturas y certificados de paz y salvo."],
             ["Canales de contacto", "La Gobernación publicó atención para el beneficio en la Oficina de Gestión Tributaria, calle 22 # 15-21. Confirma horarios directamente con la entidad."],
-            ["Fuente de referencia", "Abrir comunicado oficial sobre descuentos en intereses y publicación de septiembre de 2026 que confirma el beneficio del 50 % hasta el 31 de octubre."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Comunicado oficial del 16 de octubre de 2026 sobre el 50 % de descuento hasta el 31 de octubre: https://www.gobernaciondelmagdalena.gov.co/aprovecha-descuentos-del-50-en-impuestos-de-vigencias-anteriores-y-disfruta-una-experiencia-especial-en-la-nueva-casa-de-rentas/ ; portal oficial de impuestos: https://impuestos.gobernaciondelmagdalena.gov.co/."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "nariño": [
             ["Jurisdicción", titulo],
@@ -212,8 +212,8 @@ document.querySelectorAll("#departamentos .card").forEach(card => {
             ["Calendario tributario 2026", "Resolución 022936 del 29 de diciembre de 2025: descuento del 15 % hasta el último día hábil de abril y del 10 % desde el 1 de mayo hasta el último día hábil de junio. El plazo máximo fue el 30 de junio de 2026; todos los plazos ordinarios ya vencieron."],
             ["Medios de pago", "La Gobernación informa pago en línea desde su portal institucional y atención presencial en la Oficina de Rentas. Confirma los medios vigentes antes de pagar."],
             ["Canales de contacto", "Gobernación del Cesar: Calle 16 # 12-120, edificio Alfonso López Michelsen, Valledupar · (605) 588 5602 · contactenos@cesar.gov.co. Solicitar orientación del Grupo Gestión de Rentas."],
-            ["Fuente de referencia", "Comunicado oficial sobre el calendario 2026 y Resolución 022936 del 29 de diciembre de 2025."],
-            ["Fecha de verificación de esta ficha", "9 de octubre de 2026."]
+            ["Fuente de referencia", "Comunicado oficial del calendario 2026: https://www.cesar.gov.co/d/es/noticias/boletines/8164-boletin-2026-3 ; Resolución 022936 del 29 de diciembre de 2025: https://cesar.gov.co/d/filesmain/actos/resolucion_022936_del_29_dic_2025.pdf ."],
+            ["Fecha de verificación de esta ficha", "17 de octubre de 2026."]
         ],
         "narino": [
             ["Jurisdicción", titulo],

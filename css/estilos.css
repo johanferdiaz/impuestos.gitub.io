@@ -18,7 +18,13 @@ body {
    ========================================================= */
 
 .hero {
-    background: linear-gradient(135deg, #071a33, #126e82 60%, #159a9c);
+    /* Banner alojado en GitHub: el texto HTML permanece por encima de la imagen. */
+    background-image:
+        linear-gradient(110deg, rgba(4, 18, 38, .86) 0%, rgba(5, 36, 61, .64) 52%, rgba(6, 89, 105, .38) 100%),
+        url("../img/C19E4AF6-B55C-4055-94B4-4DA75BAF0FAA_0863A4F3-D811-4410-B0FB-36DECE90C6D2.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #fff;
     padding: 58px 20px 76px;
     text-align: center;

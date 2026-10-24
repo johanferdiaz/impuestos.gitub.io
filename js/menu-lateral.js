@@ -39,7 +39,7 @@
     });
     cerrar.addEventListener("click", cerrarMenu);
     overlay.addEventListener("click", cerrarMenu);
-    menu.querySelectorAll("[data-menu-enlace]").forEach(enlace => enlace.addEventListener("click", cerrarMenu));
+    menu.querySelectorAll("a[href]").forEach(enlace => enlace.addEventListener("click", cerrarMenu));
     document.addEventListener("keydown", evento => {
         if (evento.key === "Escape" && menu.classList.contains("abierto")) cerrarMenu();
         if (evento.key === "Tab" && menu.classList.contains("abierto")) {
